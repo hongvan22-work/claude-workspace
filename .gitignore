@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+env/
+
+# Node
+node_modules/
+.next/
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Large files
+*.pdf
+*.pptx
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Claude local settings (keep agents, commands, skills but not local settings)
+.claude/settings.local.json
