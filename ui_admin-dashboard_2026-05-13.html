@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — Ladle Crane Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== DESIGN TOKENS ===== */
+    :root {
+      --bg-base:       #0d0d0d;
+      --bg-surface:    #161616;
+      --bg-elevated:   #1e1e1e;
+      --bg-hover:      #252525;
+      --border:        #2a2a2a;
+      --border-bright: #3a3a3a;
+
+      --amber-500:     #f59e0b;
+      --amber-400:     #fbbf24;
+      --amber-300:     #fcd34d;
+      --amber-600:     #d97706;
+      --amber-900:     #1c1108;
+
+      --text-primary:  #f5f5f5;
+      --text-secondary:#a3a3a3;
+      --text-muted:    #6b6b6b;
+      --text-amber:    #f59e0b;
+
+      --green-400:     #4ade80;
+      --green-900:     #052e16;
+      --red-400:       #f87171;
+      --red-900:       #2d0b0b;
+      --blue-400:      #60a5fa;
+      --blue-900:      #0c1a2e;
+
+      --sidebar-w:     240px;
+      --header-h:      64px;
+      --radius-sm:     6px;
+      --radius-md:     10px;
+      --radius-lg:     14px;
+
+      --shadow-card:   0 2px 8px rgba(0,0,0,0.5);
+      --shadow-elevated: 0 4px 20px rgba(0,0,0,0.7);
+    }
+
+    /* ===== RESET ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-base);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      overflow: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    ul { list-style: none; }
+
+    /* ===== SCROLLBAR ===== */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-base); }
+    ::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      width: var(--sidebar-w);
+      min-width: var(--sidebar-w);
+      background: var(--bg-surface);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      position: fixed;
+      left: 0; top: 0;
+      z-index: 100;
+    }
+    .sidebar-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--border);
+      height: var(--header-h);
+    }
+    .sidebar-logo-icon {
+      width: 34px; height: 34px;
+      background: linear-gradient(135deg, var(--amber-500), var(--amber-600));
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .sidebar-logo-icon svg { width: 18px; height: 18px; fill: #0d0d0d; }
+    .sidebar-logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+    .sidebar-logo-text strong { font-size: 13px; font-weight: 700; color: var(--text-primary); letter-spacing: 0.3px; }
+    .sidebar-logo-text span { font-size: 10px; color: var(--text-muted); letter-spacing: 0.5px; text-transform: uppercase; }
+
+    .sidebar-section { padding: 8px 12px; }
+    .sidebar-section-label {
+      font-size: 10px; font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 12px 8px 6px;
+    }
+    .nav-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 9px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 13.5px; font-weight: 500;
+      color: var(--text-secondary);
+      transition: background 0.15s, color 0.15s;
+      cursor: pointer;
+      margin-bottom: 2px;
+    }
+    .nav-item:hover { background: var(--bg-hover); color: var(--text-primary); }
+    .nav-item.active {
+      background: var(--amber-900);
+      color: var(--amber-400);
+      border: 1px solid rgba(245,158,11,0.2);
+    }
+    .nav-item.active .nav-icon { color: var(--amber-400); }
+    .nav-icon { width: 16px; height: 16px; flex-shrink: 0; opacity: 0.7; }
+    .nav-item.active .nav-icon { opacity: 1; }
+    .nav-badge {
+      margin-left: auto;
+      background: var(--amber-600);
+      color: #0d0d0d;
+      font-size: 10px; font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 10px;
+    }
+
+    .sidebar-footer {
+      margin-top: auto;
+      padding: 16px 12px;
+      border-top: 1px solid var(--border);
+    }
+    .sidebar-user {
+      display: flex; align-items: center; gap: 10px;
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .sidebar-user:hover { background: var(--bg-hover); }
+    .avatar {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--amber-500), var(--amber-600));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700; color: #0d0d0d;
+      flex-shrink: 0;
+    }
+    .sidebar-user-info { flex: 1; min-width: 0; }
+    .sidebar-user-info strong { display: block; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .sidebar-user-info span { font-size: 11px; color: var(--text-muted); }
+
+    /* ===== MAIN LAYOUT ===== */
+    .main-wrapper {
+      margin-left: var(--sidebar-w);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-y: auto;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border);
+      height: var(--header-h);
+      display: flex; align-items: center;
+      padding: 0 28px;
+      gap: 16px;
+      position: sticky; top: 0; z-index: 50;
+    }
+    .header-title { flex: 1; }
+    .header-title h1 { font-size: 17px; font-weight: 700; }
+    .header-title p { font-size: 12px; color: var(--text-muted); margin-top: 1px; }
+    .header-actions { display: flex; align-items: center; gap: 10px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 13px; font-weight: 600;
+      transition: all 0.15s;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--amber-500);
+      color: #0d0d0d;
+    }
+    .btn-primary:hover { background: var(--amber-400); }
+    .btn-ghost {
+      background: var(--bg-elevated);
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover { background: var(--bg-hover); color: var(--text-primary); }
+    .btn svg { width: 14px; height: 14px; }
+    .notification-btn {
+      width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      position: relative;
+      transition: all 0.15s;
+      cursor: pointer;
+    }
+    .notification-btn:hover { background: var(--bg-hover); color: var(--text-primary); }
+    .notification-dot {
+      position: absolute; top: 6px; right: 6px;
+      width: 6px; height: 6px;
+      background: var(--amber-500);
+      border-radius: 50%;
+      border: 1.5px solid var(--bg-surface);
+    }
+
+    /* ===== CONTENT ===== */
+    .content { padding: 28px; flex: 1; }
+
+    /* ===== STAT CARDS ===== */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .stat-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .stat-card:hover {
+      border-color: var(--border-bright);
+      box-shadow: var(--shadow-card);
+    }
+    .stat-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    }
+    .stat-card.amber::before { background: linear-gradient(90deg, var(--amber-500), var(--amber-400)); }
+    .stat-card.green::before { background: linear-gradient(90deg, var(--green-400), #22c55e); }
+    .stat-card.blue::before { background: linear-gradient(90deg, var(--blue-400), #818cf8); }
+    .stat-card.red::before { background: linear-gradient(90deg, #f87171, #fb923c); }
+
+    .stat-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 12px; }
+    .stat-label { font-size: 12px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .stat-icon {
+      width: 32px; height: 32px;
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .stat-icon.amber { background: rgba(245,158,11,0.12); color: var(--amber-500); }
+    .stat-icon.green { background: rgba(74,222,128,0.12); color: var(--green-400); }
+    .stat-icon.blue { background: rgba(96,165,250,0.12); color: var(--blue-400); }
+    .stat-icon.red { background: rgba(248,113,113,0.12); color: var(--red-400); }
+    .stat-icon svg { width: 16px; height: 16px; }
+    .stat-value { font-size: 28px; font-weight: 800; line-height: 1; margin-bottom: 6px; font-variant-numeric: tabular-nums; }
+    .stat-value.amber { color: var(--amber-400); }
+    .stat-value.green { color: var(--green-400); }
+    .stat-value.blue { color: var(--blue-400); }
+    .stat-value.red { color: var(--red-400); }
+    .stat-change { font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 4px; }
+    .stat-change .up { color: var(--green-400); font-weight: 600; }
+    .stat-change .down { color: var(--red-400); font-weight: 600; }
+
+    /* ===== TWO-COLUMN LAYOUT ===== */
+    .two-col { display: grid; grid-template-columns: 1fr 320px; gap: 20px; margin-bottom: 28px; }
+
+    /* ===== SECTION CARD ===== */
+    .card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .card-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .card-title { font-size: 14px; font-weight: 700; }
+    .card-subtitle { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    .card-action { font-size: 12px; color: var(--amber-500); cursor: pointer; font-weight: 500; }
+    .card-action:hover { color: var(--amber-400); }
+
+    /* ===== TABLE ===== */
+    .table-wrapper { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    thead th {
+      text-align: left;
+      padding: 10px 16px;
+      font-size: 11px; font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 0.6px;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-elevated);
+      white-space: nowrap;
+    }
+    tbody tr { border-bottom: 1px solid var(--border); transition: background 0.1s; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: var(--bg-hover); }
+    td { padding: 12px 16px; vertical-align: middle; }
+    .td-user { display: flex; align-items: center; gap: 10px; }
+    .td-user .avatar-sm {
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      font-size: 11px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .avatar-sm.c1 { background: rgba(245,158,11,0.2); color: var(--amber-400); }
+    .avatar-sm.c2 { background: rgba(74,222,128,0.2); color: var(--green-400); }
+    .avatar-sm.c3 { background: rgba(96,165,250,0.2); color: var(--blue-400); }
+    .avatar-sm.c4 { background: rgba(248,113,113,0.2); color: var(--red-400); }
+    .avatar-sm.c5 { background: rgba(167,139,250,0.2); color: #a78bfa; }
+    .avatar-sm.c6 { background: rgba(251,146,60,0.2); color: #fb923c; }
+    .td-user-name { font-weight: 600; font-size: 13px; }
+    .td-user-email { font-size: 11px; color: var(--text-muted); }
+
+    /* ===== PROGRESS BAR ===== */
+    .progress-wrap { display: flex; align-items: center; gap: 8px; }
+    .progress-bar {
+      flex: 1;
+      height: 6px;
+      background: var(--bg-elevated);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.3s ease;
+    }
+    .progress-fill.amber { background: linear-gradient(90deg, var(--amber-600), var(--amber-400)); }
+    .progress-fill.green { background: linear-gradient(90deg, #16a34a, var(--green-400)); }
+    .progress-fill.red { background: linear-gradient(90deg, #b91c1c, var(--red-400)); }
+    .progress-fill.blue { background: linear-gradient(90deg, #2563eb, var(--blue-400)); }
+    .progress-pct { font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; width: 34px; text-align: right; flex-shrink: 0; }
+
+    /* ===== STATUS BADGE ===== */
+    .badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 3px 8px;
+      border-radius: 20px;
+      font-size: 11px; font-weight: 600;
+      white-space: nowrap;
+    }
+    .badge-green { background: rgba(74,222,128,0.12); color: var(--green-400); border: 1px solid rgba(74,222,128,0.2); }
+    .badge-amber { background: rgba(245,158,11,0.12); color: var(--amber-400); border: 1px solid rgba(245,158,11,0.2); }
+    .badge-red { background: rgba(248,113,113,0.12); color: var(--red-400); border: 1px solid rgba(248,113,113,0.2); }
+    .badge-blue { background: rgba(96,165,250,0.12); color: var(--blue-400); border: 1px solid rgba(96,165,250,0.2); }
+    .badge-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+
+    /* ===== CHAPTER PROGRESS PANEL ===== */
+    .chapter-list { padding: 4px 0; }
+    .chapter-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.1s;
+    }
+    .chapter-item:last-child { border-bottom: none; }
+    .chapter-item:hover { background: var(--bg-hover); }
+    .chapter-num {
+      width: 24px; height: 24px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-bright);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10px; font-weight: 700;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+    .chapter-num.done { background: rgba(245,158,11,0.15); border-color: var(--amber-600); color: var(--amber-400); }
+    .chapter-info { flex: 1; min-width: 0; }
+    .chapter-name { font-size: 12.5px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .chapter-meta { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
+    .chapter-rate { font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .chapter-rate.high { color: var(--green-400); }
+    .chapter-rate.mid { color: var(--amber-400); }
+    .chapter-rate.low { color: var(--red-400); }
+
+    /* ===== ACTIVITY FEED ===== */
+    .activity-list { padding: 4px 0; }
+    .activity-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 11px 20px;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.1s;
+    }
+    .activity-item:last-child { border-bottom: none; }
+    .activity-item:hover { background: var(--bg-hover); }
+    .activity-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+    .activity-dot.amber { background: var(--amber-500); }
+    .activity-dot.green { background: var(--green-400); }
+    .activity-dot.blue { background: var(--blue-400); }
+    .activity-dot.red { background: var(--red-400); }
+    .activity-text { flex: 1; font-size: 12.5px; line-height: 1.5; color: var(--text-secondary); }
+    .activity-text strong { color: var(--text-primary); font-weight: 600; }
+    .activity-time { font-size: 11px; color: var(--text-muted); white-space: nowrap; margin-top: 2px; flex-shrink: 0; }
+
+    /* ===== BOTTOM ROW ===== */
+    .bottom-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+    /* ===== DONUT / MINI CHART ===== */
+    .donut-wrap { display: flex; align-items: center; justify-content: center; padding: 20px; gap: 24px; }
+    .donut-svg { flex-shrink: 0; }
+    .donut-legend { display: flex; flex-direction: column; gap: 10px; }
+    .donut-legend-item { display: flex; align-items: center; gap: 8px; font-size: 12.5px; }
+    .donut-legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .donut-legend-label { color: var(--text-secondary); flex: 1; }
+    .donut-legend-val { font-weight: 700; font-variant-numeric: tabular-nums; color: var(--text-primary); }
+
+    /* ===== QUICK ACTIONS ===== */
+    .quick-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 16px; }
+    .qa-btn {
+      display: flex; flex-direction: column; align-items: flex-start;
+      gap: 6px; padding: 14px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .qa-btn:hover { background: var(--bg-hover); border-color: var(--amber-600); }
+    .qa-btn:hover .qa-icon { color: var(--amber-400); }
+    .qa-icon { color: var(--text-muted); }
+    .qa-icon svg { width: 18px; height: 18px; }
+    .qa-label { font-size: 12px; font-weight: 600; color: var(--text-secondary); }
+    .qa-btn:hover .qa-label { color: var(--text-primary); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1200px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .two-col { grid-template-columns: 1fr; }
+      .bottom-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .sidebar { transform: translateX(-100%); }
+      .main-wrapper { margin-left: 0; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .content { padding: 16px; }
+      .header { padding: 0 16px; }
+    }
+    @media (max-width: 480px) {
+      .stats-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============ SIDEBAR ============ -->
+<aside class="sidebar" role="navigation" aria-label="Sidebar">
+  <div class="sidebar-logo">
+    <div class="sidebar-logo-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/>
+      </svg>
+    </div>
+    <div class="sidebar-logo-text">
+      <strong>Ladle Crane</strong>
+      <span>Training System</span>
+    </div>
+  </div>
+
+  <nav class="sidebar-section" aria-label="Điều hướng chính">
+    <div class="sidebar-section-label">Tổng quan</div>
+    <a class="nav-item active" href="#" aria-current="page">
+      <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M2 4a2 2 0 012-2h4a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2V4zm0 10a2 2 0 012-2h4a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2zm10-10a2 2 0 012-2h2a2 2 0 012 2v8a2 2 0 01-2 2h-2a2 2 0 01-2-2V4zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+      Dashboard
+    </a>
+    <a class="nav-item" href="#">
+      <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a2 2 0 002 2h4a2 2 0 002-2V3a2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/></svg>
+      Thống kê
+    </a>
+  </nav>
+
+  <nav class="sidebar-section">
+    <div class="sidebar-section-label">Quản lý</div>
+    <a class="nav-item" href="#">
+      <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/></svg>
+      Học viên
+      <span class="nav-badge">48</span>
+    </a>
+    <a class="nav-item" href="#">
+      <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"/></svg>
+      Chương học
+    </a>
+    <a class="nav-item" href="#">
+      <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+      Bài kiểm tra
+      <span class="nav-badge">3</span>
+    </a>
+    <a class="nav-item" href="#">
+      <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"/></svg>
+      Phân quyền
+    </a>
+  </nav>
+
+  <nav class="sidebar-section">
+    <div class="sidebar-section-label">Hệ thống</div>
+    <a class="nav-item" href="#">
+      <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
+      Cài đặt
+    </a>
+    <a class="nav-item" href="#">
+      <svg class="nav-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v14a1 1 0 01-1 1H4a1 1 0 01-1-1V3zm2 2v10h10V5H5z" clip-rule="evenodd"/><path d="M7 7h6v2H7V7zm0 4h6v2H7v-2z"/></svg>
+      Báo cáo
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="sidebar-user" role="button" tabindex="0" aria-label="Tài khoản admin">
+      <div class="avatar">NT</div>
+      <div class="sidebar-user-info">
+        <strong>Nguyễn Thanh</strong>
+        <span>Super Admin</span>
+      </div>
+      <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" style="color:var(--text-muted)">
+        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+      </svg>
+    </div>
+  </div>
+</aside>
+
+<!-- ============ MAIN ============ -->
+<div class="main-wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-title">
+      <h1>Dashboard Quản trị</h1>
+      <p>Thứ Ba, 13 tháng 5 năm 2026 &mdash; Kỳ đào tạo Q2/2026</p>
+    </div>
+    <div class="header-actions">
+      <button class="notification-btn" aria-label="Thông báo">
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"/></svg>
+        <span class="notification-dot"></span>
+      </button>
+      <button class="btn btn-ghost">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        Xuất báo cáo
+      </button>
+      <button class="btn btn-primary">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/></svg>
+        Thêm học viên
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="content" id="main-content">
+
+    <!-- STAT CARDS -->
+    <section aria-label="Thống kê tổng quan">
+      <div class="stats-grid">
+
+        <div class="stat-card amber">
+          <div class="stat-header">
+            <span class="stat-label">Tổng học viên</span>
+            <div class="stat-icon amber">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/></svg>
+            </div>
+          </div>
+          <div class="stat-value amber">48</div>
+          <div class="stat-change"><span class="up">+6</span> so với tháng trước</div>
+        </div>
+
+        <div class="stat-card green">
+          <div class="stat-header">
+            <span class="stat-label">Hoàn thành TB</span>
+            <div class="stat-icon green">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            </div>
+          </div>
+          <div class="stat-value green">67%</div>
+          <div class="stat-change"><span class="up">+4%</span> so với tháng trước</div>
+        </div>
+
+        <div class="stat-card blue">
+          <div class="stat-header">
+            <span class="stat-label">Quiz Pass Rate</span>
+            <div class="stat-icon blue">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            </div>
+          </div>
+          <div class="stat-value blue">82%</div>
+          <div class="stat-change"><span class="up">+2%</span> so với tháng trước</div>
+        </div>
+
+        <div class="stat-card red">
+          <div class="stat-header">
+            <span class="stat-label">Đang học dở</span>
+            <div class="stat-icon red">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+            </div>
+          </div>
+          <div class="stat-value red">7</div>
+          <div class="stat-change"><span class="down">+2</span> cần hỗ trợ</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TWO-COLUMN: TABLE + CHAPTER PROGRESS -->
+    <div class="two-col">
+
+      <!-- STUDENT TABLE -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Học viên gần đây</div>
+            <div class="card-subtitle">Cập nhật: hôm nay lúc 08:30</div>
+          </div>
+          <a href="#" class="card-action">Xem tất cả</a>
+        </div>
+        <div class="table-wrapper">
+          <table aria-label="Danh sách học viên">
+            <thead>
+              <tr>
+                <th scope="col">Học viên</th>
+                <th scope="col">Chương hiện tại</th>
+                <th scope="col">Tiến độ</th>
+                <th scope="col">Trạng thái</th>
+                <th scope="col">Quiz</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="td-user">
+                    <div class="avatar-sm c1">PT</div>
+                    <div>
+                      <div class="td-user-name">Phạm Tuấn Anh</div>
+                      <div class="td-user-email">phamtuananh@nhaxuong.vn</div>
+                    </div>
+                  </div>
+                </td>
+                <td style="color:var(--text-secondary);font-size:12.5px">Ch.5 — Vận hành nâng hạ</td>
+                <td>
+                  <div class="progress-wrap">
+                    <div class="progress-bar"><div class="progress-fill green" style="width:88%"></div></div>
+                    <span class="progress-pct" style="color:var(--green-400)">88%</span>
+                  </div>
+                </td>
+                <td><span class="badge badge-green"><span class="badge-dot"></span>Đang học</span></td>
+                <td style="font-size:13px;font-weight:600;color:var(--green-400);font-variant-numeric:tabular-nums">92/100</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="td-user">
+                    <div class="avatar-sm c2">NL</div>
+                    <div>
+                      <div class="td-user-name">Nguyễn Thị Lan</div>
+                      <div class="td-user-email">nguyen.lan@nhaxuong.vn</div>
+                    </div>
+                  </div>
+                </td>
+                <td style="color:var(--text-secondary);font-size:12.5px">Ch.7 — An toàn điện</td>
+                <td>
+                  <div class="progress-wrap">
+                    <div class="progress-bar"><div class="progress-fill amber" style="width:100%"></div></div>
+                    <span class="progress-pct" style="color:var(--amber-400)">100%</span>
+                  </div>
+                </td>
+                <td><span class="badge badge-amber"><span class="badge-dot"></span>Hoàn thành</span></td>
+                <td style="font-size:13px;font-weight:600;color:var(--amber-400);font-variant-numeric:tabular-nums">87/100</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="td-user">
+                    <div class="avatar-sm c3">TV</div>
+                    <div>
+                      <div class="td-user-name">Trần Văn Hùng</div>
+                      <div class="td-user-email">tvhung@nhaxuong.vn</div>
+                    </div>
+                  </div>
+                </td>
+                <td style="color:var(--text-secondary);font-size:12.5px">Ch.3 — Kết cấu cầu trục</td>
+                <td>
+                  <div class="progress-wrap">
+                    <div class="progress-bar"><div class="progress-fill amber" style="width:45%"></div></div>
+                    <span class="progress-pct" style="color:var(--amber-400)">45%</span>
+                  </div>
+                </td>
+                <td><span class="badge badge-amber"><span class="badge-dot"></span>Đang học</span></td>
+                <td style="font-size:13px;font-weight:600;color:var(--text-muted);font-variant-numeric:tabular-nums">—</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="td-user">
+                    <div class="avatar-sm c4">LM</div>
+                    <div>
+                      <div class="td-user-name">Lê Minh Đức</div>
+                      <div class="td-user-email">lemduc@nhaxuong.vn</div>
+                    </div>
+                  </div>
+                </td>
+                <td style="color:var(--text-secondary);font-size:12.5px">Ch.2 — Lý thuyết rót thép</td>
+                <td>
+                  <div class="progress-wrap">
+                    <div class="progress-bar"><div class="progress-fill red" style="width:22%"></div></div>
+                    <span class="progress-pct" style="color:var(--red-400)">22%</span>
+                  </div>
+                </td>
+                <td><span class="badge badge-red"><span class="badge-dot"></span>Chậm tiến độ</span></td>
+                <td style="font-size:13px;font-weight:600;color:var(--text-muted);font-variant-numeric:tabular-nums">—</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="td-user">
+                    <div class="avatar-sm c5">HT</div>
+                    <div>
+                      <div class="td-user-name">Hoàng Thị Mai</div>
+                      <div class="td-user-email">htmai@nhaxuong.vn</div>
+                    </div>
+                  </div>
+                </td>
+                <td style="color:var(--text-secondary);font-size:12.5px">Ch.6 — Xử lý sự cố</td>
+                <td>
+                  <div class="progress-wrap">
+                    <div class="progress-bar"><div class="progress-fill green" style="width:74%"></div></div>
+                    <span class="progress-pct" style="color:var(--green-400)">74%</span>
+                  </div>
+                </td>
+                <td><span class="badge badge-green"><span class="badge-dot"></span>Đang học</span></td>
+                <td style="font-size:13px;font-weight:600;color:var(--blue-400);font-variant-numeric:tabular-nums">78/100</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="td-user">
+                    <div class="avatar-sm c6">VK</div>
+                    <div>
+                      <div class="td-user-name">Võ Quốc Khánh</div>
+                      <div class="td-user-email">vqkhanh@nhaxuong.vn</div>
+                    </div>
+                  </div>
+                </td>
+                <td style="color:var(--text-secondary);font-size:12.5px">Ch.4 — Thiết bị phanh</td>
+                <td>
+                  <div class="progress-wrap">
+                    <div class="progress-bar"><div class="progress-fill blue" style="width:61%"></div></div>
+                    <span class="progress-pct" style="color:var(--blue-400)">61%</span>
+                  </div>
+                </td>
+                <td><span class="badge badge-blue"><span class="badge-dot"></span>Ôn tập</span></td>
+                <td style="font-size:13px;font-weight:600;color:var(--blue-400);font-variant-numeric:tabular-nums">65/100</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="td-user">
+                    <div class="avatar-sm c1">BN</div>
+                    <div>
+                      <div class="td-user-name">Bùi Ngọc Hà</div>
+                      <div class="td-user-email">bngochanh@nhaxuong.vn</div>
+                    </div>
+                  </div>
+                </td>
+                <td style="color:var(--text-secondary);font-size:12.5px">Ch.1 — Tổng quan hệ thống</td>
+                <td>
+                  <div class="progress-wrap">
+                    <div class="progress-bar"><div class="progress-fill amber" style="width:100%"></div></div>
+                    <span class="progress-pct" style="color:var(--amber-400)">100%</span>
+                  </div>
+                </td>
+                <td><span class="badge badge-amber"><span class="badge-dot"></span>Hoàn thành</span></td>
+                <td style="font-size:13px;font-weight:600;color:var(--green-400);font-variant-numeric:tabular-nums">95/100</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- CHAPTER COMPLETION -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Tiến độ theo chương</div>
+            <div class="card-subtitle">Tỉ lệ hoàn thành / chương</div>
+          </div>
+        </div>
+        <div class="chapter-list">
+          <div class="chapter-item">
+            <div class="chapter-num done">1</div>
+            <div class="chapter-info">
+              <div class="chapter-name">Tổng quan hệ thống cầu trục</div>
+              <div class="chapter-meta">Lý thuyết &bull; 12 bài học</div>
+            </div>
+            <span class="chapter-rate high">96%</span>
+          </div>
+          <div class="chapter-item">
+            <div class="chapter-num done">2</div>
+            <div class="chapter-info">
+              <div class="chapter-name">Lý thuyết luyện &amp; rót thép</div>
+              <div class="chapter-meta">Kỹ thuật &bull; 9 bài học</div>
+            </div>
+            <span class="chapter-rate high">84%</span>
+          </div>
+          <div class="chapter-item">
+            <div class="chapter-num done">3</div>
+            <div class="chapter-info">
+              <div class="chapter-name">Kết cấu thép cầu trục</div>
+              <div class="chapter-meta">Cơ khí &bull; 15 bài học</div>
+            </div>
+            <span class="chapter-rate mid">71%</span>
+          </div>
+          <div class="chapter-item">
+            <div class="chapter-num done">4</div>
+            <div class="chapter-info">
+              <div class="chapter-name">Thiết bị phanh &amp; hãm tải</div>
+              <div class="chapter-meta">Điện - Cơ &bull; 11 bài học</div>
+            </div>
+            <span class="chapter-rate mid">63%</span>
+          </div>
+          <div class="chapter-item">
+            <div class="chapter-num done">5</div>
+            <div class="chapter-info">
+              <div class="chapter-name">Vận hành nâng hạ tải trọng</div>
+              <div class="chapter-meta">Thực hành &bull; 10 bài học</div>
+            </div>
+            <span class="chapter-rate mid">58%</span>
+          </div>
+          <div class="chapter-item">
+            <div class="chapter-num">6</div>
+            <div class="chapter-info">
+              <div class="chapter-name">Xử lý sự cố vận hành</div>
+              <div class="chapter-meta">Thực hành &bull; 8 bài học</div>
+            </div>
+            <span class="chapter-rate low">41%</span>
+          </div>
+          <div class="chapter-item">
+            <div class="chapter-num">7</div>
+            <div class="chapter-info">
+              <div class="chapter-name">An toàn điện &amp; phòng cháy</div>
+              <div class="chapter-meta">An toàn &bull; 7 bài học</div>
+            </div>
+            <span class="chapter-rate low">32%</span>
+          </div>
+          <div class="chapter-item">
+            <div class="chapter-num">8</div>
+            <div class="chapter-info">
+              <div class="chapter-name">Kiểm tra định kỳ &amp; bảo trì</div>
+              <div class="chapter-meta">Bảo trì &bull; 6 bài học</div>
+            </div>
+            <span class="chapter-rate low">18%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM ROW: DONUT + ACTIVITY -->
+    <div class="bottom-row">
+
+      <!-- STATUS DISTRIBUTION -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Phân bố trạng thái học viên</div>
+            <div class="card-subtitle">Tổng 48 học viên đang hoạt động</div>
+          </div>
+        </div>
+        <div class="donut-wrap">
+          <svg class="donut-svg" width="120" height="120" viewBox="0 0 120 120" aria-label="Biểu đồ trạng thái học viên">
+            <!-- Background circle -->
+            <circle cx="60" cy="60" r="46" fill="none" stroke="var(--bg-elevated)" stroke-width="14"/>
+            <!-- Completed: 18/48 = 37.5% → 108.3deg → stroke-dashoffset -->
+            <!-- Using stroke-dasharray trick: circumference = 2π×46 ≈ 289 -->
+            <!-- Green: 18 = 37.5% of 289 = 108.4 -->
+            <circle cx="60" cy="60" r="46" fill="none" stroke="var(--green-400)" stroke-width="14"
+              stroke-dasharray="108 181" stroke-dashoffset="72" stroke-linecap="butt" transform="rotate(-90 60 60)"/>
+            <!-- Amber (in progress): 23 = 47.9% = 138.5 -->
+            <circle cx="60" cy="60" r="46" fill="none" stroke="var(--amber-500)" stroke-width="14"
+              stroke-dasharray="139 150" stroke-dashoffset="-36" stroke-linecap="butt" transform="rotate(-90 60 60)"/>
+            <!-- Red (at risk): 7 = 14.6% = 42 -->
+            <circle cx="60" cy="60" r="46" fill="none" stroke="var(--red-400)" stroke-width="14"
+              stroke-dasharray="42 247" stroke-dashoffset="-175" stroke-linecap="butt" transform="rotate(-90 60 60)"/>
+            <!-- Center text -->
+            <text x="60" y="56" text-anchor="middle" font-size="18" font-weight="800" fill="var(--text-primary)" font-family="Inter,sans-serif">48</text>
+            <text x="60" y="70" text-anchor="middle" font-size="9" fill="var(--text-muted)" font-family="Inter,sans-serif" letter-spacing="0.5">HỌC VIÊN</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="donut-legend-item">
+              <div class="donut-legend-dot" style="background:var(--green-400)"></div>
+              <span class="donut-legend-label">Hoàn thành</span>
+              <span class="donut-legend-val">18</span>
+            </div>
+            <div class="donut-legend-item">
+              <div class="donut-legend-dot" style="background:var(--amber-500)"></div>
+              <span class="donut-legend-label">Đang học</span>
+              <span class="donut-legend-val">23</span>
+            </div>
+            <div class="donut-legend-item">
+              <div class="donut-legend-dot" style="background:var(--red-400)"></div>
+              <span class="donut-legend-label">Chậm tiến độ</span>
+              <span class="donut-legend-val">7</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div style="border-top:1px solid var(--border);padding:12px 16px 4px;">
+          <div style="font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:8px;">Thao tác nhanh</div>
+        </div>
+        <div class="quick-actions">
+          <button class="qa-btn" aria-label="Thêm học viên mới">
+            <span class="qa-icon"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"/></svg></span>
+            <span class="qa-label">Thêm học viên</span>
+          </button>
+          <button class="qa-btn" aria-label="Thêm chương học mới">
+            <span class="qa-icon"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"/></svg></span>
+            <span class="qa-label">Thêm chương học</span>
+          </button>
+          <button class="qa-btn" aria-label="Tạo bài kiểm tra mới">
+            <span class="qa-icon"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg></span>
+            <span class="qa-label">Tạo bài kiểm tra</span>
+          </button>
+          <button class="qa-btn" aria-label="Xuất báo cáo">
+            <span class="qa-icon"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></span>
+            <span class="qa-label">Xuất báo cáo</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ACTIVITY FEED -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Hoạt động gần đây</div>
+            <div class="card-subtitle">24 giờ qua</div>
+          </div>
+          <a href="#" class="card-action">Xem tất cả</a>
+        </div>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="activity-dot green"></div>
+            <div class="activity-text"><strong>Nguyễn Thị Lan</strong> đã hoàn thành Ch.7 — An toàn điện với điểm <strong style="color:var(--amber-400)">87/100</strong></div>
+            <div class="activity-time">8 phút trước</div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot amber"></div>
+            <div class="activity-text"><strong>Phạm Tuấn Anh</strong> bắt đầu bài quiz kiểm tra chương 5</div>
+            <div class="activity-time">23 phút trước</div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot blue"></div>
+            <div class="activity-text"><strong>Võ Quốc Khánh</strong> xem lại bài giảng Ch.4 — Thiết bị phanh lần thứ 3</div>
+            <div class="activity-time">1 giờ trước</div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot red"></div>
+            <div class="activity-text"><strong>Lê Minh Đức</strong> thất bại bài kiểm tra Ch.2, điểm <strong style="color:var(--red-400)">42/100</strong> — cần hỗ trợ</div>
+            <div class="activity-time">2 giờ trước</div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot green"></div>
+            <div class="activity-text"><strong>Bùi Ngọc Hà</strong> đạt điểm tuyệt đối <strong style="color:var(--amber-400)">95/100</strong> quiz Ch.1</div>
+            <div class="activity-time">3 giờ trước</div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot amber"></div>
+            <div class="activity-text"><strong>Hoàng Thị Mai</strong> tiếp tục học Ch.6 — Xử lý sự cố vận hành</div>
+            <div class="activity-time">4 giờ trước</div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot blue"></div>
+            <div class="activity-text"><strong>3 học viên mới</strong> đã được thêm vào kỳ đào tạo Q2/2026</div>
+            <div class="activity-time">Hôm qua, 17:45</div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot amber"></div>
+            <div class="activity-text"><strong>Trần Văn Hùng</strong> đăng ký khóa học lần đầu — gán Ch.1</div>
+            <div class="activity-time">Hôm qua, 09:12</div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot green"></div>
+            <div class="activity-text">Hệ thống cập nhật nội dung Ch.8 — Kiểm tra định kỳ bảo trì</div>
+            <div class="activity-time">2 ngày trước</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- END BOTTOM ROW -->
+
+  </main>
+</div>
+
+</body>
+</html>
