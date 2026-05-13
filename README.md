@@ -1,18 +1,14 @@
-# Claude Workspace — SEONGON BTVN Buổi 4
+# Claude Workspace
 
-Không gian làm việc nâng cao với Claude Code: Sub Agents + Custom Skills.
+Không gian làm việc với Claude Code: Sub Agents + Custom Skills.
 
-## Thông tin cơ bản
+## Thông tin
 
 | Mục | Chi tiết |
 |-----|---------|
 | **Tác giả** | hongvan22-work |
-| **Email** | hongvancv22@gmail.com |
-| **Khóa học** | SEONGON — Claude Code thực chiến |
-| **Buổi** | BTVN Buổi 4 |
+| **Công cụ** | Claude Code |
 | **Ngày tạo** | 13/05/2026 |
-| **Công cụ** | Claude Code (claude-sonnet-4-6) |
-| **Dự án liên quan** | [ladle-crane-training](https://github.com/hongvan22-work/ladle-crane-training) |
 
 ## Cấu trúc `.claude/`
 
@@ -60,38 +56,24 @@ Folder `.claude/` sẽ được tự động nhận diện — agents và skills
 ### Bước 3 — Dùng Skills (Slash Commands)
 
 ```
-/research [chủ đề]        # Nghiên cứu → xuất file .md
-/slides [topic] [số trang] # Tạo HTML presentation
-/ui-ux-pro-max             # Thiết kế UI component
+/research [chủ đề]         # Nghiên cứu → xuất file .md
+/slides [topic] [số trang]  # Tạo HTML presentation
+/ui-ux-pro-max              # Thiết kế UI component
 ```
 
 ### Bước 4 — Giao nhiệm vụ cho Agents
-
-Giao 1 nhiệm vụ lớn cho Claude Code, nó sẽ tự phân bổ cho agent phù hợp:
-
-```
-Ví dụ: "Tạo tài liệu hoàn chỉnh cho dự án Ladle Crane Training"
-
-→ Research Analyst Agent    : /research + /slides → report .md + slides .html
-→ UI Content Creator Agent  : /ui-ux-pro-max + /slides → UI .html + design slides .html
-```
-
-Hoặc gọi thẳng agent cụ thể:
 
 ```
 "Dùng research-analyst để nghiên cứu về [chủ đề]"
 "Dùng ui-content-creator để thiết kế [màn hình]"
 ```
 
+Hoặc giao 1 nhiệm vụ lớn, Claude Code sẽ tự phân bổ cho agent phù hợp.
+
 ## Files Output
 
 | File | Mô tả |
 |------|-------|
-| `lich_su_tro_chuyen.txt` | Lịch sử trò chuyện xuất từ `/export` |
 | `research_*.md` | Kết quả nghiên cứu từ Research Analyst |
 | `slides_*.html` | Slide presentations |
 | `ui_*.html` | UI components từ UI Content Creator |
-
-## Dự án liên quan
-
-- **Ladle Crane Training:** [github.com/hongvan22-work/ladle-crane-training](https://github.com/hongvan22-work/ladle-crane-training)
