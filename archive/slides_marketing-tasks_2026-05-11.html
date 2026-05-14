@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tasks của Marketing</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --color-bg:        #0B0F1A;
+      --color-surface:   #141928;
+      --color-border:    rgba(255,255,255,0.08);
+      --color-primary:   #7C3AED;
+      --color-accent:    #38BDF8;
+      --color-green:     #34D399;
+      --color-orange:    #FB923C;
+      --color-pink:      #F472B6;
+      --grad-title:      linear-gradient(135deg, #A78BFA, #38BDF8);
+      --grad-card:       linear-gradient(145deg, #141928, #1E2640);
+      --font-head:       'Segoe UI', system-ui, sans-serif;
+      --font-body:       'Segoe UI', system-ui, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--color-bg);
+      color: #E2E8F0;
+      font-family: var(--font-body);
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    /* 16:9 letterbox */
+    .slide-deck {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    @media (min-width: 769px) {
+      .slide-deck {
+        max-width: calc(100vh * 16 / 9);
+        max-height: calc(100vw * 9 / 16);
+        margin: auto;
+        position: absolute;
+        inset: 0;
+      }
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 56px 64px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.45s ease;
+      background: var(--color-bg);
+      overflow: hidden;
+    }
+    .slide.active { opacity: 1; visibility: visible; }
+
+    .slide-content {
+      width: 100%;
+      max-height: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* ── Typography ── */
+    .slide-title {
+      font-size: clamp(36px, 6.5vw, 84px);
+      font-weight: 800;
+      background: var(--grad-title);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+      text-align: center;
+    }
+    .slide-subtitle {
+      font-size: clamp(14px, 2vw, 22px);
+      color: rgba(255,255,255,0.55);
+      text-align: center;
+    }
+    .section-title {
+      font-size: clamp(24px, 4vw, 48px);
+      font-weight: 700;
+      background: var(--grad-title);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    .section-sub {
+      font-size: clamp(13px, 1.6vw, 18px);
+      color: rgba(255,255,255,0.45);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    /* ── Cards ── */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      width: 100%;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 100%;
+    }
+    .grid-5 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      width: 100%;
+    }
+
+    .card {
+      background: var(--grad-card);
+      border: 1px solid var(--color-border);
+      border-radius: 14px;
+      padding: 20px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .card-icon { font-size: clamp(22px, 3vw, 32px); }
+    .card-label {
+      font-size: clamp(12px, 1.4vw, 15px);
+      font-weight: 600;
+      color: #CBD5E1;
+    }
+    .card-desc {
+      font-size: clamp(11px, 1.1vw, 13px);
+      color: rgba(255,255,255,0.45);
+      line-height: 1.5;
+    }
+    .card-accent { border-top: 3px solid var(--color-primary); }
+
+    /* ── Tag ── */
+    .tag {
+      display: inline-block;
+      background: rgba(124,58,237,0.2);
+      border: 1px solid rgba(124,58,237,0.4);
+      color: #A78BFA;
+      border-radius: 999px;
+      padding: 4px 14px;
+      font-size: clamp(10px, 1.1vw, 13px);
+      font-weight: 600;
+    }
+
+    /* ── Big number ── */
+    .big-number {
+      font-size: clamp(56px, 9vw, 110px);
+      font-weight: 900;
+      background: var(--grad-title);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
+    }
+
+    /* ── Metric row ── */
+    .metric-card {
+      background: var(--grad-card);
+      border: 1px solid var(--color-border);
+      border-radius: 14px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .metric-num {
+      font-size: clamp(26px, 4vw, 48px);
+      font-weight: 800;
+      background: var(--grad-title);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .metric-label {
+      font-size: clamp(11px, 1.2vw, 14px);
+      color: rgba(255,255,255,0.5);
+      margin-top: 4px;
+    }
+
+    /* ── Timeline ── */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+    .timeline-week {
+      font-size: clamp(11px, 1.2vw, 14px);
+      font-weight: 700;
+      color: #A78BFA;
+      text-align: right;
+      padding-top: 2px;
+    }
+    .timeline-bar {
+      background: var(--color-surface);
+      border-left: 3px solid var(--color-primary);
+      border-radius: 0 8px 8px 0;
+      padding: 10px 14px;
+    }
+    .timeline-task {
+      font-size: clamp(12px, 1.3vw, 15px);
+      font-weight: 600;
+      color: #E2E8F0;
+    }
+    .timeline-detail {
+      font-size: clamp(10px, 1vw, 12px);
+      color: rgba(255,255,255,0.4);
+      margin-top: 2px;
+    }
+
+    /* ── Tool chips ── */
+    .tool-chip {
+      background: rgba(56,189,248,0.1);
+      border: 1px solid rgba(56,189,248,0.25);
+      border-radius: 8px;
+      padding: 10px 14px;
+      text-align: center;
+      font-size: clamp(11px, 1.2vw, 14px);
+      font-weight: 600;
+      color: #7DD3FC;
+    }
+
+    /* ── Chart container ── */
+    .chart-wrap {
+      width: min(85%, 640px);
+      height: clamp(180px, 32vh, 320px);
+      position: relative;
+    }
+
+    /* ── CTA slide ── */
+    .cta-box {
+      border: 1px solid rgba(124,58,237,0.4);
+      border-radius: 20px;
+      padding: 30px 40px;
+      text-align: center;
+      background: rgba(124,58,237,0.08);
+      max-width: 700px;
+    }
+
+    /* ── Funnel ── */
+    .funnel {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 70%;
+    }
+    .funnel-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .funnel-bar {
+      height: 38px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      font-size: clamp(11px, 1.2vw, 14px);
+      font-weight: 700;
+      color: #fff;
+      transition: width 0.6s ease;
+    }
+    .funnel-stat {
+      font-size: clamp(11px, 1.1vw, 14px);
+      color: rgba(255,255,255,0.5);
+      white-space: nowrap;
+    }
+
+    /* ── Glow decoration ── */
+    .glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .glow-purple { background: rgba(124,58,237,0.18); width: 400px; height: 400px; top: -100px; right: -80px; }
+    .glow-blue   { background: rgba(56,189,248,0.12); width: 320px; height: 320px; bottom: -80px; left: -60px; }
+
+    .z1 { position: relative; z-index: 1; width: 100%; }
+
+    /* ── Animations ── */
+    .animate-fade-up { animation: fadeUp 0.6s ease-out forwards; opacity: 0; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animate-stagger > * { opacity: 0; animation: fadeUp 0.5s ease-out forwards; }
+    .animate-stagger > *:nth-child(1) { animation-delay: 0.08s; }
+    .animate-stagger > *:nth-child(2) { animation-delay: 0.16s; }
+    .animate-stagger > *:nth-child(3) { animation-delay: 0.24s; }
+    .animate-stagger > *:nth-child(4) { animation-delay: 0.32s; }
+    .animate-stagger > *:nth-child(5) { animation-delay: 0.40s; }
+
+    /* ── Navigation ── */
+    .progress-bar {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #7C3AED, #38BDF8);
+      transition: width 0.35s ease;
+      z-index: 1000;
+    }
+    .nav-controls {
+      position: fixed;
+      bottom: 26px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      z-index: 1000;
+      background: rgba(20,25,40,0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--color-border);
+      border-radius: 999px;
+      padding: 8px 20px;
+    }
+    .nav-btn {
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.7);
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 1;
+      padding: 4px 6px;
+      border-radius: 6px;
+      transition: color 0.2s;
+    }
+    .nav-btn:hover { color: #fff; }
+    .slide-counter { color: rgba(255,255,255,0.4); font-size: 13px; min-width: 50px; text-align: center; }
+
+    @media (max-width: 768px) {
+      .slide { padding: 32px 24px; }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .grid-5 { grid-template-columns: repeat(3, 1fr); }
+      .funnel { width: 90%; }
+    }
+    @media (max-width: 480px) {
+      .slide { padding: 20px 16px; }
+      .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      .grid-5 { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="slide-deck">
+
+  <!-- ─── SLIDE 1: Title ─── -->
+  <div class="slide active">
+    <div class="glow glow-purple"></div>
+    <div class="glow glow-blue"></div>
+    <div class="slide-content z1">
+      <div class="tag animate-fade-up">Marketing Team</div>
+      <h1 class="slide-title animate-fade-up" style="animation-delay:0.1s">
+        Tasks của<br/>Marketing
+      </h1>
+      <p class="slide-subtitle animate-fade-up" style="animation-delay:0.2s">
+        Tổng quan công việc, quy trình và KPI<br/>của một Marketing Team hiện đại
+      </p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; animation-delay:0.3s" class="animate-fade-up">
+        <span class="tag">Content</span>
+        <span class="tag">SEO</span>
+        <span class="tag">Ads</span>
+        <span class="tag">Social</span>
+        <span class="tag">Analytics</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SLIDE 2: Overview – 5 nhóm task ─── -->
+  <div class="slide">
+    <div class="glow glow-purple"></div>
+    <div class="slide-content z1">
+      <div class="tag">Overview</div>
+      <h2 class="section-title">5 Nhóm Task Chính</h2>
+      <p class="section-sub">Marketing hiện đại vận hành theo 5 trụ cột</p>
+      <div class="grid-5 animate-stagger" style="width:100%">
+        <div class="card card-accent" style="border-color:#7C3AED">
+          <span class="card-icon">✍️</span>
+          <div class="card-label">Content</div>
+          <div class="card-desc">Blog, video, copywriting</div>
+        </div>
+        <div class="card card-accent" style="border-color:#38BDF8">
+          <span class="card-icon">🔍</span>
+          <div class="card-label">SEO & SEM</div>
+          <div class="card-desc">Organic & paid search</div>
+        </div>
+        <div class="card card-accent" style="border-color:#34D399">
+          <span class="card-icon">📣</span>
+          <div class="card-label">Social Media</div>
+          <div class="card-desc">Fanpage, community</div>
+        </div>
+        <div class="card card-accent" style="border-color:#FB923C">
+          <span class="card-icon">📧</span>
+          <div class="card-label">Email & CRM</div>
+          <div class="card-desc">Nurture, automation</div>
+        </div>
+        <div class="card card-accent" style="border-color:#F472B6">
+          <span class="card-icon">📊</span>
+          <div class="card-label">Analytics</div>
+          <div class="card-desc">Data, report, optimize</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SLIDE 3: Content Marketing ─── -->
+  <div class="slide">
+    <div class="glow glow-blue"></div>
+    <div class="slide-content z1">
+      <div class="tag">01 — Content Marketing</div>
+      <h2 class="section-title">Tạo & Phân phối Nội dung</h2>
+      <div class="grid-3 animate-stagger" style="width:100%">
+        <div class="card">
+          <span class="card-icon">📝</span>
+          <div class="card-label">Blog & SEO Content</div>
+          <div class="card-desc">Nghiên cứu từ khoá, viết bài chuẩn SEO, tối ưu On-page</div>
+        </div>
+        <div class="card">
+          <span class="card-icon">🎬</span>
+          <div class="card-label">Video & Reels</div>
+          <div class="card-desc">Kịch bản, quay dựng, publish đa kênh</div>
+        </div>
+        <div class="card">
+          <span class="card-icon">🎨</span>
+          <div class="card-label">Design & Visual</div>
+          <div class="card-desc">Banner, infographic, template brand</div>
+        </div>
+        <div class="card">
+          <span class="card-icon">📰</span>
+          <div class="card-label">Newsletter</div>
+          <div class="card-desc">Biên tập nội dung tuần/tháng</div>
+        </div>
+        <div class="card">
+          <span class="card-icon">🤝</span>
+          <div class="card-label">Collab & UGC</div>
+          <div class="card-desc">KOL, affiliate, user-generated content</div>
+        </div>
+        <div class="card">
+          <span class="card-icon">📅</span>
+          <div class="card-label">Content Calendar</div>
+          <div class="card-desc">Lên lịch, approve, publish workflow</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SLIDE 4: SEO & Paid Ads ─── -->
+  <div class="slide">
+    <div class="glow glow-purple"></div>
+    <div class="slide-content z1">
+      <div class="tag">02 — SEO & Paid Advertising</div>
+      <h2 class="section-title">Traffic từ Search</h2>
+      <div class="grid-2 animate-stagger" style="width:100%">
+        <div class="card" style="gap:14px">
+          <div style="display:flex; align-items:center; gap:10px">
+            <span class="card-icon">🔍</span>
+            <div class="card-label" style="font-size:clamp(14px,1.8vw,18px)">SEO Organic</div>
+          </div>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:8px">
+            <li style="font-size:clamp(11px,1.2vw,14px); color:#CBD5E1">🔑 Keyword research & mapping</li>
+            <li style="font-size:clamp(11px,1.2vw,14px); color:#CBD5E1">📄 On-page & technical SEO</li>
+            <li style="font-size:clamp(11px,1.2vw,14px); color:#CBD5E1">🔗 Link building & outreach</li>
+            <li style="font-size:clamp(11px,1.2vw,14px); color:#CBD5E1">📈 Rank tracking & reporting</li>
+          </ul>
+        </div>
+        <div class="card" style="gap:14px">
+          <div style="display:flex; align-items:center; gap:10px">
+            <span class="card-icon">💰</span>
+            <div class="card-label" style="font-size:clamp(14px,1.8vw,18px)">Paid Ads (SEM/PPC)</div>
+          </div>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:8px">
+            <li style="font-size:clamp(11px,1.2vw,14px); color:#CBD5E1">⚙️ Setup & cấu hình chiến dịch</li>
+            <li style="font-size:clamp(11px,1.2vw,14px); color:#CBD5E1">✍️ Viết Ad copy & A/B test</li>
+            <li style="font-size:clamp(11px,1.2vw,14px); color:#CBD5E1">💵 Budget allocation & bidding</li>
+            <li style="font-size:clamp(11px,1.2vw,14px); color:#CBD5E1">📊 ROAS monitoring & optimize</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SLIDE 5: Social Media ─── -->
+  <div class="slide">
+    <div class="glow glow-blue"></div>
+    <div class="slide-content z1">
+      <div class="tag">03 — Social Media</div>
+      <h2 class="section-title">Quản lý Kênh Mạng Xã Hội</h2>
+      <div class="grid-3 animate-stagger" style="width:100%">
+        <div class="card" style="border-color:rgba(56,189,248,0.3)">
+          <span class="card-icon">📘</span>
+          <div class="card-label">Facebook / Instagram</div>
+          <div class="card-desc">Post, Story, Reels, chạy ads, reply comment</div>
+        </div>
+        <div class="card" style="border-color:rgba(56,189,248,0.3)">
+          <span class="card-icon">🎵</span>
+          <div class="card-label">TikTok</div>
+          <div class="card-desc">Short-form video, trending content, duet/collab</div>
+        </div>
+        <div class="card" style="border-color:rgba(56,189,248,0.3)">
+          <span class="card-icon">💼</span>
+          <div class="card-label">LinkedIn</div>
+          <div class="card-desc">Thought leadership, B2B content, employer branding</div>
+        </div>
+        <div class="card" style="border-color:rgba(56,189,248,0.3)">
+          <span class="card-icon">👥</span>
+          <div class="card-label">Community</div>
+          <div class="card-desc">Group, forum, Discord — xây dựng cộng đồng</div>
+        </div>
+        <div class="card" style="border-color:rgba(56,189,248,0.3)">
+          <span class="card-icon">🌟</span>
+          <div class="card-label">Influencer / KOL</div>
+          <div class="card-desc">Tìm kiếm, outreach, track seeding campaign</div>
+        </div>
+        <div class="card" style="border-color:rgba(56,189,248,0.3)">
+          <span class="card-icon">🔔</span>
+          <div class="card-label">Social Listening</div>
+          <div class="card-desc">Theo dõi brand mention, sentiment, trends</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SLIDE 6: Email & CRM ─── -->
+  <div class="slide">
+    <div class="glow glow-purple"></div>
+    <div class="slide-content z1">
+      <div class="tag">04 — Email & CRM</div>
+      <h2 class="section-title">Nuôi dưỡng Khách hàng</h2>
+      <p class="section-sub">Email vẫn là kênh ROI cao nhất — $36 return / $1 spent</p>
+      <div class="timeline animate-stagger" style="width:90%">
+        <div class="timeline-item">
+          <div class="timeline-week">Lead Capture</div>
+          <div class="timeline-bar">
+            <div class="timeline-task">Form, landing page, lead magnet</div>
+            <div class="timeline-detail">Thiết kế opt-in, tích hợp CRM</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-week">Welcome Flow</div>
+          <div class="timeline-bar">
+            <div class="timeline-task">Automation chuỗi email chào mừng</div>
+            <div class="timeline-detail">3–5 emails, onboard & educate</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-week">Nurture</div>
+          <div class="timeline-bar">
+            <div class="timeline-task">Newsletter tuần, drip campaign</div>
+            <div class="timeline-detail">Segment theo hành vi & interest</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-week">Convert</div>
+          <div class="timeline-bar">
+            <div class="timeline-task">Promo, flash sale, upsell campaign</div>
+            <div class="timeline-detail">A/B test subject line & CTA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SLIDE 7: Analytics – Chart.js bar ─── -->
+  <div class="slide">
+    <div class="glow glow-blue"></div>
+    <div class="slide-content z1">
+      <div class="tag">05 — Analytics & Reporting</div>
+      <h2 class="section-title">Đo lường Hiệu quả</h2>
+      <div class="chart-wrap">
+        <canvas id="channelChart"></canvas>
+      </div>
+      <p style="font-size:clamp(11px,1.2vw,14px); color:rgba(255,255,255,0.4); text-align:center">
+        Traffic nguồn kênh — Q1 2026 (ví dụ minh hoạ)
+      </p>
+    </div>
+  </div>
+
+  <!-- ─── SLIDE 8: Marketing Funnel – Chart.js doughnut ─── -->
+  <div class="slide">
+    <div class="glow glow-purple"></div>
+    <div class="slide-content z1">
+      <div class="tag">Marketing Funnel</div>
+      <h2 class="section-title">Chuyển đổi từng giai đoạn</h2>
+      <div style="display:flex; gap:40px; align-items:center; width:100%; justify-content:center; flex-wrap:wrap">
+        <div style="width:clamp(200px,30vw,280px); height:clamp(200px,30vw,280px)">
+          <canvas id="funnelChart"></canvas>
+        </div>
+        <div class="funnel animate-stagger" style="width:auto; flex:1; min-width:200px">
+          <div class="funnel-row">
+            <div class="funnel-bar" style="width:100%; background:linear-gradient(90deg,#7C3AED,#9B59B6)">Awareness</div>
+            <div class="funnel-stat">10,000 reach</div>
+          </div>
+          <div class="funnel-row">
+            <div class="funnel-bar" style="width:75%; background:linear-gradient(90deg,#3B82F6,#60A5FA)">Interest</div>
+            <div class="funnel-stat">7,500 visits</div>
+          </div>
+          <div class="funnel-row">
+            <div class="funnel-bar" style="width:45%; background:linear-gradient(90deg,#38BDF8,#67E8F9)">Consideration</div>
+            <div class="funnel-stat">4,500 leads</div>
+          </div>
+          <div class="funnel-row">
+            <div class="funnel-bar" style="width:20%; background:linear-gradient(90deg,#34D399,#6EE7B7)">Intent</div>
+            <div class="funnel-stat">2,000 SQL</div>
+          </div>
+          <div class="funnel-row">
+            <div class="funnel-bar" style="width:8%; background:linear-gradient(90deg,#F59E0B,#FCD34D)">Convert</div>
+            <div class="funnel-stat">800 customers</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SLIDE 9: KPI Dashboard ─── -->
+  <div class="slide">
+    <div class="glow glow-blue"></div>
+    <div class="slide-content z1">
+      <div class="tag">KPIs</div>
+      <h2 class="section-title">Chỉ số Quan trọng cần theo dõi</h2>
+      <div class="grid-3 animate-stagger" style="width:100%">
+        <div class="metric-card">
+          <div class="metric-num">CPL</div>
+          <div class="metric-label">Cost Per Lead</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">ROAS</div>
+          <div class="metric-label">Return on Ad Spend</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">CAC</div>
+          <div class="metric-label">Customer Acq. Cost</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">CTR</div>
+          <div class="metric-label">Click-Through Rate</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">LTV</div>
+          <div class="metric-label">Lifetime Value</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">MQL</div>
+          <div class="metric-label">Marketing Qualified Lead</div>
+        </div>
+      </div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:4px">
+        <span class="tool-chip">Google Analytics 4</span>
+        <span class="tool-chip">Looker Studio</span>
+        <span class="tool-chip">HubSpot</span>
+        <span class="tool-chip">Meta Ads Manager</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SLIDE 10: CTA / Closing ─── -->
+  <div class="slide">
+    <div class="glow glow-purple"></div>
+    <div class="glow glow-blue"></div>
+    <div class="slide-content z1">
+      <div class="tag animate-fade-up">Let's Go</div>
+      <div class="cta-box animate-fade-up" style="animation-delay:0.1s">
+        <h2 class="slide-title" style="font-size:clamp(28px,5vw,64px)">
+          Marketing<br/>hoạt động như một cỗ máy
+        </h2>
+        <p class="slide-subtitle" style="margin-top:16px">
+          Mỗi task đều có mục tiêu, deadline và KPI rõ ràng.<br/>
+          Đo lường → Tối ưu → Tăng trưởng.
+        </p>
+      </div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; animation-delay:0.2s" class="animate-fade-up">
+        <span class="tool-chip">Notion</span>
+        <span class="tool-chip">Slack</span>
+        <span class="tool-chip">Figma</span>
+        <span class="tool-chip">Canva</span>
+        <span class="tool-chip">Mailchimp</span>
+        <span class="tool-chip">Semrush</span>
+        <span class="tool-chip">Hootsuite</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.slide-deck -->
+
+<!-- Navigation -->
+<div class="nav-controls">
+  <button class="nav-btn" onclick="prevSlide()">←</button>
+  <span class="slide-counter"><span id="current">1</span> / <span id="total">10</span></span>
+  <button class="nav-btn" onclick="nextSlide()">→</button>
+</div>
+
+<script>
+  /* ── Slide navigation ── */
+  let current = 1;
+  const total = document.querySelectorAll('.slide').length;
+  document.getElementById('total').textContent = total;
+
+  function showSlide(n) {
+    if (n < 1) n = 1;
+    if (n > total) n = total;
+    current = n;
+    document.querySelectorAll('.slide').forEach((s, i) => {
+      s.classList.toggle('active', i === n - 1);
+    });
+    document.getElementById('current').textContent = n;
+    document.getElementById('progressBar').style.width = (n / total * 100) + '%';
+  }
+  function nextSlide() { showSlide(current + 1); }
+  function prevSlide() { showSlide(current - 1); }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
+  });
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.nav-controls')) nextSlide();
+  });
+
+  showSlide(1);
+
+  /* ── Chart: Traffic by channel ── */
+  new Chart(document.getElementById('channelChart'), {
+    type: 'bar',
+    data: {
+      labels: ['Organic Search', 'Paid Ads', 'Social Media', 'Email', 'Referral', 'Direct'],
+      datasets: [{
+        label: 'Sessions (K)',
+        data: [42, 28, 19, 14, 9, 7],
+        backgroundColor: [
+          'rgba(124,58,237,0.7)',
+          'rgba(56,189,248,0.7)',
+          'rgba(52,211,153,0.7)',
+          'rgba(251,146,60,0.7)',
+          'rgba(244,114,182,0.7)',
+          'rgba(148,163,184,0.5)',
+        ],
+        borderRadius: 8,
+        borderSkipped: false,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: { label: ctx => ` ${ctx.parsed.y}K sessions` }
+        }
+      },
+      scales: {
+        x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94A3B8', font: { size: 12 } } },
+        y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94A3B8', font: { size: 12 } } }
+      }
+    }
+  });
+
+  /* ── Chart: Funnel doughnut ── */
+  new Chart(document.getElementById('funnelChart'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Awareness', 'Interest', 'Consideration', 'Intent', 'Convert'],
+      datasets: [{
+        data: [40, 28, 18, 9, 5],
+        backgroundColor: ['#7C3AED','#3B82F6','#38BDF8','#34D399','#F59E0B'],
+        borderWidth: 0,
+        hoverOffset: 8,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutout: '65%',
+      plugins: {
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: { color: '#94A3B8', boxWidth: 12, font: { size: 11 } }
+        }
+      }
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plan Thực Hành Claude Cowork</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #0f0f13;
+      color: #e2e8f0;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #a78bfa, #60a5fa, #34d399);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .header p {
+      color: #64748b;
+      font-size: 15px;
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #1e1e2e;
+      border: 1px solid #2d2d3d;
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    .meta-item .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    /* Phase card */
+    .phase {
+      background: #1a1a27;
+      border: 1px solid #2d2d3d;
+      border-radius: 16px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .phase:hover {
+      border-color: #4c4c6d;
+    }
+
+    .phase-header {
+      padding: 20px 28px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 1px solid #2d2d3d;
+    }
+
+    .phase-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .phase-0 .phase-number { background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff; }
+    .phase-1 .phase-number { background: linear-gradient(135deg, #6366f1, #4f46e5); color: #fff; }
+    .phase-2 .phase-number { background: linear-gradient(135deg, #10b981, #059669); color: #fff; }
+    .phase-3 .phase-number { background: linear-gradient(135deg, #ec4899, #db2777); color: #fff; }
+
+    .phase-title-block h2 {
+      font-size: 17px;
+      font-weight: 600;
+      color: #e2e8f0;
+    }
+
+    .phase-title-block p {
+      font-size: 13px;
+      color: #64748b;
+      margin-top: 2px;
+    }
+
+    .phase-duration {
+      margin-left: auto;
+      background: #0f0f13;
+      border: 1px solid #2d2d3d;
+      border-radius: 8px;
+      padding: 6px 14px;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    .phase-body {
+      padding: 20px 28px;
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th {
+      text-align: left;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #475569;
+      padding: 0 0 12px;
+    }
+
+    th:last-child { text-align: right; }
+
+    tr.task-row td {
+      padding: 10px 0;
+      border-top: 1px solid #1e293b;
+      font-size: 14px;
+      color: #cbd5e1;
+      vertical-align: top;
+    }
+
+    td .day-label {
+      font-weight: 600;
+      color: #94a3b8;
+      white-space: nowrap;
+      padding-right: 20px;
+      min-width: 80px;
+    }
+
+    td .time-label {
+      text-align: right;
+      color: #475569;
+      white-space: nowrap;
+      font-size: 13px;
+    }
+
+    .task-text {
+      color: #cbd5e1;
+    }
+
+    /* Tips section */
+    .tips {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      border: 1px solid #2d2d4d;
+      border-radius: 16px;
+      padding: 28px;
+      margin-top: 8px;
+    }
+
+    .tips h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #a78bfa;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tip-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 14px;
+      align-items: flex-start;
+    }
+
+    .tip-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: #2d2d4d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .tip-content strong {
+      display: block;
+      font-size: 14px;
+      color: #e2e8f0;
+      margin-bottom: 2px;
+    }
+
+    .tip-content span {
+      font-size: 13px;
+      color: #64748b;
+    }
+
+    /* Progress bar decoration */
+    .progress-bar {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 32px;
+    }
+
+    .progress-segment {
+      height: 4px;
+      border-radius: 2px;
+      flex: 1;
+    }
+
+    .seg-0 { background: linear-gradient(90deg, #f59e0b, #d97706); }
+    .seg-1 { background: linear-gradient(90deg, #6366f1, #4f46e5); }
+    .seg-2 { background: linear-gradient(90deg, #10b981, #059669); }
+    .seg-3 { background: linear-gradient(90deg, #ec4899, #db2777); }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #334155;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="badge">Learning Path</div>
+      <h1>Plan Thực Hành Claude Cowork</h1>
+      <p>Lộ trình 21 ngày từ zero đến tự động hóa công việc thực tế</p>
+      <div class="meta-row">
+        <div class="meta-item">
+          <div class="dot" style="background:#10b981"></div>
+          21 ngày
+        </div>
+        <div class="meta-item">
+          <div class="dot" style="background:#6366f1"></div>
+          30 phút / ngày
+        </div>
+        <div class="meta-item">
+          <div class="dot" style="background:#f59e0b"></div>
+          3 mục tiêu
+        </div>
+      </div>
+    </div>
+
+    <!-- Progress decoration -->
+    <div class="progress-bar">
+      <div class="progress-segment seg-0"></div>
+      <div class="progress-segment seg-1"></div>
+      <div class="progress-segment seg-1"></div>
+      <div class="progress-segment seg-1"></div>
+      <div class="progress-segment seg-1"></div>
+      <div class="progress-segment seg-1"></div>
+      <div class="progress-segment seg-1"></div>
+      <div class="progress-segment seg-2"></div>
+      <div class="progress-segment seg-2"></div>
+      <div class="progress-segment seg-2"></div>
+      <div class="progress-segment seg-2"></div>
+      <div class="progress-segment seg-2"></div>
+      <div class="progress-segment seg-2"></div>
+      <div class="progress-segment seg-2"></div>
+      <div class="progress-segment seg-3"></div>
+      <div class="progress-segment seg-3"></div>
+      <div class="progress-segment seg-3"></div>
+      <div class="progress-segment seg-3"></div>
+      <div class="progress-segment seg-3"></div>
+      <div class="progress-segment seg-3"></div>
+      <div class="progress-segment seg-3"></div>
+    </div>
+
+    <!-- Phase 0 -->
+    <div class="phase phase-0">
+      <div class="phase-header">
+        <div class="phase-number">0</div>
+        <div class="phase-title-block">
+          <h2>Setup & Khởi động</h2>
+          <p>Cài đặt xong, chạy được task đầu tiên</p>
+        </div>
+        <div class="phase-duration">Ngày 1</div>
+      </div>
+      <div class="phase-body">
+        <table>
+          <thead>
+            <tr>
+              <th>Việc cần làm</th>
+              <th>Thời gian</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="task-row">
+              <td><span class="task-text">Đăng ký / nâng cấp tài khoản Claude (cần plan Pro hoặc Team)</span></td>
+              <td><span class="time-label">5 phút</span></td>
+            </tr>
+            <tr class="task-row">
+              <td><span class="task-text">Tải và cài Claude desktop app tại claude.ai/download</span></td>
+              <td><span class="time-label">5 phút</span></td>
+            </tr>
+            <tr class="task-row">
+              <td><span class="task-text">Bật tính năng Cowork trong app (Settings → Enable Cowork)</span></td>
+              <td><span class="time-label">5 phút</span></td>
+            </tr>
+            <tr class="task-row">
+              <td><span class="task-text">Task đầu tiên: "Hãy đọc Desktop của tôi và liệt kê 5 file được sửa gần nhất"</span></td>
+              <td><span class="time-label">15 phút</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Phase 1 -->
+    <div class="phase phase-1">
+      <div class="phase-header">
+        <div class="phase-number">1</div>
+        <div class="phase-title-block">
+          <h2>Quản lý File & Tài liệu</h2>
+          <p>Làm chủ việc đọc, tổ chức và tổng hợp thông tin</p>
+        </div>
+        <div class="phase-duration">Ngày 2 – 7</div>
+      </div>
+      <div class="phase-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="min-width:80px">Ngày</th>
+              <th>Bài tập</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="task-row">
+              <td><span class="day-label">Ngày 2</span></td>
+              <td><span class="task-text">Yêu cầu Cowork đọc 1 folder dự án → tóm tắt cấu trúc</span></td>
+            </tr>
+            <tr class="task-row">
+              <td><span class="day-label">Ngày 3</span></td>
+              <td><span class="task-text">Cho Cowork đọc 1 file Word/PDF → trích xuất ý chính ra file mới</span></td>
+            </tr>
+            <tr class="task-row">
+              <td><span class="day-label">Ngày 4</span></td>
+              <td><span class="task-text">Cho Cowork tổ chức lại folder Downloads (phân loại theo loại file)</span></td>
+            </tr>
+            <tr class="task-row">
+              <td><span class="day-label">Ngày 5</span></td>
+              <td><span class="task-text">Yêu cầu tạo báo cáo từ nhiều file dữ liệu rời rạc</span></td>
+            </tr>
+            <tr class="task-row">
+              <td><span class="day-label">Ngày 6</span></td>
+              <td><span class="task-text">Task nhiều bước: "Đọc file A, so sánh với file B, ghi sự khác biệt ra file C"</span></td>
+            </tr>
+            <tr class="task-row">
+              <td><span class="day-label">Ngày 7 ★</span></td>
+              <td><span class="task-text">Tổng kết: tự ra 1 task thực tế từ công việc của bạn</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Phase 2 -->
+    <div class="phase phase-2">
+      <div class="phase-header">
+        <div class="phase-number">2</div>
+        <div class="phase-title-block">
+          <h2>Tự động hóa Workflow</h2>
+          <p>Dùng Routines để tác vụ chạy tự động theo lịch</p>
+        </div>
+        <div class="phase-duration">Ngày 8 – 14</div>
+      </div>
+      <div class="phase-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="min-width:80px">Ngày</th>
+              <th>Bài tập</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="task-row">
+              <td><span class="day-label">Ngày 8</span></td>
+              <td><span class="task-text">Tạo Routine đầu tiên: "Mỗi sáng 8h, tóm tắt email chưa đọc ra 1 file"</span></td>
+            </tr>
+            <tr class="task-row">
+              <td><span class="day-label">Ngày 9</span></td>
+              <td><span class="task-text">Tạo Routine: "Cuối ngày, liệt kê file nào được chỉnh sửa hôm nay"</span></td>
+            </tr>
+            <tr class="task-row">
+              <td><span class="day-label">Ngày 10</span></td>
+              <td><span class="task-text">Kết hợp Cowork + Slack: tự động post tóm tắt vào channel</span></td>
+            </tr>
+            <tr class="task-row">
+              <td><span class="day-label">Ngày 11</span></td>
+              <td><span class="task-text">Automation cho dự án code: "Đọc README + package.json → tạo báo cáo dự án"</span></td>
+            </tr>
+            <tr class="task-row">
+              <td><span class="day-label">Ngày 12</span></td>
+              <td><span class="task-text">Tạo workflow xử lý dữ liệu lặp lại (ví dụ: chuyển CSV → báo cáo)</span></td>
+            </tr>
+            <tr class="task-row">
+              <td><span class="day-label">Ngày 13</span></td>
+              <td><span class="task-text">Tối ưu lại Routine đã tạo, thêm điều kiện phức tạp hơn</span></td>
+            </tr>
+            <tr class="task-row">
+              <td><span class="day-label">Ngày 14 ★</span></td>
+              <td><span class="task-text">Tổng kết: xây 1 workflow hoàn chỉnh cho công việc thực tế</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Phase 3 -->
+    <div class="phase phase-3">
+      <div class="phase-header">
+        <div class="phase-number">3</div>
+        <div class="phase-title-block">
+          <h2>Ứng dụng vào công việc thực tế</h2>
+          <p>Áp dụng vào dự án thật, không còn bài tập mẫu</p>
+        </div>
+        <div class="phase-duration">Ngày 15 – 21</div>
+      </div>
+      <div class="phase-body">
+        <table>
+          <thead>
+            <tr>
+              <th style="min-width:100px">Ngày</th>
+              <th>Hướng làm</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="task-row">
+              <td><span class="day-label">Ngày 15–16</span></td>
+              <td><span class="task-text">Xác định 3 tác vụ lặp lại nhất trong tuần → giao cho Cowork</span></td>
+            </tr>
+            <tr class="task-row">
+              <td><span class="day-label">Ngày 17–18</span></td>
+              <td><span class="task-text">Xây pipeline: input → Cowork xử lý → output chuẩn</span></td>
+            </tr>
+            <tr class="task-row">
+              <td><span class="day-label">Ngày 19–20</span></td>
+              <td><span class="task-text">Tích hợp với tool đang dùng (VS Code, Notion, Excel...)</span></td>
+            </tr>
+            <tr class="task-row">
+              <td><span class="day-label">Ngày 21 ★</span></td>
+              <td><span class="task-text">Review: so sánh năng suất trước và sau khi dùng Cowork</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Tips -->
+    <div class="tips">
+      <h3>&#9889; Nguyên tắc luyện tập hiệu quả</h3>
+      <div class="tip-item">
+        <div class="tip-icon">&#127919;</div>
+        <div class="tip-content">
+          <strong>Bắt đầu bằng task thật</strong>
+          <span>Đừng dùng task giả để luyện — kết quả thật mới tạo được thói quen thật.</span>
+        </div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">&#128200;</div>
+        <div class="tip-content">
+          <strong>Tăng độ phức tạp dần</strong>
+          <span>1 bước → nhiều bước → có điều kiện → tự động hóa hoàn toàn.</span>
+        </div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">&#128221;</div>
+        <div class="tip-content">
+          <strong>Ghi lại prompt hiệu quả</strong>
+          <span>Những cách ra lệnh nào cho kết quả tốt — lưu lại để tái sử dụng.</span>
+        </div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">&#128683;</div>
+        <div class="tip-content">
+          <strong>Đừng làm thay Cowork</strong>
+          <span>Nếu bạn đang tự click hoặc tự copy thì bạn đang làm sai rồi.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Tạo bởi Claude Code &nbsp;·&nbsp; Ngày 07/05/2026</p>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,2130 @@
+﻿Total pages: 61
+=== PAGE 1 ===
+ 
+1 
+ 
+ 
+ 
+ 
+GIAO TRÌNH ĐÀO TẠO 
+CẦU TRỤC RÓT THÉP 
+ 
+ 
+ 
+ 
+ 
+Copyright: DINH V AN TOAN 
+Issued date: 1/4/2026 
+
+
+=== PAGE 2 ===
+ 
+2 
+ 
+MỤC LỤC 
+PHẦN A TỔNG QUAN VỀ MÔI TRƯỜNG NHÀ MÁY THÉP 
+CHUYÊN ĐỀ 1  HIỂU VỀ MÔI TRƯỜNG NHÀ MÁY THÉP – "ĐỊA NGỤC" CỦA THIẾT BỊ MÁY MÓC 
+CHUYÊN ĐỀ 2 BẢN ĐỒ CẦU TRỤC TRONG NHÀ MÁY THÉP (THE STEEL MILL CRANE MAP) 
+PHẦN B TIÊU CHUẨN THIẾT KẾ CẦU TRỤC HẠNG NẶNG (HEAVY-DUTY) 
+CHUYÊN ĐỀ 3 "GIẢI MÃ" TIÊU CHUẨN FEM 1.001 CHO CẦU TRỤC HẠNG NẶNG  
+PHẦN C  ĐI SÂU VÀO CẦU TRỤC RÓT THÉP LỎNG (LADLE CRANE)  
+CHUYÊN ĐỀ 4 GIẢI MÃ CẤU TRÚC DẦM (GIRDER LAYOUT) 
+CHUYÊN ĐỀ 5 CƠ CẤU NÂNG HẠ DỰ PHÒNG (REDUNDANT KINEMATICS) – "BẢO HIỂM SINH 
+TỬ" 
+CHUYÊN ĐỀ 6 HỆ THỐNG PHANH AN TOÀN TUYỆT ĐỐI (THE ULTIMATE BRAKING SYSTEM) – 
+"CHỐT CHẶN CUỐI CÙNG" 
+CHUYÊN ĐỀ 7 CỤM MÓC CẨU RÓT THÉP (LADLE HOOK) – "BÀN TAY THÉP TRONG LỬA ĐỎ" 
+CHUYÊN ĐỀ 8  HỆ THỐNG BẢO VỆ CHỐNG NHIỆT – "ÁO GIÁP TRONG LÒ BÁT QUÁI" 
+PHẦN D CÁC CƠ CẤU CƠ KHÍ & ĐIỆN ĐẶC THÙ KHÁC 
+CHUYÊN ĐỀ 9 CƠ CẤU DI CHUYỂN (TRAVEL MECHANISMS) – "ĐÔI CHÂN THÉP NGÀN TẤN" 
+CHUYÊN ĐỀ 10 HỆ THỐNG ĐIỆN & ĐIỀU KHIỂN – "BỘ NÃO TRONG LÒ BÁT QUÁI" 
+PHẦN E CÔNG NGHỆ TỰ ĐỘNG HÓA & "SMART CRANE" 
+CHUYÊN ĐỀ 11 HỆ THỐNG CHỐNG LẮC (ANTI -SWAY) – "NGHỆ THUẬT KIỂM SOÁT CON LẮC 
+KHỔNG LỒ" 
+CHUYÊN ĐỀ 12 HỆ THỐNG ĐỊNH VỊ TUYỆT ĐỐI (ABSOLUTE POSITIONING) – "BẢN ĐỒ GPS CỦA 
+CẦU TRỤC" 
+CHUYÊN ĐỀ 13 HỆ THỐNG CAMERA (CCTV) CHỊU NHIỆT ĐỘ, ĐỘ TRỄ THẤP ((<150ms): Điều khiển 
+từ xa không cần cabin. 
+CHUYÊN ĐỀ 14 VÙNG CẤP BAY (NO-FLY ZONES / ZONE INTERLOCKING) : THIẾT LẬP QUA PLC  
+CHUYÊN ĐỀ 15 HỆ THỐNG GIÁM SÁT & QUẢN LÝ (CMS): GIAO TIẾP VỚI SCADA / MES CỦA NHÀ 
+MÁY. 
+PHẦN F AN TOÀN, KIỂM ĐỊNH & BẢO TRÌ DỰ ĐOÁN.  
+MỤC 1 CÁC THIẾT BỊ AN TOÀN GIỚI HẠN – "LƯỚI BẢO VỆ NHIỀU LỚP" 
+MỤC 2  BẢO TRÌ DỰ ĐOÁN ISO 12482 – "BÁC SĨ BẮT MẠCH CHO CẦU TRỤC" 
+MỤC 3 QUY TRÌNH LOTO & CỬA KHÓA LIÊN ĐỘNG – "TÍNH MẠNG TRONG TAY BẠN" 
+PHẦN G CHIẾN LƯỢC BÁN HÀNG & PHÂN TÍCH ĐỐI THỦ 
+CHUYÊN ĐỀ 17  DANH SÁCH NHÀ CUNG CẤP 
+MỤC 1 CƠ CẤU TRUYỀN ĐỘNG CHÍNH (MAIN DRIVES) 
+MỤC 2  THIẾT BỊ MANG TẢI & CƠ KHÍ ĐẶC CHỦNG (LIFTING & MECHANICAL)  
+MỤC 3  ĐIỆN, ĐIỀU KHIỂN & TỰ ĐỘNG HÓA (ELECTRICAL & AUTOMATION) 
+MỤC 4 THIẾT BỊ PHỤ TRỢ ĐẶC BIỆT LÒ EAF (SPECIALTIES) 
+CHUYÊN ĐỀ 18 CÁC "ÔNG TRÙM" CẨU THÉP TOÀN CẦU 
+CHUYÊN ĐỀ 19  PHỐI HỢP VÀ TÍNH TOÁN CHIẾN LƯỢC CHO VINALIFT 
+  
+
+=== PAGE 3 ===
+ 
+3 
+ 
+ 
+PHẦN A: TỔNG QUAN VỀ MÔI TRƯỜNG NHÀ MÁY THÉP 
+CHUYÊN ĐỀ 1: HIỂU VỀ MÔI TRƯỜNG NHÀ MÁY THÉP – "ĐỊA NGỤC" CỦA 
+THIẾT BỊ MÁY MÓC 
+Nhà máy luyện kim (Steel Mill / Meltshop) không phải là một nhà xưởng bình thường. Đây 
+là một trong những môi trư ờng công nghiệp khắc nghiệt nhất trên Trái Đ ất. Bất kỳ thiết bị nào 
+đưa vào đây nếu thiết kế theo chuẩn công nghiệp nhẹ sẽ bị phá hủy chỉ trong vài tuần. 
+Để thiết kế hoặc bán được cầu trục luyện kim, chúng ta phải hiểu 5 kẻ thù lớn nhất sau đây: 
+1. Nhiệt độ cực đoan & Bức xạ nhiệt (Extreme Heat & Radiant Heat) 
+• Hiện tượng: 
+o Nhiệt độ môi trường (Ambient Temp): Khí hậu trong xư ởng thường dao đ ộng 
+từ 40∘𝐶  đến 70∘𝐶 ở sát mái nhà xưởng (nơi cầu trục hoạt động), do nhiệt bốc lên 
+cao. 
+o Bức xạ nhiệt (Radiant Heat): Đây mới là sát th ủ thực sự. Khi c ầu trục cẩu một 
+thùng thép lỏng (Ladle) ở nhiệt độ  1.500∘𝐶 − 1.600∘𝐶 , bức xạ nhiệt chiếu thẳng 
+lên bụng dầm cầu trục, cụm móc cẩu và cáp thép. 
+• Hậu quả nếu dùng cẩu thường: 
+o Cáp thép lõi đay (lõi đay tẩm mỡ bò) sẽ bị bốc cháy, làm khô dầu mỡ, cáp giòn và 
+đứt. 
+o Tủ điện bị "luộc chín", biến tần nổ bo mạch. Dầu hộp số bị loãng ra mất tác dụng 
+bôi trơn. 
+• Giải pháp bắt buộc (Key Design): 
+o Bên dưới bụng dầm chính, cụm móc và cabin phải hàn các Tấm chắn bức xạ nhiệt 
+(Heat Shields). 
+o Chỉ dùng cáp thép lõi thép chịu nhiệt (IWRC). 
+o Phòng điện (E-room) phải có v ỏ cách nhiệt bông khoáng và l ắp Điều hòa công 
+nghiệp (Heavy-duty HV AC) chạy dự phòng 1+1 (chết 1 cái, cái kia tự chạy). 
+2. Bụi mài mòn & Bụi dẫn điện (Abrasive & Conductive Dust) 
+• Hiện tượng: Quá trình n ạp phế liệu vào lò h ồ quang (EAF), nấu chảy và rót thép t ạo ra 
+lượng bụi khổng lồ. 
+o Bụi xỉ kim loại rất cứng (Bụi mài mòn). 
+o Bụi than chì (Graphite) sinh ra từ điện cực lò EAF là vật liệu dẫn điện rất tốt. 
+• Hậu quả nếu dùng cẩu thường: 
+
+=== PAGE 4 ===
+ 
+4 
+ 
+o Bụi mài mòn rơi vào bánh xe, thanh ray, vòng bi làm cơ c ấu cơ khí b ị "ăn mòn" 
+nhanh chóng. 
+o Bụi than chì bay vào t ủ điện hở, bám lên bo m ạch sẽ gây ra đoản mạch (short-
+circuit), cháy nổ tủ điện. 
+• Giải pháp bắt buộc (Key Design): 
+o Toàn bộ tủ điện, động cơ, vỏ camera phải đạt chuẩn tối thiểu IP54 đến IP66 (Kín 
+bụi hoàn toàn). 
+o Phòng điện phải duy trì Áp suất dương (Positive Pressure): Máy lạnh sẽ bơm khí 
+sạch vào phòng làm áp su ất trong phòng cao hơn bên ngoài, đ ể mỗi khi m ở cửa, 
+không khí chỉ đẩy ra chứ bụi không thể chui vào. 
+o Bánh xe phải có Gạt bụi/Gạt đá (Rail Sweeps) bằng thép dày. 
+3. Khí ăn mòn & Hơi ẩm (Corrosive Gases & Fumes) 
+• Hiện tượng: Khói bốc lên từ lò luyện chứa rất nhiều lưu huỳnh ( 𝑆𝑂2 ), oxit nitơ ( 𝑁𝑂𝑥 ). 
+Khi kết hợp với độ ẩm trong không khí, chúng tạo thành sương axit nhẹ. 
+• Hậu quả nếu dùng cẩu thường: 
+o Kết cấu thép gỉ sét nghiêm trọng. Các tiếp điểm điện bị oxi hóa gây mất tín hiệu. 
+• Giải pháp bắt buộc (Key Design): 
+o Áp dụng hệ sơn bảo vệ chống ăn mòn cấp độ cao: C3, C4 hoặc C5 theo tiêu chuẩn 
+EN ISO 12944 (thường dùng sơn Epoxy giàu kẽm kết hợp phủ Polyurethane). 
+o Khung v ỏ các thiết b ị nhạy c ảm (camera, c ảm bi ến) ph ải dùng  Thép không g ỉ 
+(Stainless Steel 304/316). 
+4. Rung chấn & Va đập liên tục (Heavy Shock & Vibration) 
+• Hiện tượng: 
+o Mỗi khi thả gầu ngoạm xuống đống phế liệu, hoặc khi cẩu 150 tấn thép lỏng chạy 
+và dừng đột ngột, toàn bộ kết cấu cầu trục phải chịu lực vặn xoắn và quán tính cực 
+lớn. 
+• Hậu quả nếu dùng cẩu thường: 
+o Hiện tượng Mỏi kim lo ại (Metal Fatigue): Dầm thép s ẽ bị nứt ở các đường hàn 
+sau vài năm. 
+o Ốc vít lỏng ra, các thiết bị điện rụng khỏi thanh ray gá. 
+• Giải pháp bắt buộc (Key Design): 
+o Phải thiết kế theo chế độ làm việc siêu n ặng Q4 / Class S8, S9  (Tiêu chuẩn EN 
+13001) - Chấp nhận khung dầm rất to và nặng để đổi lấy tuổi thọ mỏi. Tương đương 
+A8/M8 trong FEM 1.001. 
+
+=== PAGE 5 ===
+ 
+5 
+ 
+o Sử dụng Gối đỡ giảm chấn Polyurethane (Cellular Buffers)  để hấp thụ lực va 
+đập cuối hành trình thay vì cao su cứng. Hoặc giảm chấn thuỷ lực.  
+o Tủ điện phải có hệ thống đế giảm chấn (Anti-vibration mounts). 
+5. Áp lực "Không được phép sai sót" (Zero-Failure Tolerance) 
+• Hiện tượng: 
+o Nhà máy thép hoạt động 24/7. Cầu trục rót thép (Ladle Crane) là c ổ chai của nhà 
+máy. Cẩu dừng 1 giờ, nhà máy mất hàng nhiều ngàn Đô la. 
+o Nếu cẩu đang nh ấc thùng thép l ỏng 150 t ấn ngang qua đ ầu công nhân mà b ị đứt 
+cáp hoặc mất phanh →  Thảm họa nhân mạng và phá hủy nhà máy. 
+• Hậu quả nếu dùng cẩu thường: Rủi ro dừng máy cao, không có phương án c ứu hộ khi 
+có sự cố. 
+• Giải pháp bắt buộc (Key Design): 
+o Triết lý Dự phòng (Redundancy): Mọi thứ quan trọng đều phải có "kép". Cáp kép 
+(đứt 1 s ợi cáp vẫn giữ được tải), Phanh kép (Phanh làm vi ệc + Phanh kh ẩn cấp), 
+Biến tần chạy/dự phòng (1 Run + 1 Standby). 
+o Hệ thống Quản lý Cầu trục (CMS) chẩn đoán lỗi chuyên sâu để thợ điện tìm ra bệnh 
+trong vòng 5 phút thay vì đi dò dây mất cả buổi. 
+ 
+Case study : 
+• "Theo các bạn, tại sao khách hàng yêu cầu với chúng ta đòi chuy ển từ tủ điện khung hở 
+(Open Chassis) sang tủ kín (IP54 Cubicles) trong phòng điện?" 
+o → Câu trả lời: Vì bụi dẫn điện (bụi graphite) sẽ làm chập mạch khung hở, và để an 
+toàn cho thợ cơ khí đi ngang qua không bị điện giật. 
+• "Tại sao hệ thống Camera quan sát tải trọng không thể dùng loại vỏ nhựa như camera an 
+ninh ở nhà?" 
+o → Câu trả lời: Vì nhiệt độ bức xạ sẽ làm chảy nhựa, bụi làm mờ ống kính (cần vỏ 
+Inox, chịu nhiệt và có vòi phun khí nén thổi bụi). 
+ 
+  
+
+=== PAGE 6 ===
+ 
+6 
+ 
+CHUYÊN ĐỀ 2: BẢN ĐỒ CẦU TRỤC TRONG NHÀ MÁY THÉP \ 
+(THE STEEL MILL CRANE MAP) 
+Nhà máy luyện thép không dùng sức người để bưng bê. Mọi sự dịch chuyển vật chất (từ sắt 
+vụn lạnh lẽo đến thép lỏng rực lửa và phôi thép đ ỏ rực) đều phụ thuộc 100% vào h ệ thống cầu 
+trục. Hãy cùng đi theo dòng chảy của thép để xem mặt mũi từng loại cẩu. 
+BƯỚC 1: KHU VỰC BÃI PHẾ LIỆU (Scrap Yard) 
+Vật liệu: Sắt thép vụn (Scrap) - Lạnh, bẩn, lộ thiên. 
+• Loại cầu trục: Cầu trục gắp phế liệu (Scrap Handling Crane). 
+• Thiết b ị mang t ải (Attachment): Mâm t ừ (Nam châm đi ện - Magnet) hoặc Gầu ngo ạm 
+(Grab/Bucekt). 
+• Nhiệm vụ: Nhặt sắt vụn từ bãi tập kết hoặc xe tải, sau đó th ả vào các giỏ/thùng nạp liệu 
+(Scrap Baskets). 
+• Đặc thù thiết kế: 
+o Hoạt động liên tục với tốc độ cực cao để theo kịp nhịp độ lò nấu. 
+o Chịu va đập lớn khi gầu ngoạm đập xuống đống phế liệu. 
+o Dây cáp cấp nguồn cho nam châm/gầu ngoạm (Cable reel) phải hoạt động đồng tốc 
+với cáp nâng hạ. 
+BƯỚC 2: KHU VỰC NẠP LIỆU LÒ EAF (Charging Area) 
+Vật liệu: Giỏ phế liệu khổng lồ (Scrap Basket). 
+• Loại cầu trục: Cầu trục nạp liệu lò (EAF Charging Crane / Loading Crane) : Chính là cẩu 
+230/150T – POSCO chúng ta đang làm.   
+• Thiết bị mang tải: Móc cẩu lá (Laminated hook) đôi + Móc phụ. 
+• Nhiệm vụ: Cẩu giỏ phế liệu nặng hàng trăm tấn từ xe phế liệu, di chuyển đến trên miệng 
+Lò hồ quang điện (EAF). Móc chính gi ữ quai giỏ, móc phụ (Aux hoist) móc vào đáy giỏ 
+để lật nghiêng (tipping), đổ ầm phế liệu vào lò. 
+• Đặc thù thiết kế: 
+o Phải có tính năng Đồng tốc điện tử (Tandem Hoisting) giữa móc chính và móc phụ 
+để giữ giỏ thăng bằng khi di chuyển. 
+o Chịu nhiệt độ chớp nhoáng cực cao và khói bụi bốc lên mịt mù khi phế liệu đổ vào 
+lò đang cháy. 
+o Làm việc ở chế độ siêu nặng (Q4/S9). (A8/M8) 
+BƯỚC 3: KHU VỰC LÒ LUYỆN & RÓT THÉP (Meltshop & Teeming Area) 
+Vật liệu: Thép lỏng (Molten Steel) ở 1.600∘𝐶. 
+
+=== PAGE 7 ===
+ 
+7 
+ 
+• Loại cầu trục: Cầu trục rót thép / Cầu trục luyện kim (Ladle Crane / Teeming Crane) - Đây 
+là "Bố già" của các loại cẩu. 
+• Thiết bị mang tải: Dầm đòn gánh (Lifting beam) với các móc J-hook/Laminated hook thiết 
+kế đặc biệt để ngàm chặt vào ngõng (Trunnion) của thùng rót (Ladle). 
+• Nhiệm vụ: Hứng thép l ỏng từ lò EAF, mang sang lò tinh luy ện (Ladle Furnace), sau đó 
+mang lên tháp đúc của Máy đúc liên tục (CCM) để rót thép lỏng vào khuôn. 
+• Đặc thù thiết kế (BẮT BUỘC PHẢI NHỚ): 
+o An toàn là sinh tử: Phải có cơ cấu Dự phòng (Redundancy). Nếu đứt 1 sợi cáp, cáp 
+còn lại vẫn giữ được thùng thép lỏng (Dual-rope reeving). 
+o Có hệ thống Phanh khẩn cấp (Emergency Brake) kẹp trực tiếp trên vành tang cuốn. 
+o Kết cấu thường là 4 dầm (4-Girder layout): 2 d ầm ngoài cho xe con chính (Main 
+Trolley) chạy, 2 dầm trong thấp hơn cho xe con ph ụ (Aux Trolley) chạy luồn bên 
+dưới để lật thùng rót. 
+BƯỚC 4: KHU VỰC ĐÚC & XỬ LÝ PHOI (Casting & Billet Handling) 
+Vật liệu: Phôi thép (Billet/Slab) đỏ rực ( 800∘𝐶 − 1.000∘𝐶). 
+• Loại cầu trục: Cầu trục gắp phôi (Billet/Slab Handling Crane). 
+• Thiết bị mang tải: Nam châm điện chịu nhiệt (Heat-resistant Magnet) hoặc Kẹp cơ khí/thủy 
+lực (Mechanical/Hydraulic Tongs). 
+• Nhiệm vụ: Gắp các thanh phôi thép vừa cắt ra từ máy đúc, đưa ra bãi làm nguội hoặc đưa 
+thẳng sang lò nung của xưởng cán. 
+• Đặc thù thiết kế: 
+o Nam châm ph ải có h ệ thống pin d ự phòng (UPS/Battery Backup) kho ảng 15-20 
+phút. Nếu mất điện lưới đột ngột, nam châm không được nhả phôi rơi xuống đất. 
+o Nhiệt độ bức xạ từ các thanh phôi rất lớn, cần tấm chắn nhiệt cho cụm móc. 
+BƯỚC 5: KHU VỰC CÁN & KHO THÀNH PHẨM (Rolling Mill & Coil Storage) 
+Vật liệu: Cuộn thép (Coils), thép tấm, thép thanh vằn - Đã nguội. 
+• Loại cầu trục: Cầu trục thành phẩm (Coil/Product Handling Crane). 
+• Thiết b ị mang t ải: Móc ch ữ C (C -Hook) ho ặc K ẹp cu ộn thép d ẫn đ ộng b ằng đ ộng cơ 
+(Motorized Coil Tongs). 
+• Nhiệm vụ: Nâng hạ, xếp lớp các cuộn thép, thép bó lên xe tải hoặc tàu hỏa để xuất hàng. 
+• Đặc thù thiết kế: 
+o Cần độ chính xác cao để không làm xước/hỏng thành phẩm (đặc biệt là tôn mạ, tôn 
+lạnh). 
+
+=== PAGE 8 ===
+ 
+8 
+ 
+o Thường được trang bị hệ thống Chống lắc (Anti-sway) và Định vị tự động (Semi-
+auto/WMS) để quản lý kho thông minh. 
+ 
+Case study cho chuyên đề 2:  
+• "Theo các bạn, trong 5 khu v ực trên, cẩu ở khu vực nào có rủi ro pháp lý và đ ền bù cao 
+nhất nếu xảy ra sự cố rơi tải?" 
+o Gợi ý tr ả lời: Chắc ch ắn là  Bước 3 (Ladle Crane). Rơi 150 t ấn thép l ỏng 
+ở  1600∘𝐶  sẽ gây nổ bốc hơi (Steam explosion) n ếu gặp nước, phá h ủy toàn b ộ 
+thiết bị bên dưới và đe dọa sinh mạng công nhân. Đó là lý do tại sao bộ tiêu chuẩn 
+EN 13001 và các yêu cầu về an toàn kép (Redundancy, Emergency Brakes) lại tập 
+trung dày đặc vào loại cẩu này. 
+• "Dự án POSCO 230/150T mà chúng ta vừa làm hồ sơ thuộc bước nào?" 
+o Gợi ý trả lời: Thuộc Bước 2 (EAF Loading Crane). Móc chính 230T giữ giỏ phế 
+liệu, móc phụ 150 T lật đáy giỏ. Khách hàng yêu cầu Camera ở khu vực này (Visual 
+Hooking Assistance) chính là để nhìn rõ cái ngõng (trunnion) khi móc vào giỏ phế 
+liệu, tránh bị rơi giỏ khi đang nâng. 
+ 
+  
+
+=== PAGE 9 ===
+ 
+9 
+ 
+PHẦN B: TIÊU CHUẨN THIẾT KẾ CẦU TRỤC HẠNG NẶNG (HEA VY-DUTY) CHO 
+NHÀ MÁY THÉP 
+CHUYÊN ĐỀ 3: "GIẢI MÃ" TIÊU CHUẨN FEM 1.001 CHO C ẦU TRỤC HẠNG 
+NẶNG 
+Tại sao cùng cẩu được 150 tấn, nhưng cầu trục nhà máy (bình thường) giá chỉ 5 tỷ, trong 
+khi cầu trục rót thép lỏng giá lên tới 20 tỷ? Sự khác biệt không nằm ở "Sức nâng" (Static Strength), 
+mà nằm ở "Sức bền mỏi" (Fatigue Life). Tiêu chuẩn FEM 1.001 ra đời để lượng hóa sự hao mòn 
+này. 
+Để phân loại một chiếc cầu trục theo FEM, chúng ta phải xác định được 2 tham số cốt lõi: 
+1. Class of Utilization (U): Tần suất sử dụng (Làm việc nhiều hay ít?). 
+2. Load Spectrum (Q hoặc L): Phổ tải trọng (Nâng hàng nặng hay nhẹ?). 
+ 
+BƯỚC 1: TÍNH TOÁN TẦN SUẤT SỬ DỤNG (UTILIZATION CLASS - U) 
+Định nghĩa: Xác định tổng số Chu kỳ làm việc (Operating Cycles) của cầu trục trong suốt vòng 
+đời thiết kế (Design Life). 
+• Một chu kỳ (1 Cycle) = Nhấc tải →  Di chuyển  →  Hạ tải  →  Chạy không tải về vị trí ban 
+đầu. 
+Bảng phân loại (FEM 1.001 - Table 2.1.2.2): 
+• U0 - U3 (≤ 1.25 × 105  chu kỳ): Dùng rất ít (Cẩu bảo trì trạm bơm, nhà máy điện). 
+• U4 - U5 (≤ 5 × 105 chu kỳ): Dùng trung bình (Cẩu xưởng cơ khí, lắp ráp nhẹ). 
+• U6 - U7 (≤ 2 × 106 chu kỳ): Dùng nhiều (Cẩu kho bãi, cảng nhỏ). 
+• U8 - U9 (> 2 × 106 chu kỳ): Dùng liên tục (Nhà máy thép, Cảng biển lớn, Mỏ luyện kim). 
+Bài tập thực tế cho nhân viên: 
+Cẩu nạp liệu lò EAF ho ạt động 330 ngày/năm, 24 gi ờ/ngày. Mỗi mẻ thép (bao gồm cẩu giỏ phế 
+liệu, c ẩu ph ụ gia, d ọn x ỉ...) t ốn kho ảng 6 chu k ỳ/giờ. Tuổi th ọ thiết k ế yêu c ầu là 15 năm.  
+Tính: Tổng chu kỳ = 330 × 24 × 6 × 15 = 712.800  chu kỳ. 
+Tra bảng: Cầu trục này thuộc nhóm U6 hoặc U7. (Thực tế nhà máy thép cường độ cao hơn sẽ tính 
+lên U8). 
+ 
+BƯỚC 2: TÍNH TOÁN PHỔ TẢI TRỌNG (LOAD SPECTRUM FACTOR) 
+Đây là phần tính toán quan trọng nhất. Sự phá hủy mỏi của kết cấu thép không tuyến tính, mà nó 
+tỷ lệ với Lập phương (mũ 3) của tải trọng. (Nâng tải 100% sẽ làm mỏi thép gấp 8 lần so với nâng 
+tải 50%). 
+2.1. Công thức hệ số phổ tải (𝐾𝑝 cho kết cấu thép, 𝐾𝑚 cho cơ cấu máy): 
+
+=== PAGE 10 ===
+ 
+10 
+ 
+Công thức FEM: 𝐾𝑝 = ∑ (
+𝐶𝑖
+𝐶𝑡𝑜𝑡𝑎𝑙
+× (
+𝑃𝑖
+𝑃𝑚𝑎𝑥
+)
+3
+) 
+Trong đó: 
+• 𝐶𝑖: Số chu kỳ cẩu ở mức tải 𝑃𝑖. 
+• 𝐶𝑡𝑜𝑡𝑎𝑙: Tổng số chu kỳ. 
+• 𝑃𝑖: Tải trọng thực tế đang cẩu. 
+• 𝑃𝑚𝑎𝑥: Sức nâng tối đa thiết kế (Safe Working Load - SWL). 
+2.2. Phân nhóm Ph ổ tải trọng (Q):Dựa vào hệ số 𝐾𝑝 tính được, FEM chia làm 4 nhóm:Q1 - Nhẹ 
+(Light): 𝐾𝑝 ≤ 0.125 (Hầu như cẩu hàng rất nhẹ, thỉnh thoảng mới cẩu max tải). 
+• Q2 - Trung bình (Medium): 0.125 < 𝐾𝑝 ≤ 0.25 
+• Q3 - Nặng (Heavy): 0.25 < 𝐾𝑝 ≤ 0.5 
+ (Cẩu hàng nặng thường xuyên). 
+• Q4 - Rất nặng (Very Heavy): 0.5 < 𝐾𝑝 ≤ 1.0 
+ (Gần như lần nào cẩu lên cũng là Max tải). 
+Bài tập thực tế :  
+Tại sao c ẩu rót thép (Ladle Crane) ho ặc cẩu gắp phế liệu bằng nam châm (Magnet Crane) luôn 
+luôn là Q4? 
+Giải thích: Bản thân cái gầu rót thép rỗng hoặc cái nam châm điện đã chiếm tới 40%-50% tải trọng 
+cẩu. Khi xúc thêm phế liệu hoặc rót thép lỏng vào, tải trọng luôn đạt 90% - 100% sức nâng thiết 
+kế. Do tỷ lệ (𝑃𝑖/𝑃𝑚𝑎𝑥) luôn xấp xỉ 1, nên khi mũ 3 lên, 𝐾𝑝 chắc chắn lớn hơn 0.5. → Bắt buộc thiết 
+kế Q4. 
+ 
+BƯỚC 3:  MA TRẬN PHÂN C ẤP T ỔNG TH Ể (APPLIANCE GROUP - A) VÀ CƠ C ẤU 
+(MECHANISM - M) 
+Sau khi có U (Tần suất) và Q (Phổ tải), ta ghép chúng vào ma trận của FEM để ra phân cấp 
+cuối cùng. 
+Ma trận Cấp kết cấu thép (Steel Structure Class - A1 đến A8): 
+(Giao điểm của Cột U và Hàng Q) 
+• Ví dụ: Cẩu xưởng cơ khí: U4 + Q2 = A4. 
+• Ví dụ: Cẩu nhà máy thép EAF: U8 + Q3 = A8 hoặc U7 + Q4 = A8. 
+(Lưu ý: A8 là cấp cao nhất trong tiêu chuẩn FEM 1.001 cũ. Trong hồ sơ dự án Posco, kết cấu dầm 
+chính được xác định là A8). 
+
+=== PAGE 11 ===
+ 
+11 
+ 
+Phân cấp Cơ cấu máy (Mechanism Group - M1 đến M8):Tương tự như trên, nhưng tính cho Động 
+cơ, Hộp số, Cáp, Phanh. 
+• Cẩu nhà máy thép bắt buộc phải chọn thiết bị đạt Nhóm M8. Nghĩa là hộp số, động cơ phải 
+siêu to, tản nhiệt tốt để chạy liên tục không bị cháy, cáp thép phải to hơn bình thư ờng để 
+chống đứt. 
+ 
+BƯỚC 4: HỆ SỐ ĐỘNG LỰC HỌC (DYNAMIC FACTORS - 𝜓) - BÍ QUYẾT TÍNH D ẦM 
+CẦU TRỤC 
+Không bao giờ dùng tải trọng tĩnh (Static Load) để thiết kế dầm. 
+Khi cầu trục nhấc 150 t ấn thép lên kh ỏi mặt đất, lực giật cục (shock) do motor kéo cáp 
+căng đột ngột sẽ làm dầm chịu một lực tương đương 180 t ấn - 200 tấn. FEM quy định các hệ số 
+nhân sau: 
+1. Hệ số giật khi nâng hàng (𝜓1 hoặc 𝜙2): 
+o Công thức: 𝜓 = 1 + 𝜉 × 𝑉ℎ (Trong đó 𝑉ℎ là tốc độ nâng nâng hàng). 
+o Bài học: Tốc độ nâng (𝑉ℎ) càng nhanh, lực giật càng mạnh, dầm càng phải làm dày. 
+Đây là lý do cầu trục 150T rót thép tốc độ nâng chỉ khoảng 6 - 10 m/phút. 
+2. Hệ số thả tải đột ngột (𝜓2): 
+o Khi cẩu gắp phế liệu đang c ẩu 40 t ấn, đột ngột ngắt điện nam châm th ả phế liệu 
+xuống. Dầm đang cong vút sẽ nảy bật ngược lên trên. Phải tính toán để dầm không 
+bị xé rách đường hàn khi nảy lên. 
+3. Hệ số gia tốc di chuyển (𝜓3): 
+o Lực xô ngang (Horizontal force) khi c ẩu đang chạy 80m/phút mà phanh đột ngột. 
+Lực này bẻ ngang dầm chính và xé rách liên k ết giữa dầm biên (End carriage) và 
+dầm chính. 
+ 
+Case study:  
+Tình huống: 
+Khách hàng nói: "Tôi cần mua cẩu 50 tấn gắp phế liệu. Công ty A báo giá rẻ hơn VINALIFT của 
+các anh 30%. Họ cũng cam kết cẩu được 50 tấn." 
+Cách trả lời (Dùng kiến thức FEM): 
+• "Thưa anh, công ty A thiết kế cẩu 50 tấn theo chế độ A5 (U5+Q2). Cẩu của họ nâng 50 tấn 
+lên thì dầm không gãy, nhưng cẩu của anh hoạt động 24/24, ngày nào cũng mang tải tối đa. 
+• Theo công thức tính mỏi của FEM, với chế độ đó, cẩu A5 sẽ bị nứt dầm và hỏng hộp số 
+chỉ sau 1.5 năm (vì vượt quá số chu kỳ cho phép của U5). 
+
+=== PAGE 12 ===
+ 
+12 
+ 
+• Cẩu của VINALIFT thiết kế theo chế độ A8/M8 (U8+Q4). Dầm thép dày gấp rưỡi, hộp số 
+lớn gấp đôi. Chúng tôi cam k ết anh chạy 24/7 liên tục trong 15 năm không nứt dầm. Anh 
+tiết kiệm 30% hôm nay, nhưng 2 năm sau anh phải dừng lò luyện thép 1 tháng để hạ dầm 
+xuống hàn lại, chi phí đó gấp nhiều lần tiền cẩu." 
+PHẦN C: ĐI SÂU VÀO CẦU TRỤC RÓT THÉP LỎNG (LADLE CRANE) 
+CHUYÊN ĐỀ 4: GIẢI MÃ CẤU TRÚC DẦM (GIRDER LAYOUT) 
+Hãy quên đi những chiếc cầu trục dầm đơn hay dầm đôi bình thường trong các nhà xưởng 
+cơ khí. Khi bạn phải nâng một "cốc" thép lỏng nặng 150 tấn ở nhiệt độ 1.600∘𝐶 và lật nghiêng nó 
+để rót, thiết kế cơ khí ph ải giải quyết được bài toán va ch ạm không gian (Interference) và bi ến 
+dạng nhiệt. Đó là lý do Cấu trúc Dầm của Ladle Crane ra đời. 
+1. Bài toán Hình học của việc "Rót thép" 
+Cách để nâng thùng liệu:  
+• Hai bên hông thùng có 2 cái ngõng (Trunnions).  Móc chính (Main Hoist)  sẽ dùng đòn 
+gánh móc vào 2 ngõng này để nhấc bổng thùng lên. 
+• Dưới đáy thùng có 1 cái móc hãm. Móc phụ (Auxiliary Hoist) sẽ móc vào đây kéo lên để 
+lật nghiêng thùng rót thép ra ngoài. 
+• Vấn đề: Móc chính nằm ở giữa, móc phụ đi từ phía sau tới. Làm sao đ ể cáp của xe con 
+chính và xe con phụ không bị vướng (tangle) vào nhau khi lật thùng?  
+→ Giải pháp nằm ở Cấu trúc Dầm. Có 2 loại layout chính: 
+2. Loại 1:  Cấu trúc 2 Dầm mở rộng (Wide-span Double Girder) 
+• Áp dụng: Cho các cẩu rót thép cỡ trung bình hoặc cẩu nạp liệu  
+• Cấu tạo: Vẫn chỉ có 2 dầm chính, nhưng khoảng cách giữa 2 dầm (Gauge) được kéo giãn 
+ra rất rộng. 
+• Nguyên lý: 
+o Xe con chính (Main Trolley) chạy trên ray chính. Cáp móc chính được thả dọc theo 
+bên ngoài dầm. 
+o Xe con phụ (Aux Trolley) được thiết kế chạy chung trên cùng hệ ray, nhưng cơ cấu 
+tời kéo cáp đư ợc bố trí lệch hẳn sang một bên để khi thả cáp lật thùng, nó không 
+vướng vào đòn gánh của móc chính. 
+• Ưu điểm: Trọng lượng bản thân nhẹ hơn, chi phí chế tạo rẻ hơn. 
+3. Loại 2: Cấu trúc 4 D ầm, 6 Dầm (Four-Girder / Six-Girder Layout) - Đỉnh cao của Ladle 
+Crane 
+• Áp dụng: Cho các cẩu rót thép h ạng siêu nặng (từ 200 tấn đến 500 tấn). Đây là thi ết kế 
+"Huyền thoại" của ngành luyện kim. 
+• Cấu tạo: Cầu trục có tới 4 dầm chữ hộp chạy song song với nhau. 
+
+=== PAGE 13 ===
+ 
+13 
+ 
+• Nguyên lý (Trainer cần nhấn mạnh phần này): 
+o 2 Dầm chính (Main Girders) n ằm ở ngoài cùng: Xe con chính (Main Trolley) 
+khổng lồ mang tời 200T-500T sẽ chạy trên 2 dầm này. Khoảng trống ở giữa xe con 
+chính được làm rỗng. 
+o 2 D ầm ph ụ (Auxiliary Girders) n ằm ở giữa và th ấp hơn:  Xe con ph ụ (Aux 
+Trolley) mang tời 50T-100T sẽ chạy trên 2 dầm này. 
+o Sự kỳ diệu: Nhờ 2 dầm phụ nằm lọt thỏm bên dưới xe con chính, xe con phụ có 
+thể chạy chui qua gầm của xe con chính. Điều này cho phép móc phụ di chuyển 
+tự do từ đầu này sang đầu kia của thùng rót thép l ỏng để lật thùng một cách hoàn 
+hảo mà không bao giờ sợ cáp chạm vào nhau. 
+4. "Bộ xương" bên trong Dầm (Internal Box Structure) 
+Dầm cầu trục luyện kim không dùng thép hình (I, H) mà bắt buộc phải dùng Dầm 
+Hộp (Box Girder). 
+• Chống vặn xoắn (Torsion Resistance): Khi lật thùng thép l ỏng, trọng tâm thay đ ổi liên 
+tục tạo ra lực vặn xoắn cực lớn. Cấu trúc hộp là hình khối chống vặn xoắn tốt nhất. 
+• Vách ngăn (Diaphragms):  Bên trong lòng d ầm h ộp không r ỗng hoàn toàn. C ứ cách 
+khoảng 1m - 1.5m sẽ có một tấm thép hàn chắn ngang (Vách ngăn). Nó giống như các đốt 
+sống lưng, giúp các b ản thép m ảng l ớn (b ụng, cánh) không b ị mất ổn đ ịnh c ục b ộ 
+(buckling/móp méo) dưới tải trọng hàng trăm tấn. 
+• Mối hàn ng ấu hoàn toàn (Full Penetration Welds):  Tiêu chuẩn FEM / EN 13001 b ắt 
+buộc các đư ờng hàn n ối các b ản bích ch ịu lực chính ph ải là hàn ng ấu 100% và siêu âm 
+(UT) 100% để chống nứt mỏi do làm việc ở chế độ Q4/S9 (A8/M8).  
+5. "Áo giáp" Chống Bức xạ nhiệt (Heat Shields) 
+Thép lỏng ở 1.600∘𝐶 phát ra bức xạ hồng ngoại khổng lồ. Nếu dầm thép của cẩu bị nung nóng 
+liên tục lên trên 200∘𝐶, thép sẽ mất ứng suất, mềm ra và võng xuống. 
+• Cấu tạo Tấm chắn nhiệt: Bên dưới mặt đáy của dầm chính, người ta sẽ treo các tấm thép 
+bức x ạ. Gi ữa t ấm thép này và đáy d ầm là m ột l ớp không khí ho ặc l ớp bông khoáng 
+(Mineral Wool / Bông gốm) cách nhiệt dày từ 50mm - 100mm. 
+• Tác dụng: Tấm thép mỏng bên dưới sẽ gánh chịu nhiệt độ cong vênh (có thể thay thế khi 
+bảo trì), trong khi dầm chính chịu lực bên trên vẫn giữ được nhiệt độ an toàn (<70∘𝐶). 
+ 
+  
+
+=== PAGE 14 ===
+ 
+14 
+ 
+CHUYÊN ĐỀ 5 : CƠ CẤU NÂNG HẠ DỰ PHÒNG  
+(REDUNDANT KINEMATICS) – "BẢO HIỂM SINH TỬ" 
+Hãy tưởng tượng cầu trục đang treo m ột thùng thép l ỏng 150 tấn ở nhiệt độ 1.600∘𝐶 lơ 
+lửng cách mặt đất 20 mét. Đột nhiên, "PẶC!"... một sợi cáp thép bằng cổ tay bị đứt búng ra. 
+Nếu đây là cẩu công nghiệp bình thường: Thùng thép s ẽ rơi tự do, chạm đất, phát nổ và 
+san phẳng toàn bộ xưởng đúc. 
+Nhưng với Cầu trục Rót thép (Ladle Crane), thùng thép l ỏng sẽ chỉ giật nhẹ một cái, hạ 
+xuống thêm khoảng 5-10cm rồi... KHÓA CỨNG LẠI GIỮA KHÔNG TRUNG. Mọi người an toàn! 
+Phép màu nào làm đư ợc điều đó? Đó chính là thi ết kế Redundant Kinematics (Cơ c ấu 
+động học dự phòng) tuân thủ triết lý "Single-Failure Proof" (Chống rủi ro điểm đơn). 
+ 
+1. Triết lý "Single-Failure Proof" là gì? 
+Luật an toàn Châu Âu (EN 13001, EN 13135) quy định đối với cẩu kim loại nóng: Bất kỳ 
+một chi ti ết chịu lực đơn l ẻ nào bị gãy/đứt (1 s ợi cáp, 1 tr ục động cơ, 1 bánh răng), thì h ệ 
+thống vẫn không được phép để rơi tải trọng. 
+Để làm đư ợc đi ều này, toàn b ộ cụm nâng h ạ (từ Motor → Hộp s ố → Tang 
+cuốn → Cáp → Móc) đều phải được nhân đôi (nhân bản). 
+2. Thiết kế Cáp kép (Dual-Rope Reeving System) 
+Thay vì dùng 1 sợi cáp rất to và dài quấn từ đầu này sang đầu kia của tang cuốn, Ladle Crane 
+sử dụng ít nhất 2 sợi cáp hoàn toàn độc lập. 
+• Cấu hình trên Tang (Drum): Tang cuốn được tiện rãnh kép (phân thành rãnh trái và rãnh 
+phải). Hai sợi cáp độc lập sẽ được cố định vào 2 đầu của tang. 
+• Hệ số an toàn (Safety Factor) cực đoan: 
+o Ở cẩu thường, hệ số an toàn của cáp là 5:1 (Cáp đứt khi tải gấp 5 lần). 
+o Ở Ladle Crane, hệ số này được tính toán sao cho: Khi 1 sợi bị đứt, sợi cáp còn lại 
+(đang phải gánh gấp đôi tải trọng đột ngột) vẫn phải đạt hệ số an toàn lớn hơn 
+4:1. Sợi cáp này sẽ phải to và đặc biệt hơn rất nhiều (thường là cáp lõi thép IWRC 
+cấp bền 1960 N/mm²). 
+3. "Trái tim" c ủa h ệ thống: Thanh cân b ằng & C ảm bi ến đ ứt cáp (Equalizer Bar & 
+Imbalance Detector) 
+Nếu đứt 1 sợi cáp, làm sao hệ thống biết để dừng lại trước khi sợi thứ 2 bị đứt nốt do lực 
+quán tính quá mạnh? Bí mật nằm ở cụm Puly Cân Bằng (Equalizer). 
+Cách thức hoạt động (Yêu cầu học viên tưởng tượng): 
+
+=== PAGE 15 ===
+ 
+15 
+ 
+1. Hai đầu còn lại của 2 sợi cáp (sau khi lu ồn qua các puly trên c ụm móc) sẽ được chốt 
+chặt vào 2 đầu của một thanh thép nằm ngang gọi là Thanh cân bằng (Equalizer Bar). 
+Thanh này giống hệt một cái Bập Bênh, có một trục xoay ở chính giữa. 
+2. Trạng thái bình thư ờng: Khi cẩu 150 t ấn lên, l ực căng trên 2 s ợi cáp là b ằng nhau 
+(mỗi bên gánh 75 tấn). Cái bập bênh bị kéo căng hai đầu nên nó nằm cân bằng (phẳng 
+ngang). 
+3. Trạng thái đứt cáp: Đột nhiên Sợi cáp A bị đứt. Lực căng bên A biến mất (= 0 t ấn). 
+Lúc này Sợi cáp B vẫn đang chịu lực kéo cực mạnh. Cái bập bênh mất thăng bằng và 
+lập tức lật nghiêng một góc lớn về phía dây B. 
+4. Kích hoạt An toàn (The Action): 
+o Ngay sát cái b ập bênh, kỹ sư lắp 2 cái Công tắc hành trình an toàn (Safety 
+Limit Switches). 
+o Khi bập bênh lật nghiêng, nó sẽ đá mạnh vào công tắc này. 
+o Tín hiệu điện truyền về PLC chỉ trong vài mili-giây (<10𝑚𝑠). PLC lập tức ra 
+lệnh: DỪNG KHẨN CẤP (E-STOP)! 
+o Hệ thống cắt toàn bộ điện, Phanh khẩn cấp (Emergency Caliper Brakes) kẹp 
+chặt vào vành tang cuốn. Tang cuốn ngừng quay ngay lập tức. Tải trọng 150 tấn 
+được giữ lại an toàn trên sợi cáp B còn lại. 
+4. Dự phòng Truyền động (Drive Redundancy) 
+Áp dụng trực tiếp Case Study từ dự án 150T:  
+Khách hàng đã phàn nàn: "Tại sao cẩu 150 tấn của các anh chỉ có 1 động cơ nâng chính? 
+Chúng tôi muốn 2 động cơ để nếu hỏng 1 cái thì cái kia vẫn chạy được nửa tốc độ!" 
+Đây chính là tư duy Dự phòng động học: 
+• Thay vì dùng 1 Motor kh ổng l ồ 800kW, VINALIFT ph ải chuy ển sang dùng  2 Motor 
+400kW nối vào 1 (hoặc 2) Hộp số. 
+• Hoạt động: Hai motor chạy đồng tốc (Master/Follower qua biến tần). 
+• Khi có s ự cố (Cháy 1 motor):  Trục của motor cháy s ẽ được cắt ly h ợp hoặc phanh l ại. 
+Biến tần sẽ cho phép Motor còn lại chạy ở Chế độ một nửa tốc độ (Half-speed Mode). 
+• Ý nghĩa: Nhờ vậy, nếu đang cẩu dở mẻ thép lỏng mà cháy motor, nhà máy vẫn có thể bò 
+với tốc độ chậm để rót nốt mẻ thép cho an toàn, tránh để thép đông đặc lại thành một khối 
+đá khổng lồ 150 tấn trong thùng rót (hủy hoại luôn cái thùng). 
+5. Ứng dụng hộp số vi sai trong cẩu thép 
+Trong thiết k ế Ladle Crane cao c ấp, ngoài vi ệc dùng bi ến t ần đ ồng t ốc, ngư ời ta thư ờng 
+dùng Hộp số Vi sai (Planetary Gearbox / Differential Gearbox). 
+• Ưu điểm cực hay đ ể khoe với khách: Khi 2 motor c ắm vào 1 h ộp số vi sai, n ếu 1 motor 
+cháy, motor kia vẫn quay bình thường. Hộp số vi sai tự động chia lại tỷ số truyền, cẩu sẽ 
+
+=== PAGE 16 ===
+ 
+16 
+ 
+tự động chạy chậm lại một nửa (Half-speed) mà KHÔNG CẦN bất kỳ can thiệp nào của 
+hệ thống cắt ly hợp hay biến tần. Đây là cơ khí thuần túy, an toàn 100% 
+ 
+ 
+Case study:  
+Khách hàng hỏi: "Giá cẩu của VINALIFT đắt quá. Tôi thấy xưởng bên cạnh họ mua cẩu 
+150T của Trung Quốc giá chỉ bằng một nửa, họ dùng 1 sợi cáp cỡ 60mm, họ bảo đứt làm sao được 
+mà phải tốn tiền làm cáp kép bập bênh như các anh?" 
+Hướng dẫn trả lời: 
+"Dạ thưa anh, cáp 60mm đúng là rất khó đứt vì sức nặng. Nhưng trong nhà máy thép, cáp 
+đứt không ph ải do n ặng, mà do  mỏi và nhi ệt. M ột tia thép l ỏng b ắn trúng, ho ặc nhi ệt 
+độ 1600∘𝐶 nung liên tục làm cáp mất ứng suất đột ngột, nó có thể đứt bất cứ lúc nào không báo 
+trước.  
+Cẩu 1 sợi cáp, đ ứt là RƠI. Còn c ẩu hệ cáp kép qua thanh cân b ằng của VINALIFT, cáp 
+đứt, bập bênh lật, phanh đóng lại trong 10 phần nghìn giây. Tải vẫn treo trên không trung. Sự chênh 
+lệch giá tiền chính là chi phí cho cái 'bảo hiểm sinh mạng' này của nhà máy anh ạ." 
+2. Nhấn mạnh vào thuật ngữ chuyên ngành (Keywords to remember): 
+• Redundant Reeving: Đi cáp dự phòng. 
+• Equalizer Bar / Equalizer Sheave: Thanh cân bằng / Puly cân bằng. 
+• Imbalance Detection: Phát hiện mất cân bằng cáp. 
+• Single-Failure Proof: An toàn tuyệt đối với rủi ro điểm đơn. 
+ 
+ 
+  
+
+=== PAGE 17 ===
+ 
+17 
+ 
+CHUYÊN ĐỀ 6: HỆ THỐNG PHANH AN TOÀN TUYỆT ĐỐI  
+(THE ULTIMATE BRAKING SYSTEM) – "CHỐT CHẶN CUỐI CÙNG" 
+Giả sử cầu trục đang cẩu 150 tấn thép lỏng đứng yên giữa không trung. Đột nhiên, trục ra 
+của hộp số (nối với tang cuốn cáp) kêu "RẮC" và gãy đôi. Điều gì sẽ xảy ra tiếp theo? 
+Nếu là cầu trục thông thường: Động cơ vẫn đứng yên, phanh vẫn đang đóng chặt. NHƯNG, 
+tang cuốn cáp đã bị mất kết nối với hệ thống phanh. Hậu quả: Tang cuốn sẽ quay tự do dưới sức 
+kéo của 150 tấn, nhả toàn bộ cáp ra trong ch ớp mắt. Thùng thép l ỏng rơi tự do đập xuống đất. 
+Thảm họa! 
+Đó là lý do C ầu tr ục Luy ện kim b ắt bu ộc ph ải có  Hệ thống Phanh 2 T ầng (Two-Tier 
+Braking System). 
+ 
+1. Sự nguy hiểm của "Phanh Thông Thường" (Standard Brakes) 
+Trên các cầu trục thông thường (dầm đôi xưởng cơ khí), phanh được lắp ở đâu? 
+• Vị trí: Lắp trên trục tốc độ cao (High-speed shaft) của Động cơ, nằm ngay trước hộp số. 
+• Lý do: Ở vị trí này, tốc độ quay rất nhanh nhưng Mô-men xoắn (Torque) lại nhỏ nhất. Do 
+đó, chỉ cần một bộ phanh nhỏ, gọn, giá rẻ là đủ sức giữ được cả hệ thống. 
+• Điểm yếu chết người: Nó bảo vệ Động cơ, nhưng nó phó mặc sinh mạng cho Chuỗi truyền 
+động (Kinematic Chain). Nếu bất kỳ mắt xích nào giữa Động cơ và Tang cuốn bị gãy (vỡ 
+bánh răng hộp số, gãy trục khớp nối), cái phanh đó lập tức trở nên vô dụng. 
+2. Hệ thống Phanh 2 Tầng trên Ladle Crane (The Two-Tier System) 
+Để giải quyết tử huyệt trên, tiêu chuẩn an toàn luyện kim yêu cầu cấu hình phanh như sau: 
+Tầng 1: Phanh Làm Việc (Service Brakes / Duty Brakes) 
+• Vị trí: Vẫn nằm trên trục động cơ (trục tốc độ cao). 
+• Số lượng: Luôn luôn là 2 bộ phanh độc lập cho một cơ cấu nâng. Mỗi bộ phanh phải được 
+thiết kế với Lực hãm (Braking Torque) tối thiểu bằng 150% mô-men xoắn định mức của 
+động cơ. (Nghĩa là hỏng 1 cái, cái kia vẫn dư sức giữ được tải 150%). 
+• Chức năng: Dùng để hãm và giữ tải trong các thao tác nâng hạ bình thường hàng ngày. 
+Tầng 2: Phanh Khẩn Cấp (Emergency Brakes) - Ngôi sao của hệ thống 
+• Vị trí (Cực kỳ quan trọng): Bắt trực tiếp lên Vành của Tang cuốn cáp (Rope Drum Flange) - 
+tức là trục tốc độ chậm nhất nhưng Mô-men xoắn khổng lồ nhất. 
+• Loại phanh: Phanh đĩa kẹp thủy lực khổng lồ (Hydraulic Caliper Brakes). Trông nó giống 
+hệt cụm phanh đĩa bánh xe ô tô đua nhưng lớn hơn.  
+• Chức năng: Chỉ nằm im ch ờ đợi. Nếu hệ thống truyền động bị gãy (như ví d ụ đầu bài), 
+hoặc tốc độ hạ tải vượt quá giới hạn an toàn, cụm phanh này sẽ "ngậm" thẳng vào cái tang 
+cuốn, khóa chết cái tang ngay lập tức. Tải không thể rơi dù hộp số có vỡ nát. 
+
+=== PAGE 18 ===
+ 
+18 
+ 
+3. Nguyên lý "An toàn vĩnh cửu" (Fail-Safe Principle) 
+Làm sao để đảm bảo chính cái Phanh Khẩn Cấp không bị hỏng khi cần dùng đến? Bí quyết 
+nằm ở triết lý thiết kế Fail-Safe (Hỏng là An toàn). 
+Cả Phanh làm việc và Phanh khẩn cấp đều được thiết kế theo nguyên tắc: ĐÓNG BẰNG LÒ 
+XO - MỞ BẰNG THỦY LỰC/ĐIỆN (Spring-Applied, Power-Released). 
+• Khi muốn Cẩu chạy: Trạm nguồn thủy lực (HPU) sẽ bơm dầu áp suất cao để ép các lò xo 
+khổng lồ lại, đẩy má phanh mở ra khỏi đĩa phanh. Động cơ mới có thể quay. 
+• Khi có Sự cố (Mất điện, đứt dây tín hiệu, vỡ ống thủy lực): Nguồn lực giữ lò xo biến mất. 
+Các lò xo v ới l ực nén hàng ch ục t ấn s ẽ tự động bung ra , k ẹp ch ặt má phanh vào đĩa 
+phanh/vành tang bằng cơ năng thuần túy. 
+• Kết luận: Hệ thống không cần điện để phanh. Nó cần điện để KHÔNG PHANH. Do đó, 
+trong mọi tình huống tồi tệ nhất (mất điện toàn nhà máy), cẩu sẽ tự động khóa cứng lại an 
+toàn. 
+4. Khi nào Phanh Khẩn Cấp được kích hoạt? 
+Phanh khẩn cấp sẽ đóng sập lại trong 4 trường hợp sau (được điều khiển qua PLC và rơ-le an 
+toàn): 
+1. Quá tốc (Overspeed): Có một công tắc ly tâm (Overspeed switch) gắn trên trục tang. Nếu 
+tang quay nhanh hơn  115% tốc độ tối đa cho phép (d ấu hiệu của việc trôi t ải/tuột phanh 
+chính), nó sẽ kích hoạt phanh khẩn cấp. 
+2. Đứt cáp: Bập bênh cân bằng bị lật (như đã học ở Mục 2). 
+3. Người lái đập nút Dừng khẩn (E-Stop): Trong cabin hoặc trên remote. 
+4. Mất điện toàn diện (Blackout). 
+ 
+Case study:  
+1. Liên hệ thực tế dự án 150T 
+Khách hàng đã hỏi rất kỹ: 'Nếu gãy trục kết nối hộp số và tang, các anh có thiết bị nào giữ cái 
+tang lại không?' 
+Câu trả lời của VINALIFT: "We provide an emergency brake that acts directly on the rope 
+drum's flange" (Chúng tôi cung cấp phanh khẩn cấp tác động trực tiếp lên vành tang cu ốn). Đây 
+chính là tính năng đắt tiền quyết định đẳng cấp của cẩu luyện kim!" 
+2. Kỹ năng Sales (Bán giá trị An toàn): 
+• Khách hàng chê đắt: "Tại sao tôi phải mua cái Trạm nguồn thủy lực (HPU) và cụm phanh 
+kẹp khổng lồ này, tốn thêm cả tỷ bạc?" 
+• Sales Engineer trả lời: "Thưa anh, cái phanh trên trục motor chỉ bảo vệ cái motor. Cái phanh 
+kẹp trực tiếp trên tang cuốn này bảo vệ 150 tấn thép lỏng của anh và mạng sống của anh 
+
+=== PAGE 19 ===
+ 
+19 
+ 
+em công nhân bên dư ới. Nếu có sự cố gãy trục hộp số, phanh motor vô d ụng. Không có 
+cụm phanh khẩn cấp này, 150 t ấn thép rơi t ự do sẽ phá hủy toàn bộ nhà xưởng của anh. 
+Chi phí 1 tỷ cho hệ thống này rẻ hơn rất nhiều so với một ngày dừng lò, chưa tính đến sinh 
+mạng con người." 
+3. Hình ảnh minh họa cần có trên Slide: 
+• Một hình vẽ sơ đồ truyền động (Động cơ → Phanh làm việc → Hộp số → Trục nối → Tang 
+cuốn → Phanh khẩn cấp nằm ở vành tang). 
+• Đánh dấu "X" đỏ vào vị trí Trục nối để minh họa sự cố gãy trục, qua đó thấy rõ Phanh làm 
+việc bị vô hiệu hóa, chỉ có Phanh khẩn cấp cứu vãn được tình hình. 
+ 
+ 
+  
+
+=== PAGE 20 ===
+ 
+20 
+ 
+CHUYÊN ĐỀ 7: CỤM MÓC CẨU RÓT THÉP (LADLE HOOK)  
+"BÀN TAY THÉP TRONG LỬA ĐỎ" 
+Khi chúng ta nâng m ột ki ện hàng bình thư ờng, chúng ta dùng m ột chi ếc móc c ẩu rèn 
+(Forged Hook) hình chữ C cong cong. Nhưng khi phải nâng một thùng thép lỏng (Ladle) 150 tấn 
+với đư ờng kính lên t ới 3-4 mét, ng ập tràn trong b ức xạ nhiệt 1.600∘𝐶, chiếc móc ch ữ C bình 
+thường sẽ gãy gập hoặc bị nung chảy. 
+Đó là lúc chúng ta ph ải dùng đ ến một kết cấu đặc biệt gọi là Cụm Dầm Móc (Lifting 
+Beam) kết hợp Móc Lá (Laminated / Lamellar Hooks). 
+ 
+1. Tổng quan về Cụm Dầm Móc (Lifting Beam / Spreader Beam) 
+Thay vì một điểm móc duy nhất ở giữa, cầu trục rót thép sử dụng một chiếc "Đòn gánh" khổng 
+lồ bằng thép. 
+• Cấu tạo: Là một kết cấu dầm hộp hoặc dầm chữ H siêu dày. Hai đầu đòn gánh s ẽ treo 2 
+chiếc móc thả thõng xuống (như hai cánh tay). 
+• Nhiệm v ụ: Hai chi ếc móc ở hai đ ầu đòn gánh này s ẽ ngàm ch ặt vào 2 cái  Ngõng 
+(Trunnions) nằm ở hai bên hông của thùng rót thép lỏng. 
+• Tại sao phải dùng đòn gánh? 
+1. Để ôm trọn được đường kính khổng lồ của thùng rót. 
+2. Bảo vệ hệ thống cáp: Nh ờ khoảng cách r ộng của đòn gánh, các puly và dây cáp 
+thép sẽ nằm dạt ra hai bên, tránh được cột nhiệt khổng lồ bốc thẳng lên từ miệng 
+thùng rót. 
+2. Sự kỳ diệu của "Móc Lá" (Laminated Hook / Lamellar Hook) 
+Tại sao móc c ẩu luyện kim không đúc/rèn nguyên kh ối nguyên cục cho khỏe, mà lại ghép từ 
+hàng chục tấm thép mỏng lại với nhau? 
+• Định nghĩa: Móc lá (Lamellar Hook) không phải là một khối thép đặc. Nó được tạo thành 
+bằng cách cắt hàng chục tấm thép bản mỏng (khoảng 30mm - 50mm mỗi tấm), xếp chồng 
+khít lên nhau và tán đinh ri -vê (rivet) ho ặc siết bu-lông xuyên qua đ ể ép chặt thành một 
+khối. 
+• Nguyên lý Chống lan truyền vết nứt (Crack Propagation Prevention): 
+o Nếu dùng móc rèn nguyên khối (Forged Hook): Khi chịu tải nặng liên tục cộng 
+với sốc nhiệt, bề mặt kim loại sẽ xuất hiện các vết nứt vi mô (Micro-cracks). Ở vật 
+liệu nguyên khối, vết nứt này sẽ xé toạc dần vào tâm lõi. Đến một ngày, chiếc móc 
+sẽ gãy gập đột ngột mà không báo trước (giống như đập vỡ một tấm kính). 
+o Nếu dùng Móc lá (Laminated Hook):  Nếu tấm thép ngoài cùng b ị nứt mỏi, vết 
+nứt sẽ chạy xuyên qua t ấm đó, nhưng NÓ SẼ DỪNG LẠI khi chạm đến khe h ở 
+
+=== PAGE 21 ===
+ 
+21 
+ 
+giữa tấm thứ nhất và tấm thứ hai. Vết nứt không thể "nhảy" sang mặt thép của tấm 
+bên cạnh. 
+• Bảo hiểm sinh mạng: Kể cả khi 1 hoặc 2 lá thép bị đứt gãy, hàng chục lá thép còn lại vẫn 
+gánh được 150 tấn thép lỏng. Thợ bảo trì khi kiểm tra hàng ngày nếu thấy có lá thép bị nứt 
+thì vẫn có đủ thời gian để lên kế hoạch thay thế toàn bộ cụm móc một cách an toàn. 
+3. Lớp "Áo Giáp" Bức Xạ Nhiệt (Heat Shields) 
+Thùng thép lỏng tỏa ra lượng bức xạ hồng ngoại có thể làm tan chảy cáp thép và hỏng lớp mỡ 
+bôi trơn vòng bi puly chỉ trong vài phút. 
+• Tấm chắn nhiệt đáy (Bottom Heat Shield): Ngay dưới bụng của chiếc "đòn gánh", kỹ sư 
+sẽ lắp đặt các t ấm thép nhi ều lớp, ở giữa có nh ồi bông g ốm (Ceramic fiber) ho ặc bông 
+khoáng. Tấm chắn này sẽ hứng toàn bộ "nhiệt nướng" từ thùng thép, bảo vệ cụm puly, vòng 
+bi và cáp thép an toàn nằm phía trên đòn gánh. 
+• Bảo vệ cổ móc: Chỗ phần móc ngàm vào ngõng thùng (điểm tiếp xúc gần thép lỏng nhất) 
+cũng thường được ốp thêm các vành thép bảo vệ có thể tháo lắp/thay thế được (Wear plates) 
+để chống mài mòn cơ học. 
+4. Cơ cấu Móc phụ lật thùng (Auxiliary Hook for Tipping) 
+Cụm đòn gánh móc chính (Main hoist) chỉ có nhiệm vụ nhấc bổng thùng thép lỏng di chuyển 
+từ Lò nấu sang Tháp đúc. Nhưng để rót thép ra khỏi thùng, ta cần một lực tác động thứ ba. 
+• Lúc này, Móc phụ (Auxiliary Hook) (thường là móc rèn tiêu chuẩn, tải trọng nhỏ hơn, ví 
+dụ 40 Tấn) sẽ được điều khiển chạy đến, móc vào cái khuyên nằm ở dưới đáy thùng rót. 
+• Khi móc phụ từ từ kéo lên, đáy thùng bị nhấc bổng, thùng thép sẽ xoay quanh trục (ngõng) 
+đang tựa trên đòn gánh chính → Thép lỏng được rót ra ngoài một cách từ từ và kiểm soát 
+hoàn hảo. 
+ 
+CASE STUDY:  
+1. Liên hệ hồ sơ làm rõ khách hàng gửi:  
+• Khách làm rõ:  'Hook type: Lifting beam with Ladle handling type' . Khách hàng ch ỉ ghi 
+một dòng rất ngắn, nhưng đằng sau nó là cả một bầu trời kỹ thuật." 
+• Trả lời:  VINALIFT đã thiết kế: 'The lifting beam will be equipped with 2 lamellar hooks, 
+and it will be protected by heat shields against heat radiation.' (Dầm treo sẽ được trang bị 
+2 móc phiến, và được bảo vệ bằng các tấm chắn bức xạ nhiệt). Đây chính là tiêu chuẩn cốt 
+lõi không thể thiếu của cẩu rót thép." 
+2. Ví dụ trực quan sinh động (Visual Analogy): 
+• "Để tôi giải thích cho các b ạn hiểu tại sao phải dùng Móc Phi ến (Laminated Hook). N ếu 
+tôi cầm một thanh gỗ đặc và bẻ mạnh, nó sẽ 'RẮC' và gãy làm đôi ngay lập tức." 
+
+=== PAGE 22 ===
+ 
+22 
+ 
+• "Nhưng nếu tôi cầm cuốn sách này (g ồm nhiều trang gi ấy ghép lại), tôi c ố bẻ nó. Nó sẽ 
+cong đi, các trang giấy sẽ trượt lên nhau. Nếu tôi dùng dao rọc giấy rạch đứt 1 trang ngoài 
+cùng, các trang bên trong v ẫn hoàn toàn nguyên v ẹn. Đó chính là cách Móc Phi ến cứu 
+mạng hàng trăm công nhân nhà máy thép hằng ngày!" 
+3. Nhấn mạnh Kỹ năng Bán hàng / Tư vấn (Sales/Engineering Focus): 
+Khi đi khảo sát nhà máy thép cũ, nếu thấy Móc lá (Lamellar hook) của khách hàng đã 
+bị hở khe (các tấm thép xòe ra), hoặc đinh ri-vê (rivet) bị lỏng, phải cảnh báo khách hàng 
+ngay lập tức. Khe hở đó sẽ tích tụ xỉ thép, làm đứt gãy kết cấu, và đó là cơ hội để chào bán 
+thay thế cụm móc mới. 
+ 
+ 
+  
+
+=== PAGE 23 ===
+ 
+23 
+ 
+CHUYÊN ĐỀ 8: HỆ THỐNG BẢO VỆ CHỐNG NHIỆT 
+ "ÁO GIÁP TRONG LÒ BÁT QUÁI" 
+Khi một thùng thép l ỏng 1.600∘𝐶 được nhấc lên, nó không ch ỉ làm nóng không khí xung 
+quanh, mà nó phát ra Bức xạ nhiệt (Radiant Heat) cực kỳ khủng khiếp. Bức xạ nhiệt truyền đi theo 
+đường thẳng giống như ánh sáng m ặt trời. Nếu bạn phơi m ột thanh thép dày 20mm ngay trên 
+miệng thùng rót, chỉ sau ít phút, thanh thép sẽ bị nung nóng lên 200∘𝐶 − 300∘𝐶. Ở nhiệt độ này, 
+thép bắt đầu mất ứng suất (giảm độ cứng), mềm ra như bún và... gãy sập! 
+Nhiệm vụ của kỹ sư thiết kế là phải tạo ra những "Lớp áo giáp" để ngăn chặn luồng bức 
+xạ tử thần này chạm vào bộ khung xương (dầm thép), mạch máu (dây điện) và dây thần kinh (hệ 
+thống điều khiển) của cầu trục. 
+ 
+1. Áo giáp Cơ khí: Tấm chắn bức xạ nhiệt (Radiant Heat Shields) 
+Đây là lớp phòng thủ đầu tiên và quan trọng nhất, dùng nguyên lý "phản xạ và cách ly". 
+• Vị trí lắp đặt: Bất cứ mặt phẳng nào "nhìn th ấy" trực tiếp thùng thép l ỏng đều phải được 
+che chắn. Bao gồm: Mặt dưới của Dầm chính (Main girders), mặt dưới của Khung xe con 
+(Trolley frame), Đòn gánh cụm móc (Lifting beam) và gầm Cabin (nếu có). 
+• Cấu tạo "Sandwich": Tấm chắn nhiệt không phải là hàn bừa một miếng tôn vào dầm. Nó 
+có cấu trúc nhiều lớp: 
+1. Lớp ngoài cùng (Hứng nhiệt): Một tấm thép tấm (hoặc thép không gỉ) được bắt bu-
+lông cách mặt đáy dầm một khoảng hở (Air gap). Tấm này sẽ hứng chịu toàn bộ 
+nhiệt bức xạ và nóng rực lên. Nó được thiết kế để có thể cong vênh co giãn và d ễ 
+dàng tháo ra thay mới khi bảo trì. 
+2. Lớp gi ữa (Cách nhi ệt): Ở giữa khe h ở, ngư ời ta nhét  Bông khoáng (Mineral 
+Wool) hoặc Bông g ốm (Ceramic Fiber). Đây là v ật li ệu không cháy, ngăn ch ặn 
+nhiệt truyền dẫn (conduction) từ tấm chắn lên đáy dầm. 
+3. Lớp trong cùng: Chính là đáy dầm cầu trục, lúc này luôn được duy trì ở mức nhiệt 
+độ an toàn (thường <70∘𝐶), đảm bảo thép không bị suy giảm khả năng chịu lực. 
+2. Sự sống còn của Cáp thép: Cáp lõi thép (IWRC) 
+• Sai lầm chết người: Cầu trục công nghiệp bình thường dùng cáp thép lõi đay/lõi sợi tổng 
+hợp (Fiber Core - FC). Lõi đay được tẩm mỡ bò để bôi trơn các tao cáp từ bên trong. Nếu 
+đưa cáp này vào xưởng đúc, nhiệt bức xạ sẽ làm mỡ sôi lên, chảy thành giọt như nước mưa. 
+Lõi đay khô ran, bốc cháy ngầm bên trong. Cáp thép cọ xát vào nhau, đứt gãy từ bên trong 
+và đứt phựt! 
+• Giải pháp b ắt bu ộc: Ladle Crane ph ải dùng  Cáp thép Lõi thép Đ ộc l ập (IWRC - 
+Independent Wire Rope Core). Cáp này đắt hơn, cứng hơn, nhưng chịu được nhiệt độ cao. 
+
+=== PAGE 24 ===
+ 
+24 
+ 
+• Chất bôi trơn:  Không dùng m ỡ bò thông thư ờng, ph ải dùng lo ại m ỡ chịu nhi ệt độ cao 
+(High-temp Grease / Dry lubricant) đ ể không bị nhỏ giọt xuống sàn ho ặc rớt vào thùng 
+thép lỏng (gây nổ bốc cháy). 
+3. Bảo vệ "Bộ não" và "Mạch máu" (Điện & Điều khiển) 
+• Phòng điện (Electrical Room / E-Room): Không thể để các tủ điện đứng trơ trọi phơi mình 
+trong nhiệt độ môi trường 60∘𝐶. 
+o Phòng điện phải là m ột "Container" kín khít. Vách phòng đi ện (Envelope) đư ợc 
+nhồi bông khoáng cách nhiệt. 
+o Bên trên phòng điện lắp đặt hệ thống Điều hòa công nghiệp (Heavy-duty Industrial 
+HV AC / Frigortec). Luôn chạy ở chế độ 1+1 (có một máy dự phòng tự động bật lên 
+nếu máy kia chết do quá nhiệt). 
+• Mạch máu (Cables): 
+o Các đoạn dây điện chạy lọt ra ngoài (như dây nối xuống động cơ, đèn pha) phải sử 
+dụng Cáp chịu nhiệt bọc Silicone hoặc Teflon. 
+o Các máng cáp ph ải là loại kín (Closed cable trays) đ ể tránh vảy hàn kim lo ại bắn 
+vào làm chập cháy. 
+4. Bảo vệ Người vận hành (The Operator) 
+Nếu cầu trục rót thép có Cabin điều khiển, đây là nơi cần bảo vệ nghiêm ngặt nhất vì sức chịu 
+đựng của con người kém xa máy móc. 
+• Cabin phải bọc vách kép cách nhiệt. 
+• Kính cabin là loại Kính cường lực cách nhiệt nhiều lớp (Tempered insulated glass). Thường 
+được phủ lớp phản quang để chống chói từ kim loại nóng chảy. 
+• Trang bị máy lạnh công suất lớn chuyên dụng. 
+ 
+CASE STUDY:  
+1. Hồ sơ chào giá ghi gì:  
+• Tại sao VINALIFT ghi rõ trong Spec:  'Under lifting beam, under girders, under trolley 
+frames, under cabin, will be installed protective heat shields'? Đây chính là Lớp Áo Giáp 
+Cơ Khí mà chúng ta v ừa học. Khách hàng là m ột chuyên gia luy ện kim, họ sẽ soi rất kỹ 
+dòng này." 
+• "Tiếp theo, hãy nhìn vào cách chúng ta gi ải quyết 'Bảo vệ người vận hành'. Khách hàng 
+yêu c ầu: 'We do not want cabins on board the overhead crane... controlled 
+remotely' (Chúng tôi không muốn có cabin trên cẩu... phải điều khiển từ xa). 
+
+=== PAGE 25 ===
+ 
+25 
+ 
+Bài học rút ra: Phương pháp bảo vệ chống nhiệt tốt nhất cho con người trong thế kỷ 21 chính 
+là... Đừng cho con người ngồi trên đó! Thay cabin bằng hệ thống Camera quan sát (CCTV) ch ịu 
+nhiệt độ trễ thấp và chuyển thợ lái vào phòng điều khiển máy lạnh dưới mặt đất." 
+2. Tình huống thực tế: 
+"Nếu khách hàng gọi điện báo: 'Cáp cẩu rót thép của tôi bị khô rang, mỗi lần cẩu kêu cót 
+két, mỡ bò thì chảy tong tỏng xuống sàn'. Lỗi do đâu?" 
+ 
+Gợi ý trả lời: 
+ "Lỗi do dùng sai loại cáp (dùng cáp lõi đay FC thay vì lõi thép IWRC) hoặc dùng mỡ bôi 
+trơn giá rẻ không chịu nhiệt.  
+Khắc phục: Phải thay toàn bộ cáp sang chuẩn IWRC và dùng mỡ chuyên dụng luyện kim." 
+ 
+  
+
+=== PAGE 26 ===
+ 
+26 
+ 
+PHẦN D: CÁC CƠ CẤU CƠ KHÍ & ĐIỆN ĐẶC THÙ KHÁC 
+CHUYÊN ĐỀ 9: CƠ CẤU DI CHUYỂN (TRA VEL MECHANISMS)  
+"ĐÔI CHÂN THÉP NGÀN TẤN" 
+Hãy tưởng tượng một cỗ máy nặng 200 tấn (bản thân cẩu) cõng thêm 150 t ấn thép lỏng, 
+lao đi với tốc độ 80 mét/phút trên cao. Tổng trọng lượng 350 tấn này tạo ra một lực quán tính cực 
+kỳ khủng khiếp mỗi khi tăng tốc hay phanh lại. Chưa kể, đường ray luôn phủ đầy bụi xỉ kim loại. 
+Nếu dùng bánh xe và cơ cấu di chuyển của cẩu nhà xưởng thông thường, bánh xe sẽ mòn vẹt, nứt 
+vỡ hoặc trật ray chỉ trong vài tháng. Vậy "đôi chân" của Ladle Crane được trang bị những vũ khí 
+gì? 
+ 
+1. Bánh xe di chuyển (The Wheels) – Tuyệt đối không dùng thép đúc 
+• Sai lầm của cẩu thường: Dùng thép đúc (Cast steel) hoặc thép các-bon thấp, độ cứng bề 
+mặt chỉ khoảng 300 HB. Chạy một thời gian bề mặt bánh xe sẽ bị rỗ, nứt dăm và bong tróc 
+thành từng mảng. 
+• Tiêu chuẩn Luyện kim: Bắt buộc phải là Thép hợp kim rèn nguyên khối (Forged Alloy 
+Steel). 
+o Vật liệu thường dùng: 42CrMo4 hoặc 35NCD16 (tiêu chuẩn Châu Âu). 
+o Độ cứng bề mặt: Phải được tôi luyện (Surface Hardened) đạt 450 - 500 HB (tương 
+đương 48-52 HRC), độ sâu lớp tôi từ 5-10mm. 
+o Tác dụng: Đủ độ cứng để nghiền nát bụi xỉ trên ray mà không bị mài mòn, nhưng 
+phần lõi vẫn đủ độ dẻo dai để không bị nứt vỡ khi chịu lực nén 350 tấn. 
+2. Con lăn dẫn hướng ngang (Horizontal Guide Rollers) – "Bí quyết giữ tiền cho khách" 
+Đây là chi tiết ăn tiền nhất của hệ thống di chuyển cẩu hạng nặng. 
+• Vấn đề của bánh xe truyền thống: Bánh xe cẩu thường có 2 cái gờ (Flanged wheels) để 
+ôm lấy đường ray không cho c ẩu trật bánh. Khi c ẩu chạy, do sai s ố cơ khí ho ặc lực xô 
+ngang, các gờ này sẽ cọ xát trực tiếp vào hai bên hông đường ray (Sliding friction - Ma sát 
+trượt). Lực cọ xát của 350 tấn sẽ cào mòn gờ bánh xe thành dao sắc lẹm, và cào hỏng luôn 
+cả đường ray của nhà xưởng. 
+• Giải pháp (Horizontal Guide Rollers): 
+o Kỹ sư sẽ bỏ gờ bánh xe đi (ho ặc giữ lại gờ nhưng làm r ộng ra để không bao gi ờ 
+chạm ray). Thay vào đó, họ lắp các Con lăn dẫn hướng bằng thép nằm ngang, tỳ 
+hai bên hông đường ray. 
+o Nguyên lý: Chuyển từ Ma sát trượt (gờ bánh xe cà vào ray) sang Ma sát lăn (con 
+lăn quay tròn dọc theo hông ray). 
+o Lợi ích: Bánh xe chính chỉ việc chịu tải thẳng đứng. Con lăn sẽ chịu lực xô ngang. 
+Tuổi thọ của bánh xe và đường ray tăng lên gấp 5 - 10 lần. 
+
+=== PAGE 27 ===
+ 
+27 
+ 
+3. Gạt đá & Gạt ray (Rail Sweeps / Scrapers) – "Người mở đường" 
+• Hiện tượng: Nhà máy thép có rất nhiều vảy hàn, xỉ sắt, hoặc thậm chí những cục phế liệu 
+văng lên đường ray. Nếu bánh xe cán qua m ột cục sắt, cẩu có thể bị nảy lên và tr ật bánh 
+(Derailment). 
+• Trang bị bắt buộc: Ngay phía trư ớc các bánh xe ở dầm biên (End Carriages), b ắt buộc 
+phải hàn các tấm thép hình chữ V , gọi là Rail Sweeps (Gạt đá) khoảng sáng gầm chỉ cách 
+mặt ray 5-10mm. 
+• Chức năng: Càn quét và hất văng mọi vật cản, xỉ sắt, làm sạch mặt ray trước khi bánh xe 
+lăn tới. 
+4. Giảm chấn cuối hành trình (End Buffers / Bumpers) – "Cú phanh êm ái" 
+• Sai lầm của cẩu thường: Dùng cục cao su đặc (Solid rubber). Nếu cẩu lao vào điểm dừng 
+cuối đường ray, cục cao su sẽ nén lại và... nảy bật ngược ra (như quả bóng cao su). Cú nảy 
+ngược này (Rebound) sẽ làm thùng thép lỏng 150 tấn đong đưa dữ dội, hất văng kim loại 
+nóng chảy ra ngoài. 
+• Giải pháp Luyện kim: 
+o Loại 1: Polyurethane x ốp (Cellular Polyurethane):  Cục giảm chấn cấu tạo từ 
+nhựa xốp bọt khí. Khi đ ập vào, nó x ẹp xuống từ từ để "nuốt" trọn động năng, độ 
+nảy ngược (recoil) cực kỳ thấp. 
+o Loại 2: Giảm chấn Thủy lực (Hydraulic Buffers):  Đây là loại cao cấp nhất, dùng 
+pít-tông thủy lực để dập tắt hoàn toàn xung lực va đập. Cầu trục sẽ dừng lại êm ái 
+như xe ô tô phanh thủy lực, bảo vệ tuyệt đối kết cấu dầm thép không bị xé rách. 
+5. Dẫn động độc lập (Independent Drives) 
+• Không dùng 1 motor đ ặt giữa dầm kéo 2 tr ục dài nối ra 2 bánh xe (công ngh ệ cũ, hay bị 
+vặn xoắn trục). 
+• Cẩu nhà máy thép sử dụng hệ dẫn động góc độc lập: Bố trí 4 (hoặc 8) cụm Động cơ + Hộp 
+số liền kề cắm trực tiếp vào từng bánh xe chủ động ở các góc. Việc đồng tốc để cẩu không 
+bị chạy chéo (Skewing) sẽ do Hệ thống biến tần (VFD) và PLC đảm nhiệm thông qua tín 
+hiệu Encoder. 
+ 
+CASE STUDY :  
+1. Đặc tính kỹ thuật:  
+• Khách hàng hỏi: 'Anh dùng con lăn dẫn hướng loại gì, kích thước bao nhiêu?'.  
+Cách trả lời: 'Chúng tôi dùng Independent Horizontal Guide Rollers v ật liệu 42CrMo4... 
+để giảm mài mòn bánh xe và đường ray'.  
+• Rail Sweeps:  Không có cái gạt đá này, bánh xe cán qua xỉ thép sẽ hỏng ngay lập tức." 
+
+=== PAGE 28 ===
+ 
+28 
+ 
+• Safety Stops:  Chúng ta đã xác nhận dùng Hydraulic pumper stopper (Giảm chấn thủy 
+lực). Đây là chi tiết đắt tiền nhưng bắt buộc để chống văng thép lỏng." 
+2. Khi khách hàng hỏi về giá thành:  
+• Tình huống: Khách hàng phàn nàn giá cẩu VINALIFT đắt hơn vì có thêm bộ "Con lăn dẫn 
+hướng ngang" và "Bánh xe thép rèn". 
+• Cách trả lời: 
+"Thưa anh, đúng là chi phí đ ầu tư ban đầu (CAPEX) của chúng em cao hơn 5%. Nhưng anh 
+hãy nhìn vào chi phí vận hành (OPEX). Với bánh xe cẩu thường, cứ 1-2 năm anh phải dừng xưởng 
+luyện 1 tuần để cầu một dàn cẩu khác lên thay bánh xe, chi phí dừng lò luyện thép 1 tuần của anh 
+thiệt hại hàng tỷ đồng. Chưa kể đường ray của nhà xưởng anh bị cào mòn, vài năm phải cắt đi hàn 
+lại ray mới. 
+Với hệ thống Bánh xe thép rèn + Con lăn d ẫn hướng ngang của VINALIFT, bánh xe và 
+đường ray của anh gần như không bao giờ cọ xát trượt vào nhau. Anh có thể chạy 10 năm không 
+cần thay bánh, không hỏng ray xưởng. Giá trị chúng em bán là sự hoạt động liên tục không gián 
+đoạn của nhà máy anh ạ." 
+  
+
+=== PAGE 29 ===
+ 
+29 
+ 
+CHUYÊN ĐỀ 10: HỆ THỐNG ĐIỆN & ĐIỀU KHIỂN   
+"BỘ NÃO TRONG LÒ BÁT QUÁI" 
+Linh kiện điện tử rất mỏng manh. Một chiếc điện thoại hay máy tính xách tay sẽ sập nguồn 
+nếu nhiệt độ vượt quá 50∘𝐶. Vậy làm thế nào "bộ não" của cầu trục (gồm hàng loạt biến tần, PLC, 
+contactor) có thể hoạt động hoàn hảo 24/7 ngay trên nắp lò luyện thép 1.600∘𝐶, giữa bầu không 
+khí đặc quánh bụi than chì dẫn điện? 
+Đó là nhờ vào thiết kế "Cách ly, Dự phòng và Kiểm soát chính xác tuyệt đối". 
+ 
+1. Phòng Điện (Electrical Room / E-Room) – Lô cốt sinh tồn 
+Khác với cầu trục xưởng cơ khí chỉ treo một cái tủ điện lủng lẳng bên hông dầm, Ladle Crane 
+sở hữu hẳn một "căn nhà" khép kín đặt trên dầm cầu. 
+• Vỏ phòng (Envelope): Không làm bằng tôn 1 l ớp. Nó là vách Sandwich cách nhi ệt (nhồi 
+bông khoáng bên trong). 
+• Tiêu chuẩn IP54/IP55: Phòng phải Kín khí và Kín nư ớc. Bụi than chì (Graphite) t ừ điện 
+cực lò EAF là ch ất dẫn điện cực mạnh. Nếu lọt vào bo m ạch biến tần, nó sẽ gây nổ tung 
+(Short-circuit). 
+• Hệ thống làm mát (HV AC): Sử dụng máy l ạnh công nghi ệp hạng nặng (Heavy-duty Air 
+Conditioner) như hãng Frigortec. 
+o Tính năng:  Chạy ch ế độ dự phòng 1+1 (Main/Standby). Duy trì nhi ệt đ ộ trong 
+phòng luôn dưới 30∘𝐶 − 35∘𝐶. 
+o Áp suất dương: Máy lạnh liên tục bơm khí s ạch vào phòng t ạo áp suất dương, để 
+khi thợ mở cửa bước vào, bụi bên ngoài không thể bay ngược vào trong. 
+• Tủ điện bên trong (Cubicles): Trước đây người ta hay bắt thiết bị trần lên bảng táp-lô (Open 
+Chassis) để tản nhiệt nhanh. Nhưng tiêu chuẩn an toàn mới bắt buộc phải đóng gói vào các 
+Tủ điện kín có khóa (Enclosed Cabinets) để thợ cơ khí đi ngang qua không bị điện giật. 
+2. Điều khiển Vòng Kín (Closed-Loop Vector Control) – Nghệ thuật "Zero Rollback" 
+Đây là công nghệ cốt lõi cho động cơ nâng hạ thép lỏng. 
+• Vấn đề của cẩu thường (Open-Loop): Khi bạn bấm nút Nâng, phanh sẽ mở ra. Sẽ có một 
+độ trễ khoảng 0.1 - 0.2 giây trước khi động cơ tạo đủ lực kéo để nhấc hàng lên. Trong tích 
+tắc đó, tải trọng sẽ bị tụt xuống một chút (Rollback). Với 150 tấn thép lỏng, sự tụt tải này 
+sẽ tạo ra cú giật làm nước thép sóng sánh trào ra ngoài! 
+• Giải pháp Luyện kim (Closed-Loop): 
+o Đuôi động cơ được gắn bộ mã hóa vòng quay (Encoder). 
+o Biến tần (VFD) sẽ bơm dòng điện vào động cơ. Encoder đọc tốc độ và báo về Biến 
+tần. 
+
+=== PAGE 30 ===
+ 
+30 
+ 
+o Torque Proving (Ch ứng minh l ực kéo): Biến t ần gi ữ động cơ ở trạng thái  0 Hz 
+nhưng Torque = 100% (động cơ ghì chặt tải nhưng không quay). CHỈ KHI hệ thống 
+xác nhận động cơ đã ôm trọn 150 tấn, má phanh mới được lệnh mở ra. 
+o Kết quả: Thùng thép lỏng lướt đi êm ái, hoàn toàn không có hiện tượng tụt tải hay 
+rung giật. 
+3. Hãm Tái Sinh (Active Front End - AFE) – "Biến nhiệt thành tiền" 
+• Vấn đề của cẩu thường: Khi thả 150 tấn hàng từ trên cao xuống, động cơ bị hàng kéo ghì 
+lại, nó biến thành một "Máy phát điện". Dòng điện này bị đẩy ngược về Biến tần. Để không 
+làm cháy Biến tần, người ta dùng Điện trở xả (Braking Resistors) để đốt lượng điện này 
+thành Nhiệt. 
+o Hậu quả: Cầu trục luyện kim đã quá nóng, giờ lại cõng thêm một "lò nướng" điện 
+trở xả khổng lồ trên lưng, nguy cơ cháy nổ cực cao. 
+• Giải pháp Luyện kim (AFE - Regenerative Braking): 
+o Thay vì dùng điện trở đốt nóng, kỹ sư sử dụng Bộ hãm tái sinh AFE. 
+o Nguyên lý: Dòng đi ện sinh ra khi h ạ tải s ẽ được b ộ AFE n ắn l ại cho cùng pha 
+và bơm ngược trả lại lưới điện của nhà máy. 
+o Lợi ích kép: Vừa loại bỏ được cục nung nhiệt (điện trở) trên cẩu, vừa giúp nhà máy 
+tiết kiệm hàng trăm triệu tiền điện mỗi tháng. 
+4. Hệ Thần Kinh: Cáp chịu nhiệt & Dây chuyền Tín hiệu 
+• Dây cáp (Cables): Không dùng cáp nh ựa PVC thông thư ờng (sẽ chảy nhão ở 70∘𝐶). Bắt 
+buộc dùng cáp vỏ Silicone hoặc Teflon chịu nhiệt độ cao (180∘𝐶 − 250∘𝐶). 
+• Cấp điện dọc dầm (Cross Travel Power): Thay vì dùng cáp dẹt sâu đo (Festoon Cable) dễ 
+bị đứt đ ứt do gió và rung l ắc, c ẩu luy ện kim hi ện đ ại dùng  Xích d ẫn cáp (Energy 
+Chain/Drag Chain) bằng thép hoặc nhựa chịu nhiệt, bảo vệ dây cáp hoàn hảo. Trường hợp 
+dùng cáp sâu đo, cáp phải được bọc trong bạt chịu nhiệt.  
+5. Bộ Não Thông Minh: PLC & Hệ thống Quản lý CMS 
+• PLC (Programmable Logic Controller):  Là trung tâm x ử lý an toàn (Ví d ụ: Siemens S7 -
+1500). PLC kết nối tất cả biến tần, cảm biến, loadcell qua mạng tốc độ cao (Profinet). 
+• Đồng tốc điện tử (Master/Follower): Khi dùng 2 động cơ để nâng 1 thùng thép, PLC sẽ chỉ 
+định 1 motor làm "Ch ủ" (Master), motor kia làm "T ớ" (Follower). Motor "Tớ" sẽ copy y 
+hệt tốc độ và mô-men xoắn của "Chủ", đảm bảo tải được nâng lên thẳng tắp không bị lệch. 
+• CMS (Crane Management System):  Màn hình HMI hi ển thị toàn bộ "sức khỏe" của cẩu: 
+Báo lỗi chính xác từng con ốc, theo dõi tuổi thọ mỏi (ISO 12482), cảnh báo bảo trì. 
+ 
+CASE STUDY:  
+
+=== PAGE 31 ===
+ 
+31 
+ 
+1. Liên hệ Hồ sơ dự án 
+• Khách hàng yêu c ầu:  'The overhead crane must be equipped with a regenerative brake 
+unit, we do not want on -board brake resistors'  (Cầu trục phải trang b ị bộ hãm tái sinh, 
+chúng tôi KHÔNG MUỐN điện trở xả trên cẩu). Đây chính là hệ thống AFE mà chúng ta 
+vừa học. Khách hàng sợ cháy nổ và họ muốn tiết kiệm điện." 
+• Khách hàng yêu cầu:  'Bảo vệ cáp điện ở khu vực nhạy cảm?. Câu trả lời của chúng ta là: 
+Dùng cáp chịu nhiệt cao (high-temperature resistant cables), bọc trong ống luồn kim loại 
+(metallic conduits) và bọc thêm lớp chống cháy. Đây là tiêu chuẩn sống còn!" 
+• "Ở phần tủ điện ban đ ầu chúng ta đ ịnh làm b ảng táp-lô hở (Open Chassis) đ ể tản nhiệt 
+nhanh. Nhưng vì thợ cơ khí phải đi ngang qua phòng điện để bảo trì, khách hàng bắt buộc 
+chúng ta phải đóng thành Tủ kín (Cubicles). Đây là bài toán an toàn điện." 
+2. Bán giá trị Công nghệ: 
+• Khách hàng chê: "Hệ thống AFE của các anh làm giá cẩu đắt thêm mấy trăm triệu, tôi dùng 
+điện trở xả như cẩu cũ cho rẻ." 
+• Cách trả lời: "Thưa anh, 150 tấn thép rơi tự do 20m sinh ra một lượng năng lượng khổng 
+lồ. Anh dùng điện trở xả tức là anh đang cõng m ột cái lò nướng trên lưng cẩu, rất dễ gây 
+hỏa hoạn cháy lan sang các cáp đi ện khác. Hơn n ữa, với tần suất chạy 24/7 c ủa lò EAF, 
+lượng điện mà hệ thống AFE bơm ngược lại lưới điện sẽ giúp anh hoàn vốn tiền chênh lệch 
+thiết bị này chỉ trong vòng chưa tới 2 năm. Kể từ năm thứ 3, cái cẩu này tự động kiếm tiền 
+điện cho anh." 
+ 
+  
+
+=== PAGE 32 ===
+ 
+32 
+ 
+PHẦN E: CÔNG NGHỆ TỰ ĐỘNG HÓA & "SMART CRANE" 
+CHUYÊN ĐỀ 11 : HỆ THỐNG CHỐNG LẮC (ANTI-SWAY) 
+"NGHỆ THUẬT KIỂM SOÁT CON LẮC KHỔNG LỒ" 
+Bạn hãy tưởng tượng mình đang cầm một cốc cà phê đầy nóng rực và phải chạy nhanh từ 
+đầu phòng đ ến cu ối phòng, sau đó d ừng l ại đ ột ng ột. Cà phê s ẽ sánh ra ngoài.  
+Bây giờ, hãy phóng to c ốc cà phê đó lên thành thùng thép l ỏng 150 tấn ở 1.600∘𝐶, treo lơ lửng 
+trên sợi cáp dài 20 mét. Khi cầu trục tăng tốc hoặc phanh lại, khối thép này sẽ văng như một con 
+lắc khổng lồ. Để chờ nó dừng lắc, thợ lái cẩu phải mất từ 30 giây đến 1 phút, hoặc phải dùng kỹ 
+năng "nhấp nhả" cần gạt cực kỳ điêu luyện. Nếu mỗi mẻ thép mất 1 phút chờ đợi, một ngày nhà 
+máy mất bao nhiêu tiền? 
+Đó là lý do Hệ thống Chống lắc (Anti-Sway) ra đời: Để thùng thép vừa đến đích là đứng 
+im phăng phắc, giúp nhà máy tăng 20% - 30% năng suất. 
+ 
+1. Vật lý cơ bản của sự Rung lắc (The Physics of Sway) 
+• Tải tr ọng treo trên cáp c ẩu ho ạt đ ộng chính xác theo nguyên lý c ủa m ột Con l ắc đơn 
+(Pendulum). 
+• Bí mật cốt lõi: Chu kỳ dao động (thời gian lắc qua lắc lại) của con lắc KHÔNG phụ thuộc 
+vào vi ệc c ục hàng n ặng 10 t ấn hay 150 t ấn. Nó ch ỉ phụ thuộc vào m ột bi ến s ố duy 
+nhất: Chiều dài sợi cáp (Rope Length / Hook Height). 
+o Cáp càng dài: Lắc càng chậm nhưng biên độ văng càng lớn. 
+o Cáp càng ngắn (khi kéo sát lên dầm): Lắc càng nhanh, giật cục. 
+2. Công nghệ Chống lắc Vòng Hở (Open-Loop / Sensorless Anti-Sway) 
+Đây là công nghệ phổ biến nhất và phù hợp nhất cho nhà máy thép. 
+• Nguyên lý: Không dùng bất kỳ camera hay mắt thần nào để nhìn cục hàng. Nó dùng Thuật 
+toán Toán học (Mathematical Model) nạp thẳng vào phần mềm của Biến tần (VFD) hoặc 
+PLC. 
+• Cách hoạt động: 
+o PLC luôn biết chính xác chiều dài cáp hiện tại nhờ vào Encoder lắp trên động cơ 
+nâng hạ. 
+o Dựa vào chiều dài cáp đó, thuật toán sẽ tự tính ra được chu kỳ con lắc. 
+o Khi thợ lái kéo c ần gạt Joystick đ ể chạy, Biến tần sẽ không cho motor ch ạy cái 
+"vèo" ngay lập tức, mà nó sẽ tự động tinh chỉnh biểu đồ Tăng tốc / Giảm tốc. Nó 
+tạo ra một lực gia tốc bù trừ, triệt tiêu chính xác lực quán tính của cục hàng. 
+• Ưu điểm (Tại sao nhà máy thép thích dùng): Siêu bền bỉ! Bụi mù mịt, khói lửa, nhiệt độ 
+cao không ảnh hưởng gì đến nó vì nó nằm an toàn bên trong phần mềm tủ điện. 
+
+=== PAGE 33 ===
+ 
+33 
+ 
+• Nhược điểm: Mù! Nếu có gió th ổi mạnh làm l ắc cục hàng, ho ặc thợ cẩu móc xiên c ục 
+hàng, hệ thống này không tự triệt tiêu được vì nó không "nhìn" thấy sự lắc ngoại cảnh đó. 
+3. Công nghệ Chống lắc Vòng Kín (Closed-Loop / Vision-based Anti-Sway) 
+Đây là công nghệ đắt tiền, cao cấp hơn. 
+• Nguyên lý: Có gắn Cảm biến góc (Angle Sensor) dạng cơ khí ở đầu cáp, hoặc gắn Camera 
+hồng ngoại chiếu thẳng xuống hàng (hoặc mốc phản quang trên cụm móc). 
+• Cách hoạt động: Cảm biến "nhìn" thấy dây cáp đang b ị lệch bao nhiêu độ. Tín hiệu báo 
+về PLC. PLC lập tức ra lệnh cho động cơ di chuyển cầu trục chạy nhích theo hướng hàng 
+đang lắc để "đón" nó lại, giữ cho dây cáp luôn thẳng đứng vuông góc với mặt đất. 
+• Ưu điểm: Triệt tiêu mọi loại rung lắc (kể cả do gió bão hay va chạm vật lý). Thường dùng 
+ở Cảng biển (cẩu Container) hoặc cẩu tự động hoàn toàn. 
+• Nhược điểm (Tử huyệt ở xưởng luyện kim): Camera hoặc cảm biến quang học rất dễ bị 
+"MÙ" do khói bụi đặc quánh của lò EAF hoặc bị nướng chín bởi bức xạ nhiệt. Bảo trì cực 
+kỳ vất vả. 
+4. Tại sao Anti-Sway là BẮT BUỘC với Cầu trục Điều khiển từ xa (Remote Control Cranes)? 
+• Khi thợ lái ngồi trong Cabin trên không, h ọ có cảm giác không gian (chiều sâu), họ dùng 
+quán tính cơ thể để cảm nhận cẩu đang lắc và có thể điều khiển "bù ga" bằng tay để dập tắt 
+dao động. 
+• Nhưng khi thợ lái ngồi dưới phòng điều khiển mặt đất (Remote Control Station) nhìn qua 
+màn hình Camera, họ hoàn toàn mất cảm nhận chiều sâu (Depth perception). Màn hình 
+2D không cho họ biết cục hàng đang lắc nhanh hay chậm cỡ nào. 
+• Nếu không có Anti-Sway tự động can thiệp, thợ lái từ xa sẽ rất dễ gây tai nạn đâm va cục 
+hàng vào thiết bị xung quanh. 
+ 
+CASE STUDY:  
+1. Áp dụng hồ sơ khách hàng:  
+• Khách hàng hỏi: Hệ thống Anti-sway dùng công nghệ gì?  
+• Trả lời: "Chúng ta đã xác nh ận dùng công ngh ệ Open-Loop (Vòng h ở) tích hợp trong 
+VFD/PLC. Và lý do chúng ta đưa ra cho khách hàng đ ể chốt phương án này là:  "This 
+sensorless configuration is highly robust for Steel Mill environments as it eliminates 
+external optical sensors that are prone to failure due to dust and heat."  (Cấu hình không 
+cảm biến này cực kỳ bền bỉ cho môi trường Nhà máy thép vì loại bỏ được rủi ro hỏng hóc 
+cảm biến quang học do bụi và nhiệt). Đây là câu trả lời mang tầm chuyên gia, biến cái điểm 
+yếu (không có cảm biến) thành cái lợi thế (bền bỉ, ít hỏng vặt)." 
+2. Kỹ năng Bán hàng (Sales Value Proposition): 
+
+=== PAGE 34 ===
+ 
+34 
+ 
+• Khách đặt tình hu ống: Khách hàng bảo "Phần mềm Anti-sway của Siemens đ ắt quá, vài 
+chục ngàn Đô, tôi bỏ đi cho nhân viên tôi lái tay cũng được, nhân viên tôi lái giỏi lắm." 
+• Cách trả lời: "Thưa anh, nhân viên anh lái giỏi đến mấy cũng sẽ có lúc mệt mỏi, đặc biệt 
+vào ca đêm. Thời gian để dập tắt rung lắc thủ công mất trung bình 30-45 giây mỗi mẻ cẩu. 
+Một ngày lò anh ra 50 m ẻ, anh m ất 30 phút ch ỉ để... ch ờ cục s ắt h ết l ắc. 
+Nếu dùng Anti-sway, thời gian chu kỳ (Cycle time) giảm đi 20%. Một năm nhà máy anh 
+tiết kiệm được hàng trăm giờ vận hành, lượng điện năng và nhân công tiết kiệm được thừa 
+sức mua 3 cái bản quyền phần mềm này. Hơn nữa, nó bảo vệ cơ khí của cẩu, không bị giật 
+lùi, bánh xe không bị trượt, hộp số không bị sốc dội ngược." 
+ 
+ 
+  
+
+=== PAGE 35 ===
+ 
+35 
+ 
+CHUYÊN ĐỀ 12 : HỆ THỐNG ĐỊNH VỊ TUYỆT ĐỐI  
+(ABSOLUTE POSITIONING) – "BẢN ĐỒ GPS CỦA CẦU TRỤC" 
+Hãy tưởng tượng bạn bịt mắt lái xe, bạn chỉ dựa vào đồng hồ công-tơ-mét để đếm số vòng 
+quay của bánh xe nhằm đoán xem mình đã đi được bao xa. Nếu bánh xe của bạn bị trượt trên vũng 
+lầy, bạn sẽ đâm vào tường vì khoảng cách thực tế và khoảng cách đo được đã bị sai lệch. 
+Cầu trục trong nhà máy thép cũng v ậy. Đường ray luôn ph ủ đầy dầu mỡ và bụi xỉ, việc 
+bánh xe bị trượt (slip) là xảy ra hàng ngày. Nếu chỉ dùng bộ đếm vòng quay động cơ (Incremental 
+Encoder), cầu trục sẽ bị "mù" tọa độ và có thể mang 150 tấn thép lỏng đâm sầm vào trạm biến áp. 
+Để lái cẩu tự động và an toàn, chúng ta bắt buộc phải dùng Hệ thống Định vị Tuyệt đối. 
+ 
+1. Phân biệt Định vị Tương đối (Incremental) và Tuyệt đối (Absolute) 
+Đây là kiến thức cơ bản mà mọi kỹ sư Sales và Automation phải nắm vững để giải thích cho 
+khách hàng: 
+• Định vị Tương đối (Dùng Wheel Encoder): Gắn bộ đếm xung ở đuôi động cơ di chuyển. 
+Động cơ quay 1 vòng, máy tính dịch ra cẩu đi được 1 mét. 
+o Tử huyệt: Trượt bánh (Wheel slippage). Bánh quay nhưng c ẩu không chạy → Sinh ra sai 
+số tích lũy (Cumulative error). 
+o Tử huyệt 2: Khi cúp điện, hệ thống quên mất vị trí. Có điện lại, cẩu phải chạy về đầu xưởng 
+chạm vào công tắc hành trình để "Reset gốc 0" (Homing) → Rất mất thời gian. 
+• Định vị Tuyệt đối (Absolute Positioning): Không quan tâm bánh xe quay bao nhiêu vòng. 
+Nó đ ọc t ọa đ ộ vật lý tr ực ti ếp trên đư ờng ray. Sai s ố chỉ tính b ằng Milimet 
+(±1𝑚𝑚 đến ±5𝑚𝑚). Mất điện có lại, nó đọc ngay được vị trí hiện tại mà không c ần dò 
+gốc. 
+2. Các Công nghệ Định vị Tuyệt đối cho Nhà máy Thép 
+Trong môi trường luyện kim, chúng ta có 2 vũ khí chính: 
+A. Công nghệ Đo khoảng cách bằng Laser (Laser Distance Measurement) 
+• Nguyên lý: Đặt một cục phát Laser Time -of-Flight (ví d ụ hãng Sick, Dimetix) trên c ầu 
+trục, bắn tia laser vào một tấm phản quang (Reflector) lắp cố định ở cuối đường chạy. Máy 
+đo thời gian tia sáng dội lại để tính khoảng cách. 
+• Ưu điểm: Chi phí vừa phải, lắp đặt cực nhanh, không sợ trượt bánh xe. 
+• Nhược điểm ở Lò EAF: Tia laser là ánh sáng. Trong nhà máy luy ện thép, n ếu khói bụi 
+dày đặc hoặc hơi nước bốc lên mù mịt chặn ngang tia laser, hệ thống sẽ báo lỗi. Phải dùng 
+loại tia hồng ngoại công suất cao và có vòi xịt khí nén làm sạch thấu kính. 
+B. Công nghệ Mã vạch / Data Matrix (BPS - Barcode Positioning System) 
+• Đây là công nghệ "Đỉnh cao" và tin cậy nhất hiện nay. 
+
+=== PAGE 36 ===
+ 
+36 
+ 
+• Nguyên lý:  Dán m ột d ải băng dính b ằng Thép không g ỉ (Inox) kh ắc s ẵn các mã v ạch 
+(Barcode/Data Matrix) chạy dọc theo toàn bộ chiều dài 150m của đường ray. Trên cầu trục 
+gắn một Camera h ồng ngoại, chiếu thẳng vào d ải băng này ở khoảng cách r ất gần (10-
+15cm). 
+• Ưu điểm tuyệt đối: Camera chỉ cần nhìn thấy 1 mảnh mã vạch dài 2cm là biết chính xác 
+cẩu đang ở tọa độ 𝑋 = 125.456 mét. Khói bụi không thể che khuất vì khoảng cách nhìn 
+quá gần. Hoạt động hoàn hảo trong mọi điều kiện hỏa ngục. 
+3. "Phép thuật" của Định vị Tuyệt đối (Tại sao Khách hàng chịu chi tiền?) 
+Khi cầu trục đã có "B ản đồ GPS", PLC sẽ mở khóa 2 tính năng t ự động hóa trị giá hàng 
+chục ngàn Đô la: 
+Tính năng 1: Lái Bán tự động (Semi-Automatic / "Go-To" Function) 
+• Cách làm cũ:  Thợ lái phải gạt cần Joystick ti ến/lùi, trái/phải, rà phanh m ỏi mắt để canh 
+cho đúng tâm miệng lò EAF. Rất căng thẳng và tốn thời gian. 
+• Cách làm m ới: Màn hình HMI trong phòng đi ều khi ển có s ẵn các nút b ấm: [Hố Phế 
+Liệu], [Lò EAF], [Trạm Bảo Trì]. Thợ cẩu chỉ cần bấm nút [Lò EAF] và giữ phím xác nhận 
+an toàn (Dead-man switch). 
+• Hành động của Cẩu: PLC tự động tính toán quỹ đạo ngắn nhất. Cẩu tự động tăng tốc nhanh 
+nhất, kết hợp với tính năng Chống lắc (Anti-Sway), sau đó gi ảm tốc và dừng chính xác 
+tâm Lò EAF với sai số ±5𝑚𝑚. Thợ cẩu nhàn nhã, thời gian chu kỳ (Cycle time) giảm rõ 
+rệt. 
+Tính năng 2: Vùng Cấm Bay / Khóa Liên Động Vùng (Zone Interlocking / No-Fly Zones) 
+• Vấn đề an toàn: Trong nhà máy có những khu vực cực kỳ nhạy cảm không được phép để 
+cẩu mang phế liệu hay thép l ỏng chạy ngang qua đ ầu (như: Phòng đi ều khiển trung tâm, 
+Trạm biến áp 110kV , Khu hành lang đi bộ). 
+• Giải pháp: Kỹ sư Automation dùng phần mềm "vẽ" các khối hộp 3D ảo (Virtual Boxes) 
+trong PLC để định nghĩa các vùng này là No-Fly Zones. 
+• Hành động của Cẩu: Nhờ có Định vị tuyệt đối, PLC luôn biết cẩu đang ở đâu. Dù thợ lái 
+có cố tình gạt cần Joystick lao thẳng vào phòng điều khiển, đến sát ranh giới ảo, PLC sẽ tự 
+động ngắt điện động cơ và phanh lại. Hệ thống từ chối lệnh của con người để bảo vệ an 
+toàn. 
+ 
+CASE STUDY:  
+1. Hồ sơ dự án:  
+• Khách hàng h ỏi:  'Is there an absolute positioning system... to make semi -automatic 
+moves?' (Có hệ thống định vị tuyệt đối để chạy bán tự động không?). 
+
+=== PAGE 37 ===
+ 
+37 
+ 
+Chúng ta đã trả lời: 'Yes, we can provide... functions such as 'go to position'' (Có, 
+chúng tôi cung cấp chức năng đi đến điểm). Đây là lúc chúng ta l ấy tiền của khách hàng 
+bằng giải pháp công nghệ cao." 
+• Khách hàng h ỏi:  'Is it possible to do zoning, to define exclusion areas...?'  (Có thể phân 
+vùng cấm không cho cẩu đi vào không?).  
+Chúng ta tr ả lời: Và câu tr ả lời của VINALIFT là: 'Since the crane is equipped 
+with an Absolute Positioning System, we can implement Zone Interlocking functionality in 
+the PLC' (Vì cẩu đã có Định vị tuyệt đối, chúng tôi lập trình được Vùng cấm bay). 
+Bài học: Hai tính năng này là một cặp bài trùng. Khi bán được Định vị tuyệt đối, hãy up-
+sale (bán thêm) tính năng Vùng cấm bay để tăng giá trị hợp đồng." 
+2. Kỹ năng Sales (Overcoming Objections): 
+• Khách hàng: "Tôi thấy dán mã v ạch (Barcode Tape) dọc đường ray l ằng nhằng quá, bụi 
+nhà máy tôi dày đặc, làm sao camera đọc được?" 
+• Sales Engineer: "Thưa anh, công ngh ệ BPS của chúng em dùng lo ại băng mã v ạch làm 
+bằng v ật li ệu Thép không g ỉ (Stainless steel tape), không ph ải gi ấy dán. Còn camera 
+(Reader) được lắp một hệ thống vòi thổi khí nén liên tục (Air-purge). Khí nén sẽ thổi bay 
+mọi hạt bụi bám trên mắt kính camera và trên bề mặt mã vạch ngay trước khi nó đọc. Nó 
+được sinh ra để hoạt động trong môi trường luyện kim, anh hoàn toàn yên tâm không bao 
+giờ có hiện tượng mất tọa độ." 
+ 
+  
+
+=== PAGE 38 ===
+ 
+38 
+ 
+CHUYÊN ĐỀ 13:  
+HỆ THỐNG CAMERA (CCTV) CHỊU NHIỆT ĐỘ, ĐỘ TRỄ THẤP (<150ms) 
+ĐIỀU KHIỂN TỪ XA KHÔNG CẦN CABIN 
+Bạn hãy tư ởng tư ợng mình đang lái m ột chi ếc xe t ải n ặng 350 t ấn lao đi v ới t ốc đ ộ 
+80m/phút. Nhưng kính ch ắn gió bị bưng kín, bạn chỉ được phép lái xe thông qua m ột chiếc điện 
+thoại gọi Facetime đặt trên taplo. 
+Chuyện gì sẽ xảy ra nếu mạng bị lag? Bạn đạp phanh, nhưng 1 giây sau hình ảnh trên màn 
+hình mới dừng lại. Trong 1 giây đó, chi ếc xe đã lao thêm đư ợc hơn 1.3 mét và đâm nát m ọi thứ 
+phía trước. 
+Đó chính xác là bài toán sinh tử khi điều khiển Cầu trục Rót thép từ xa (Remote Operation). 
+Chìa khóa không nằm ở độ nét 4K hay 8K, mà nằm ở 2 chữ: ĐỘ TRỄ (LATENCY) và SỨC CHỊU 
+ĐỰNG (ENDURANCE). 
+ 
+1. Tại sao phải bỏ Cabin (Cabinless Crane)? 
+• An toàn tính mạng (HSE): Môi trường trên nóc lò EAF là nồng độ khí độc (𝐶𝑂, 𝑆𝑂2), nhiệt 
+độ bức xạ cực cao và rủi ro nổ xỉ thép. Việc giải cứu một người lái cẩu bị ngất xỉu trên độ 
+cao 20m là một cơn ác mộng. 
+• Trạm điều khiển từ xa (ROS - Remote Operating Station): Thợ lái cẩu giờ đây ngồi trong 
+một căn phòng tiện nghi dưới mặt đất. Chỗ ngồi là một chiếc ghế công thái học (Ergonomic 
+chair) tích hợp Joystick, bao quanh là 4 -6 màn hình l ớn truyền hình ảnh trực tiếp từ trên 
+cẩu xuống. 
+2. Tử huyệt "Độ trễ" (The Latency Life-or-Death) 
+Đây là kiến thức quan trọng nhất để bẻ gãy ý định dùng camera an ninh rẻ tiền của khách hàng. 
+• Camera An ninh thư ờng (CCTV Security):  Độ trễ từ ống kính đ ến màn hình (Glass -to-
+Glass latency) thường rơi vào khoảng 500ms đến 2000ms (0.5s - 2 giây). Nó dùng để xem 
+lại sự việc đã xảy ra, không dùng để "lái trực tiếp". 
+• Camera Công nghiệp Luyện kim (Industrial Process Video): (Ví dụ các hãng như Motec, 
+Orlaco). Bắt buộc phải có độ trễ dưới 150 mili-giây (< 150ms). Hình ảnh gần như là "Tức 
+thời" (Real-time). 
+• Đường truyền (Transmission): Để đạt được độ trễ này, tín hiệu không đi qua Wifi dân dụng. 
+Nó phải đi qua Cáp quang (Fiber optic) chạy trong xích dẫn cáp, hoặc dùng sóng Wifi Công 
+nghiệp tần số cao (5GHz/60GHz) chống nhiễu tuyệt đối. 
+3. "Áo giáp" Phần cứng – Sinh tồn trong lò luyện Camera lắp trên cầu trục EAF phải đối mặt với 
+Nhiệt độ 100∘𝐶, Bụi dẫn điện và Rung lắc dữ dội. 
+• Vỏ bảo vệ (Housing): Không dùng nh ựa hay nhôm. Ph ải là Thép không g ỉ nguyên khối 
+(Stainless Steel 316L) đạt chuẩn IP67. 
+
+=== PAGE 39 ===
+ 
+39 
+ 
+• Làm mát b ằng L ốc xoáy (V ortex Cooling): Xung quanh mi ệng lò, nhi ệt đ ộ có th ể lên 
+tới 80∘𝐶. Camera được lắp một thiết bị gọi là Ống V ortex. Thiết bị này dùng khí nén bắn 
+vào, tạo ra một luồng lốc xoáy tách khí lạnh thổi vào làm mát bo mạch camera, và đẩy khí 
+nóng ra ngoài. (Không dùng quạt vì quạt sẽ hút bụi vào). 
+• Rửa mắt kính bằng Khí nén (Air Purge System): Bụi xỉ sẽ làm mờ ống kính chỉ sau 1 ngày. 
+Quanh ống kính được thiết kế một vòi phun khí nén liên tục, tạo ra một "tấm khiên" áp suất 
+dương, thổi bay mọi hạt bụi và khói có ý định bám vào mặt kính. 
+• Chống sốc (Vibration Dampers): Ngàm gắn camera có các đ ệm cao su chịu nhiệt hoặc lò 
+xo để triệt tiêu lực rung từ động cơ và bánh xe, giúp hình ảnh trên màn hình không bị rung 
+bần bật khiến thợ lái chóng mặt. 
+4. Giải quyết "Mù màu nhiệt" và "Mất chiều sâu" 
+Khi thợ lái nhìn qua màn hình, họ gặp 2 bất lợi vật lý: 
+• Công nghệ WDR (Wide Dynamic Range > 120dB):  Khi gầu thép lỏng rực sáng như m ặt 
+trời xuất hiện, các camera thư ờng sẽ bị "lóa trắng xóa" (như b ạn chĩa camera đi ện thoại 
+vào bóng đèn). Tính năng WDR c ấp độ công nghiệp giúp camera cân b ằng sáng t ức thì: 
+Vừa nhìn thấy ánh sáng chói lóa của kim loại nóng chảy, vừa nhìn rõ được cái ngõng gầu 
+bằng sắt đen thui nằm ngay bên cạnh. 
+• Mất cảm nhận chiều sâu (Depth Perception): Nhìn qua màn hình 2D, thợ lái không biết cái 
+móc cẩu đang n ằm trước hay nằm sau cái quai thùng rót. →  Giải pháp (Visual Hooking 
+Assistance): Phần mềm sẽ vẽ các Đường chữ thập (Crosshairs / Grid lines)  lên màn hình 
+(như tâm ngắm của súng bắn tỉa). Thợ lái chỉ cần điều khiển cho vạch chữ thập trùng khớp 
+với ngõng thùng rót (Trunnion) là bi ết chắc chắn móc đã ngàm chặt  → Chống móc mớm 
+đầu, chống trượt tải. 
+ 
+CASE STUDY:  
+1. Hồ sơ dự án:  
+• Khách hàng yêu c ầu: 'We do not want cabins on board... controlled remotely'  (Chúng tôi 
+không muốn cabin, phải điều khiển từ xa).  
+Chúng ta trả lời: 'We used Industrial Low-Latency IP Camera System... Glass -to-Glass < 
+150ms... True WDR > 120dB...' Đây chính là những thông số kỹ thuật cốt lõi mà chúng ta 
+dùng để đè bẹp các đối thủ dùng camera an ninh rẻ tiền." 
+• Khách hàng hỏi: 'Can you offer us an assistance function for picking up the basket...?' (Có 
+chức năng hỗ trợ hình ảnh để móc gầu không?).  
+Chúng ta đã đưa ra gi ải pháp 'Visual Hooking Assistance System'  với 'Target Crosshairs 
+(Grid Lines)' (Đường chữ thập mục tiêu). 
+• Khách hàng lo lắng về khói bụi: 'Cameras must be adapted to the environment: dust, high 
+temperature'.  
+
+=== PAGE 40 ===
+ 
+40 
+ 
+Và chúng ta tung đòn chốt hạ: 'Stainless Steel 316L housings... Vortex Coolers... Air Purge 
+System'.  
+  Phân tích cho Sales: "Khi các bạn ném những thuật ngữ kỹ thuật này vào bảng chào giá, 
+khách hàng ngay lập tức nhận ra chúng ta là những chuyên gia làm cẩu Luyện kim thứ thiệt, không 
+phải tay mơ." 
+2. Xử lý từ chối: 
+• Khách hàng nói: "Hệ thống camera của các anh báo giá t ới 500 tri ệu? Tôi ra ngoài mua 
+mấy bộ Hikvision/Dahua lắp lên, chi phí chưa tới 50 triệu!" 
+• Cách trả lời: "Thưa anh, 50 tri ệu đó ch ỉ là chi phí mua thi ết bị. Còn chi phí th ực tế anh 
+phải trả là 1 tuần thay camera một lần vì nhựa bị nướng chảy, ống kính mờ tịt không nhìn 
+thấy gì. Nguy hiểm hơn, camera an ninh có độ trễ hình ảnh 1 giây. Khi thợ lái của anh thấy 
+thùng thép l ỏng trên màn hình đ ến đúng đi ểm dừng, anh ấy bấm phanh, nhưng th ực tế 
+thùng thép đã trôi lố qua 1 mét và đập vào lò. Một tai nạn đổ thép lỏng sẽ tiêu tốn của anh 
+hàng triệu Đô la. 500 tri ệu cho hệ thống Camera Tức thời (Zero-latency) và Tự làm sạch 
+này chính là khoản đầu tư rẻ nhất để bảo vệ nhà máy của anh." 
+ 
+ 
+  
+
+=== PAGE 41 ===
+ 
+41 
+ 
+CHUYÊN ĐỀ 14: VUNG CẤP BAY (NO-FLY ZONES / ZONE INTERLOCKING) 
+THIẾT LẬP QUA PLC 
+Trong luật hàng không, có nh ững vùng không phận cấm máy bay dân s ự bay qua (ví dụ: 
+khu v ực quân s ự, dinh t ổng th ống). Trong nhà máy thép cũng v ậy! 
+Hãy tưởng tượng một thợ lái cẩu mới vào nghề, hoặc một người đang mệt mỏi ca đêm, lỡ tay gạt 
+Joystick cẩu 150 tấn thép lỏng 1.600∘𝐶 chạy sượt ngang qua mái c ủa Phòng Điều Khiển Trung 
+Tâm (Central Control Room), ho ặc chạy ngang qua Tr ạm biến áp 110kV . Chỉ cần vài gi ọt thép 
+văng xuống, toàn bộ "bộ não" của nhà máy sẽ bốc hơi cùng sinh mạng của hàng chục kỹ sư bên 
+trong. 
+Làm sao để ngăn chặn điều đó? Không th ể chỉ dựa vào ý th ức con người. Chúng ta c ần 
+một "Bức tường tàng hình" do PLC giăng ra – Đó chính là công nghệ Zone Interlocking (Khóa 
+liên động vùng) hay No-Fly Zones. 
+ 
+1. Điều kiện tiên quyết: Cầu trục phải biết "Mình đang ở đâu?" 
+• Hãy nh ắc l ại cho khách hàng nh ớ: Đ ể làm đư ợc "Vùng c ấm bay", c ầu tr ục BẮT 
+BUỘC phải được trang bị Hệ thống Định vị Tuyệt đối (Absolute Positioning System) – 
+như Laser hoặc Mã vạch (Data Matrix) mà chúng ta đã học ở Mục 2. 
+• Chỉ khi PLC biết chính xác tọa độ (X, Y , Z) của cẩu với sai số tính bằng milimet, nó mới 
+có thể dựng lên những bức tường ảo chính xác. 
+2. Nguyên lý hoạt động của "Bức tường tàng hình" 
+Hệ thống này tước đoạt quyền điều khiển của con người khi có nguy cơ mất an toàn. 
+• Cài đặt (Configuration): Kỹ sư tự động hóa sẽ mở bản vẽ mặt bằng nhà máy, xác đ ịnh 
+các khu vực nhạy cảm (Phòng điều hành, Lối đi bộ chính, Trạm điện, Bồn chứa dầu...). Sau 
+đó, họ nhập các tọa độ này vào phần mềm PLC/HMI (được bảo vệ bằng mật khẩu cấp cao). 
+PLC sẽ tạo ra các khối hộp 3D ảo che phủ các khu vực này. 
+• Vận hành thực tế (The Logic): 
+1. Vùng cảnh báo (Warning Zone): Khi cẩu đang chạy tốc độ cao tiến lại gần khu 
+vực cấm (cách khoảng 5-10 mét), PLC s ẽ tự động "cúp ga", ép c ầu trục giảm tốc 
+độ (Deceleration) xuống mức an toàn, đồng thời còi báo động trên HMI sẽ kêu lên 
+cảnh báo thợ lái. 
+2. Vùng dừng (Stop Zone): Nếu thợ lái vẫn ngoan cố đẩy cần Joystick lao tới, ngay 
+khi mép của cụm móc cẩu chạm vào ranh giới ảo, PLC lập tức ngắt lệnh di chuyển 
+hướng đó và đóng phanh. 
+3. Khóa liên đ ộng (Interlocking):  Lúc này, th ợ lái đ ẩy c ần Joystick ti ến lên thì 
+cẩu không nhúc nhích, hệ thống từ chối lệnh. Thợ lái CHỈ CÓ THỂ gạt cần lùi lại 
+để đi ra khỏi ranh giới cấm. 
+3. Các biến thể của Vùng Cấm (Zoning Variations) 
+
+=== PAGE 42 ===
+ 
+42 
+ 
+Hệ thống PLC hiện đại không chỉ cấm cứng ngắc, mà rất linh hoạt để phục vụ sản xuất: 
+• Cấm theo Điều kiện (Conditional Zoning): 
+o Ví dụ: Cầu trục chỉ bị cấm bay qua khu v ực bảo trì NẾU có tải trọng mang theo 
+(Móc cẩu đang móc thùng thép). 
+o NẾU móc cẩu trống (Không mang tải - Loadcell báo 0 tấn), PLC cho phép cẩu chạy 
+nhanh tạt ngang qua để tiết kiệm thời gian (Short-cut). 
+• Cấm theo Độ cao (Height-restricted Zoning): 
+o Khu vực có đường ống khí/vật cản nhô lên cao. C ầu trục chỉ được phép đi ngang 
+qua khu vực này NẾU móc cẩu đã được kéo lên sát nóc d ầm (vượt qua chiều cao 
+an toàn). Nếu móc đang thả thấp, cẩu sẽ bị phanh lại. 
+4. Lợi ích Tối thượng (The Ultimate Value) 
+• Loại bỏ Rủi ro do Con ngư ời (Eliminate Human Error): Con người có thể buồn ngủ, 
+phân tâm, phán đoán sai khoảng cách qua màn hình camera. Máy móc thì không. 
+• Bảo hiểm tài sản: Bảo vệ các khu vực thiết yếu nhất của nhà máy khỏi rủi ro rơi kim loại 
+nóng chảy. 
+• Linh hoạt: Khi nhà máy thay đ ổi layout (xây thêm m ột trạm máy m ới), không c ần hàn 
+thêm rào chắn vật lý nào trên đư ờng ray. Kỹ sư chỉ mất 5 phút cầm laptop cắm vào PLC 
+và "vẽ" thêm một bức tường ảo. 
+ 
+CASE STUDY:  
+1. Hồ sơ dự án 
+• Khách yêu cầu: 'Is it possible to do zoning, to define exclusion areas where the bridge will 
+not be allowed to evolve?' (Có thể phân vùng, định nghĩa các khu vực loại trừ mà cầu trục 
+không được phép đi vào không?)" 
+VINALIFT trả lời: 'Yes, certainly. Since the crane is equipped with an Absolute Positioning 
+System, we can implement Zone Interlocking functionality in the PLC.'" 
+Qua câu trả lời này, chúng ta khẳng định với khách hàng: Đừng chỉ mua cơ khí, hãy mua 
+giải pháp phần mềm của chúng tôi. Chúng ta gắn liền tính năng Vùng Cấm (Zoning) vào 
+phần c ứng Đ ịnh v ị Tuyệt đ ối (Absolute Positioning). Khách hàng mu ốn có an toàn 
+(Zoning), họ bắt buộc phải mua trọn gói tùy chọn Định vị cao cấp của chúng ta." 
+2. Kỹ năng Sales (Overcoming the "It's too expensive" objection): 
+• Khách hàng nói: "Thêm phần mềm Zoning này đ ắt quá. Tôi dùng cách cũ: Hàn m ấy cái 
+thanh sắt (Striker plates) lên đường ray, cẩu chạy tới đó đá vào công tắc hành trình là dừng 
+lại, vừa rẻ vừa bền!" 
+• Cách trả lời: "Thưa anh, dùng công tắc hành trình cơ khí là giải pháp của thế kỷ 20. 
+
+=== PAGE 43 ===
+ 
+43 
+ 
+o Thứ nhất, anh mu ốn vẽ một vùng c ấm hình vuông hay hình zíc -zắc che khu v ực 
+văn phòng, anh không thể hàn công tắc hành trình lơ lửng giữa không trung được. 
+o Thứ hai, công tắc cơ khí cấm là cấm tiệt. Anh không thể làm lệnh: 'Có tải thì cấm, 
+Không tải thì cho qua' như PLC được. Điều đó sẽ làm giảm năng suất của cẩu. 
+o Thứ ba, mỗi lần anh muốn thay đổi vùng cấm, anh phải trèo lên cao 20m c ắt hàn 
+lại các thanh s ắt, cực kỳ nguy hiểm và mất thời gian. Với công nghệ Zoning qua 
+PLC của VINALIFT, anh chỉ cần ngồi dưới phòng lạnh bấm vài nút trên màn hình 
+HMI là xong." 
+ 
+  
+
+=== PAGE 44 ===
+ 
+44 
+ 
+CHUYÊN ĐỀ 15. HỆ THỐNG GIÁM SÁT & QUẢN LÝ (CMS) 
+GIAO TIẾP VỚI SCADA / MES CỦA NHÀ MÁY. 
+Ngày xưa,  khi cẩu bị hỏng, thợ điện phải xách đồng hồ vạn năng trèo lên độ cao 20m, mồ 
+hôi nhễ nhại đo từng sợi dây cáp, từng cái contactor để tìm ra bệnh. Cẩu dừng 3 tiếng, nhà máy 
+thiệt hại hàng tỷ đồng. 
+Ngày nay, với Hệ thống Quản lý Cầu trục (CMS - Crane Management System), thợ bảo 
+trì chỉ cần ngồi phòng lạnh, nhìn lên màn hình c ảm ứng HMI. Màn hình s ẽ báo chính xác: "L ỗi 
+biến tần số 2, kẹt má phanh trái". Thợ chỉ mang đúng đồ nghề lên thay trong 15 phút. Đó chính là 
+sức mạnh của Dữ liệu (Data). 
+ 
+1. CMS (Crane Management System) là gì? 
+Đây là một giao diện Người - Máy (HMI - Human Machine Interface), thường là một màn 
+hình cảm ứng cỡ lớn đặt trong Cabin hoặc Phòng Điều Khiển dưới đất. Nó thu thập mọi tín hiệu 
+từ PLC (bộ não) và hiển thị lên dưới dạng đồ họa trực quan. 
+Các tính năng cốt lõi: 
+• Real-time Status (Trạng thái thời gian thực): Hiển thị tải trọng đang cẩu (Tấn), tốc độ 
+hiện tại của các cơ cấu, vị trí tọa độ X-Y-Z của cẩu, nhiệt độ của các động cơ và nhiệt độ 
+phòng điện. 
+• Advanced Diagnostics (Ch ẩn đoán chuyên sâu):  Khi có sự cố, thay vì m ột cái đèn đ ỏ 
+nhấp nháy chung chung báo "L ỖI", màn hình sẽ hiện mã lỗi chi tiết lấy trực tiếp từ Biến 
+tần (Ví d ụ: Overcurrent, Overvoltage, Motor Overheat...). Đi kèm là "L ịch sử sự kiện" 
+(Event/Alarm History) có ghi rõ ngày giờ để truy vết. 
+2. Bảo trì Dự đoán (Predictive Maintenance) theo chuẩn ISO 12482 
+Đây là tính năng cao c ấp nhất, phân biệt cẩu luyện kim hiện đại với cẩu đời cũ. Khách hàng 
+mua tính năng này để ngăn chặn sự cố gãy/đứt thiết bị bất ngờ. 
+• Vấn đề: Thay dầu hộp số hay thay cáp thép không th ể tính theo "tháng" hay "năm". M ột 
+tháng cẩu đầy tải 150 tấn liên tục sẽ phá hủy cáp nhanh g ấp 10 lần một tháng chỉ cẩu vỏ 
+thùng 50 tấn. 
+• Giải pháp ISO 12482:  Hệ thống CMS s ẽ làm toán liên t ục. Nó l ấy Trọng lư ợng (t ừ 
+Loadcell) nhân với Số chu kỳ cẩu (từ Encoder) để tính ra độ mỏi thực tế của kết cấu thép 
+và cáp. 
+• Kết quả: Màn hình sẽ hiện một thanh tiến trình (Progess bar): "Tuổi thọ cáp thép: Còn lại 
+15%". Nhờ đó, Giám đốc nhà máy sẽ chủ động đặt mua cáp mới và lên lịch thay thế vào 
+ngày nghỉ, tránh được cảnh đứt cáp đang cẩu thì phải dừng lò. 
+3. Giao tiếp SCADA/MES – Biến Cầu Trục thành một phần của Nhà máy Thông minh 
+Cầu trục không còn là m ột cỗ máy độc lập (Stand-alone). Chủ đầu tư mu ốn đưa nó vào h ệ 
+thống quản lý tổng thể của toàn nhà máy (SCADA hoặc MES - Manufacturing Execution System). 
+
+=== PAGE 45 ===
+ 
+45 
+ 
+• Open Architecture (Kiến trúc Mở): PLC của cầu trục (ví dụ Siemens S7-1500) phải dùng 
+các chuẩn giao tiếp công nghiệp hiện đại như Profinet, Modbus TCP, hoặc OPC UA để 
+truyền dữ liệu. 
+• Khách hàng dùng dữ liệu này để làm gì? 
+o Quản lý sản xuất: Hệ thống đếm được hôm nay cẩu đã nạp bao nhiêu tấn phế liệu 
+vào lò EAF  →  Tính được năng suất mẻ nấu. 
+o Điều phối kho bãi: Biết chính xác vị trí của cẩu để ra lệnh gắp hàng tự động. 
+o Tiết kiệm điện: Báo cáo lượng điện năng tiêu thụ và lượng điện tái sinh (từ bộ AFE) 
+về phòng trung tâm. 
+ 
+Case study:  
+1. Hồ sơ dự án  
+• Khách hàng h ỏi có h ệ thống CMS hi ển thị real-time trạng thái bi ến tần, lịch sử sự kiện 
+không?  
+Chúng ta đã trả lời 'YES', và cam kết cung cấp 'Data Exchange Map' (Bản đồ trao đổi dữ 
+liệu) thông qua chuẩn giao tiếp công nghiệp. Đây là điểm cộng cực lớn."  Và chức năng dự 
+đoán tuổi thọ bảo trì ( predictive maintenance) đếm số chu kỳ, tải trọng theo chu ẩn ISO 
+12482.  
+Những gì chúng ta vừa nghiên cứu là những gì các t ập đoàn luy ện kim l ớn trên thế giới 
+đang khao khát tìm kiếm." 
+2. Kỹ năng Sales (Chốt sale bằng Dịch vụ Hậu mãi): 
+• Tình huống: Khách hàng ngần ngại việc đầu tư hệ thống CMS vài trăm triệu. 
+• Sales Engineer trả lời: "Thưa anh, hệ thống CMS và Bảo trì dự đoán ISO 12482 này thực 
+chất là công cụ để anh tiết kiệm tiền mua vật tư phụ tùng. Nếu không có nó, theo luật an 
+toàn, cứ 6 tháng anh ph ải thay cáp thép 1 l ần dù nó chưa h ỏng (thay đ ịnh kỳ mù mờ). 
+Nhưng nếu có CMS, hệ thống báo cáp của anh mới dùng hết 40% tuổi thọ, anh có thể dùng 
+tiếp thêm 6 tháng nữa hoàn toàn đúng luật và an toàn. Chỉ cần tiết kiệm 1 lần tiền mua sợi 
+cáp thép luyện kim chuyên dụng, anh đã hòa vốn tiền mua hệ thống CMS của chúng em." 
+ 
+ 
+.  
+  
+
+=== PAGE 46 ===
+ 
+46 
+ 
+PHẦN F: AN TOÀN, KIỂM ĐỊNH & BẢO TRÌ DỰ ĐOÁN 
+MỤC 1: CÁC THIẾT BỊ AN TOÀN GIỚI HẠN – "LƯỚI BẢO VỆ NHIỀU LỚP" 
+Con người luôn có thể mắc sai lầm. Một thợ lái cẩu có thể ngủ gật, lỡ tay gạt nhầm Joystick, 
+hoặc không ước lượng được khoảng cách qua màn hình camera. N ếu cỗ máy 350 tấn cứ thế lao 
+đi, nó sẽ nghiền nát mọi thứ. 
+Để ngăn chặn điều này, cẩu Luyện kim được trang bị một hệ thống "Phòng thủ chiều sâu" 
+(Defense-in-depth). Nếu thợ lái sai, máy tính s ẽ sửa. Nếu máy tính h ỏng, thiết bị cơ khí sẽ chặn 
+lại. Đó chính là hệ thống Các thiết bị an toàn giới hạn. 
+ 
+1. Giới hạn di chuyển 2 cấp (2-Step Travel Limit Switches) 
+• Vấn đề của cẩu thường: Dùng công t ắc 1 c ấp. Cẩu đang ch ạy tốc độ cao, đá vào công 
+tắc → ngắt điện, phanh gấp. Với tải trọng hàng trăm tấn, việc phanh gấp ở tốc độ cao sẽ làm hàng 
+văng dữ dội và xé rách dầm cầu trục do quán tính. 
+• Giải pháp Luyện kim: Bắt buộc dùng Công tắc gạt chéo 2 cấp (2-Step Cross/Long Travel 
+Limit) cho cả xe con và dầm chính. 
+o Cấp 1 (Pre-limit / Slow-down): Khi cẩu tiến lại gần cuối đường ray, cần gạt thứ nhất 
+bị đá. Biến tần lập tức bị ép giảm tốc độ xuống mức "tốc độ rùa" (Creep speed) ≈
+10%  tốc độ tối đa, bất chấp thợ lái vẫn đang kéo hết ga. 
+o Cấp 2 (Ultimate Stop):  Khi cẩu bò đến sát gối đỡ giảm chấn, cần gạt thứ 2 bị đá. 
+Lập tức ngắt toàn bộ điện, đóng phanh. Cẩu dừng lại êm ái cách gối đỡ vài centimet. 
+2. Giới hạn Nâng hạ đa lớp & Chống đâm mỏ (Multi-stage Hoist Limits & Anti-Two Block) 
+Tai nạn "Đâm mỏ" (Two-blocking) là khi thợ cẩu mải mê kéo cụm móc lên quá cao, cụm 
+puly đập thẳng vào tang cuốn cáp, làm đứt cáp và rơi hàng. 
+Để chống lại rủi ro này, cẩu rót thép có tới 2 lớp bảo vệ độc lập: 
+• Lớp 1: Công tắc hành trình trục vít (Geared Rotary Limit Switch): 
+o Được nối trực tiếp vào trục tang cuốn cáp. Nó đếm chính xác số vòng quay của tang 
+để giới hạn điểm cao nhất và thấp nhất. 
+o Nó cũng được cài đặt nhiều cấp: Cấp giảm tốc (Slow-down) → Cấp dừng (Stop). 
+• Lớp 2: Công tắc đối trọng (Weighted Limit Switch / Anti-Two Block): 
+o Đây là chốt chặn cơ khí cuối cùng. Đề phòng trường hợp công tắc trục vít (Lớp 1) 
+bị hỏng bánh răng hoặc đứt dây. 
+o Một quả tạ nhỏ được treo lơ lửng dưới dầm xe con, xỏ xuyên qua sợi cáp. Nếu cụm 
+móc cẩu bị kéo lên quá cao, nó s ẽ đội quả tạ này lên. Quả tạ bị nâng lên làm nh ả 
+công tắc cơ khí → Trực tiếp cắt mạch an toàn (Hard-wired E-stop), ngắt điện toàn 
+hệ thống ngay lập tức. 
+
+=== PAGE 47 ===
+ 
+47 
+ 
+3. Kiểm soát Quá tải thông minh (Smart Overload Protection) 
+• Thiết bị: Chốt cảm biến lực (Load pins) lắp ở puly cân bằng. 
+• Nguyên lý "Bảo vệ một chiều": 
+o Cài đặt mức 1 (Cảnh báo): Tải đạt 100%, còi hú chớp đèn báo hiệu thợ lái đang cẩu 
+ở mức tối đa. 
+o Cài đặt mức 2 (Cắt tải): Tải đạt 105% - 110%, rơ-le ngắt điện. 
+o BÍ QUYẾT AN TOÀN: Hệ thống CHỈ ngắt lệnh NÂNG (Up), nhưng VẪN CHO 
+PHÉP HẠ (Down). Điều này cực kỳ quan trọng để thợ cẩu có thể thả cục hàng quá 
+tải xuống đất một cách an toàn, tránh vi ệc hàng b ị treo lơ l ửng nguy hi ểm trên 
+không trung vĩnh viễn. 
+4. Kiểm soát Quá tốc ly tâm (Overspeed Protection) 
+• Vấn đề: Nếu hộp số vỡ, hoặc phanh làm việc bị trượt do mòn má phanh, tải trọng 150 tấn 
+sẽ kéo trục tang quay tít thò lò (Rơi tự do). Lúc này công tắc hành trình không có tác dụng 
+gì cả. 
+• Giải pháp: Lắp một Rơ-le ly tâm (Centrifugal Switch)  hoặc Encoder an toàn đ ộc lập nối 
+thẳng vào trục tang. 
+• Hoạt động: Nó liên tục đo tốc độ hạ tải. Nếu tốc độ hạ vượt quá 115% tốc độ định mức, nó 
+nhận diện đây là sự cố "Rơi tự do". Nó lập tức kích hoạt mạch Dừng khẩn cấp, "bóp" cụm 
+Phanh khẩn cấp thủy lực (Emergency Brakes) nghiến chặt vào vành tang để cứu mạng cả 
+nhà máy. 
+ 
+CASE STUDY  
+1. Hồ sơ dự án:  
+• Khách hàng hỏi 'Móc chính có công tắc hành trình, giảm tốc và dừng không?'.  
+VINALIFT trả lời: "Yes... a multi-stage limit switch system: a working upper/lower limit, 
+a slow-down limit, and an ultimate emergency stop limit switch..." (Có hệ thống hành trình 
+đa cấp: gi ới hạn làm vi ệc trên/dưới, giới hạn gi ảm tốc, và gi ới h ạn dừng kh ẩn c ấp tối 
+hậu).  →  Đây chính là sự kết hợp giữa Rotary Switch và Weighted Switch. 
+• Khách hàng hỏi về 'Load limiter' (Bảo vệ quá tải).  
+VINALIFT trả lời: Chúng ta chốt thông số chuẩn: "warning at 100%... automatic cut -off 
+at >105%". 
+• Khách hàng hỏi:  'Is the main lift equipped with overspeed control?' (Có kiểm soát quá tốc 
+không?).  
+
+=== PAGE 48 ===
+ 
+48 
+ 
+VINALIFT trả lời:  "Centrifugal Overspeed Switch directly on the drum shaft... bypasses 
+the control system and directly triggers the Emergency Stop circuit..."  (Công tắc ly tâm 
+trên trục tang... bỏ qua hệ thống điều khiển và kích hoạt trực tiếp mạch dừng khẩn cấp). 
+2. Kỹ năng Sales (Overcoming Objections): 
+• Khách hàng thắc mắc: "Tại sao tôi phải lắp thêm cái Công tắc đối trọng (Weighted switch) 
+treo lủng lẳng vướng víu thế? Trên động cơ đã có cái công tắc hành trình trục vít đếm vòng 
+quay xịn lắm rồi mà?" 
+• Sales Engineer trả lời: "Thưa anh, công t ắc trục vít r ất chính xác, nhưng nó l ấy tín hi ệu 
+truyền động qua bánh răng. Nếu có sự cố mòn bánh răng, đứt xích lai tải, hoặc sau khi anh 
+thay cáp thép mà thợ quên cài đặt lại (Reset) mốc số 0, thì công tắc trục vít sẽ bị sai lệch 
+hoàn toàn. 
+Nếu không có Công tắc đối trọng vật lý làm chốt chặn cuối cùng, móc cẩu sẽ bị kéo đâm 
+thẳng lên dầm, giật đứt cáp và thả rơi 150 tấn thép lỏng. Trang bị thêm một thiết bị cơ khí 
+thuần túy giá ch ỉ vài triệu đồng nhưng nó là 'lá bùa h ộ mệnh' không bao gi ờ biết nói dối 
+anh ạ." 
+ 
+  
+
+=== PAGE 49 ===
+ 
+49 
+ 
+MỤC 2: BẢO TRÌ DỰ ĐOÁN ISO 12482 – "BÁC SĨ BẮT MẠCH CHO CẦU TRỤC" 
+ 
+Hãy tưởng tượng bạn mua một chiếc siêu xe. Hãng xe bảo bạn: "Cứ đúng 3 tháng anh phải 
+đi thay dầu nhớt một lần, dù xe anh đắp chiếu để trong gara hay chạy 10.000km". Nghe thật vô lý 
+và lãng phí đúng không? B ạn sẽ nói: "Tại sao không nhìn vào đ ồng hồ ODO (Công-tơ-mét) để 
+biết khi nào cần thay?"  
+Thật bất ngờ, 90% cầu trục trong các nhà máy thép hiện nay đang được bảo trì theo kiểu 
+"3 tháng thay m ột lần" đó (B ảo trì đ ịnh kỳ - Preventive Maintenance). Người ta thay cáp thép, 
+thay dầu hộp số dựa trên cuốn lịch treo tường chứ không dựa trên thực tế sử dụng. Hậu quả: Quá 
+lãng phí v ật tư, ho ặc r ủi ro đ ứt cáp trư ớc h ạn vì tháng đó nhà máy ép xung s ản xu ất. 
+Tiêu chuẩn ISO 12482 ra đời để chấm dứt sự mù mờ này, chuyển đổi nhà máy sang kỷ nguyên Bảo 
+trì dự đoán (Predictive Maintenance). 
+ 
+1. Bản chất của sự hao mòn: "Tuổi thọ mỏi" (Fatigue Life) 
+Để hiểu ISO 12482, chúng ta phải hiểu cách sắt thép "già đi". 
+• Tuổi thọ của cầu trục không tính bằng Năm (Years). Nó tính bằng Tổn thương mỏi (Fatigue 
+Damage). 
+• Nguyên lý: Một sợi cáp thiết kế cẩu được 150 Tấn trong vòng 2 triệu chu kỳ. 
+o Nếu cẩu cái thùng không (50 T ấn): Sợi cáp gần như không b ị tổn thương (có th ể 
+cẩu 10 triệu lần). 
+o Nếu cẩu rập rình liên tục mẻ thép đầy (150 Tấn): Sợi cáp sẽ đứt đúng ở lần thứ 2 
+triệu. 
+ Rõ ràng, không thể lấy "thời gian 6 tháng" ra để đánh giá cáp còn tốt hay sắp đứt. Phải có 
+một hệ thống đếm được Chính xác cục hàng nặng bao nhiêu và Đã cẩu bao nhiêu lần. 
+2. Tiêu chuẩn ISO 12482 hoạt động như thế nào? 
+ISO 12482 yêu c ầu hệ thống điều khiển (PLC) ph ải làm m ột bài toán tích phân liên t ục 
+24/7. Hệ thống này thường được gọi là CMU (Condition Monitoring Unit). 
+• Thu thập Dữ liệu (Data Collection): 
+1. Trọng lượng (Load): Lấy trực tiếp từ Loadcell (Cân điện tử). 
+2. Quãng đường / Chu kỳ (Cycles): Lấy từ Encoder gắn trên động cơ (Biết được cẩu 
+nhấc lên cao bao nhiêu mét, hạ xuống bao nhiêu mét). 
+3. Thời gian chạy (Run-time): Đếm số giờ động cơ có điện. 
+• Tính toán SWP (Safe Working Period - Chu kỳ làm việc an toàn): 
+o Bên trong PLC của VINALIFT, kỹ sư đã viết sẵn một "Hàm toán học". Mỗi lần cẩu 
+nhấc lên, hàm này s ẽ lấy (Trọng tải)^3 x (Quãng đư ờng) rồi trừ lùi vào tổng tuổi 
+thọ thiết kế (DWP - Design Working Period) ban đầu. 
+
+=== PAGE 50 ===
+ 
+50 
+ 
+• Hiển thị kết quả: 
+o Trên màn hình HMI (CMS) trong phòng điều khiển, thay vì những con số khó hiểu, 
+màn hình sẽ hiện lên một thanh tiến trình (Progress Bar) rất trực quan: 
+▪ "Tuổi thọ cáp nâng chính: Đã dùng 65% - Còn lại 35%". 
+▪ "Hộp s ố tời chính: Đã dùng 80% - Cảnh báo lên l ịch Đ ại tu (General 
+Overhaul)". 
+3. Tại sao các Giám đốc Nhà máy Thép lại "phát cuồng" vì tính năng này? 
+Hệ thống này tốn thêm chi phí lập trình, nhưng mang lại 3 giá trị khổng lồ: 
+1. Chống thảm họa (Zero Surprise): Ngăn chặn triệt để tình trạng đứt cáp, vỡ nhông hộp 
+số bất ngờ. Hệ thống sẽ báo động vàng khi linh kiện chỉ còn 10% tuổi thọ. 
+2. Tiết kiệm tiền (Cost Optimization): Không còn cảnh kỹ sư an toàn bắt thay một sợi cáp 
+thép đắt tiền trị giá hàng trăm triệu chỉ vì "đến hạn 6 tháng", trong khi thực tế do dịch bệnh 
+nhà máy nghỉ làm 3 tháng, cáp vẫn còn tốt nguyên. Mọi quyết định thay thế đều dựa trên Dữ 
+liệu thực tế (Data-driven). 
+3. Bảo vệ pháp lý (Compliance): Khi thanh tra an toàn lao động vào kiểm tra, nhà máy chỉ 
+cần xuất dữ liệu từ ISO 12482 ra là ch ứng minh được họ đang quản lý rủi ro thiết bị một 
+cách hoàn hảo, tuân thủ tiêu chuẩn cao nhất của Châu Âu. 
+ 
+CASE STUDY 
+1. Hồ sơ dự án  
+• Adding one specific function enabling to anticipate better the maintenance... capture the 
+number of cycle, the weight rate... described under the norm ISO 12482' (Thêm một chức 
+năng đặc biệt cho phép dự đoán tốt hơn việc bảo trì... thu thập số chu kỳ, mức tải trọng... 
+được mô tả dưới tiêu chuẩn ISO 12482)." 
+• Yếu tố nhấn mạnh: "Khách hàng Tây h ọ không mặc cả 'bớt cho tôi 50 tri ệu'. Họ đòi hỏi 
+những tính năng mang lại giá trị hàng tỷ đồng cho vòng đời dự án. Khi chúng ta hỏi: 'Do 
+you have any experience with such function?'  (Các anh có kinh nghi ệm làm cái này 
+không?), nếu lúc đó chúng ta ngớ người ra không biết ISO 12482 là gì, chúng ta MẤT HỢP 
+ĐỒNG vào tay các hãng lớn như Konecranes hay Demag ngay lập tức!" 
+• "Nhưng vì chúng ta am hiểu, chúng ta đã tự tin trả lời: Chúng tôi không cần gắn thêm cái 
+hộp đen đắt tiền nào cả, chúng tôi tích hợp thẳng thuật toán Tính toán SWP vào con PLC 
+Siemens S7-1500 của cẩu, lấy dữ liệu từ Loadcell và Encoder. Khách hàng đã hoàn toàn bị 
+thuyết phục bởi năng lực giải pháp của VINALIFT." 
+2. Kỹ năng Bán hàng (Upselling & After-sales Service): 
+• Tình huống: Làm sao để biến tính năng ISO 12482 thành m ột "công cụ trói chân" khách 
+hàng vào dịch vụ bảo trì của công ty? 
+
+=== PAGE 51 ===
+ 
+51 
+ 
+• Chiến thuật: "Thưa anh/chị, dữ liệu từ hệ thống ISO 12482 này không chỉ hiển thị trên màn 
+hình cẩu, mà chúng em có thể đẩy tín hiệu (qua 4G/Wifi công nghiệp) về thẳng Trung tâm 
+dịch vụ khách hàng của VINALIFT. 
+Thay vì anh phải tự theo dõi, khi cáp thép c ủa anh còn 15% tu ổi thọ, hệ thống của em sẽ 
+tự động báo 'Tít tít'. Nhân viên bảo trì của em sẽ gọi điện cho anh: 'Anh ơi, cáp cẩu lò EAF 
+số 1 sắp đến hạn mỏi, anh cho em xin lịch dừng lò chủ nhật tuần sau để quân em mang cáp 
+mới lên thay cho anh nhé.' 
+Anh mua cẩu của chúng em là anh mua sự rảnh rang, anh chỉ việc lo nấu thép, việc chăm 
+sóc sức khỏe cho cẩu cứ để bác sĩ VINALIFT lo!" 
+  
+
+=== PAGE 52 ===
+ 
+52 
+ 
+MỤC 3: QUY TRÌNH LOTO & CỬA KHÓA LIÊN ĐỘNG – "TÍNH MẠNG TRONG TAY 
+BẠN" 
+Trong lịch sử ngành công nghiệp nặng, tai nạn thương tâm nhất không phải là rơi hàng, 
+mà là thợ bảo trì đang lúi húi tra m ỡ bò trên dầm cẩu, thì một người thợ lái cẩu (không biết có 
+người bên trên) vặn chìa khóa khởi động và gạt cần chạy. Thợ bảo trì bị nghiền nát hoặc hất văng 
+từ độ cao 20 mét xuống đất.  
+Để chấm dứt thảm kịch do "hiểu lầm giao tiếp" này, thế giới sinh ra quy trình LOTO (Lock-
+out / Tag-out). Tuy nhiên, nội quy trên giấy là chưa đủ. Trên cẩu luyện kim hiện đại, LOTO phải 
+được "phần cứng hóa" bằng Hệ thống Cửa khóa liên động (Interlocked Gates). 
+ 
+1. Hiểu đúng về LOTO (Lock-out / Tag-out) 
+Đây là quy chuẩn an toàn tối thượng của Mỹ (OSHA) và Châu Âu đối với máy móc nguy 
+hiểm. 
+• Lock-out (Khóa): Tắt nguồn năng lượng (cúp cầu dao điện chính) và dùng một ổ khóa vật 
+lý (Padlock) khóa cứng cái cầu dao đó lại. Chìa khóa do chính người thợ bảo trì cất vào túi 
+quần. Không ai có thể bật điện lên nếu người thợ đó chưa làm xong việc và tự tay mở khóa. 
+• Tag-out (Gắn thẻ): Treo một tấm thẻ cảnh báo đỏ chót lên cầu dao: "NGUY HIỂM! ĐANG 
+SỬA CHỮA. KHÔNG ĐƯỢC BẬT ĐIỆN!" có ghi rõ tên người đang sửa và số điện thoại. 
+2. Sự khác biệt giữa Cửa từ (Interlock) và Cửa khóa bảo vệ (Guard Locking) 
+Đây là kiến thức kỹ thuật "ăn tiền" nhất mà một kỹ sư Sales cần giải thích cho Giám đ ốc 
+an toàn (HSE) của khách hàng: 
+• Cửa từ thông thường (Interlock Switch): Giống như cửa tủ lạnh hay máy giặt. Khi bạn mở 
+cửa lan can để bước lên cầu trục, công tắc nhả ra →  Cắt điện cầu trục. 
+o Tử huyệt: Nếu cầu trục đang chạy lù lù với tốc độ 80m/phút, bạn vẫn có thể dùng 
+tay mở cửa. Cửa mở, điện bị cắt đột ngột, cẩu phanh cháy đư ờng, hàng văng d ữ 
+dội, và bản thân bạn có thể bị cẩu đập trúng vì nó chưa dừng hẳn do quán tính. 
+• Cửa khóa bảo vệ (Guard Locking) - Chu chuẩn Luyện kim: Giống như cửa máy giặt cửa 
+ngang lúc đang quay vắt. Cửa bị khóa chết bằng chốt cơ điện (Solenoid). Bạn kéo gãy tay 
+nắm cửa cũng không ra. 
+o Nguyên lý: Cửa CHỈ CHO PHÉP MỞ khi cầu trục đã báo trạng thái "An toàn tuyệt 
+đối" (Safe State). 
+3. Logic Vận hành Hệ thống Cửa Liên Động (The Safety Logic Sequence) 
+Để bước từ hành lang nhà xưởng (Runway walkway) lên cầu trục một cách hợp lệ, thợ bảo 
+trì phải trải qua một quy trình bắt buộc do PLC kiểm soát: 
+1. Xin quyền truy cập (Request Access): Cầu trục đang làm việc. Thợ bảo trì bấm nút xin vào. 
+
+=== PAGE 53 ===
+ 
+53 
+ 
+2. Đỗ xe an toàn (Maintenance Parking):  Thợ lái cẩu bắt buộc phải lái cầu trục về đúng tọa 
+độ đỗ xe bảo trì (Ví dụ: Góc cuối xưởng, tránh xa lò EAF). 
+3. Tắt nguồn & LOTO (Power Lock -out): Thợ lái gạt cầu dao chính (Main Isolator) xu ống 
+OFF và khóa ổ khóa cá nhân lại (Lock-out). 
+4. Giải phóng Cửa (Gate Release): Lúc này, PLC nhận được 2 tín hiệu đồng thời: (1) Tốc độ 
+cẩu = 0 (Đứng im hoàn toàn); (2) Điện động lực = OFF. Hệ thống mới cấp điện cho cuộn 
+hút (Solenoid) nhả chốt cơ khí của cánh cửa lan can. 
+5. Vòng lặp An toàn (Hardware Safety Loop): Khi cánh cửa mở ra, nó cắt đứt vòng lặp mạch 
+Dừng khẩn cấp (Hardware E-stop circuit). Kể cả có ai đó điên rồ dùng xà beng cạy ổ khóa 
+LOTO và đóng cầu dao chính lên, cẩu cũng tuyệt đối không có điện động lực vì mạch phần 
+cứng đã hở tại cánh cửa. Cẩu chỉ sống lại khi thợ bước ra ngoài và đóng sập cửa lại. 
+ 
+CASE STUDY:  
+1. Hồ sơ dự án  
+• Câu h ỏi c ủa khách:  "Are the gates and access barrier to the bridge from the runway 
+planned? Are access controls integrated..."  (Các cửa và rào ch ắn lên c ầu trục từ đường 
+chạy có được lên kế hoạch không? Có tích hợp kiểm soát truy cập không?). 
+Trả lời của VINALIFT: "Yes. We will design a safe access control system, including an 
+interlocked gate... The gate can only be opened when the crane is in a safe 'Maintenance' 
+mode (power locked-out), ensuring personnel safety." (Cửa chỉ có thể được mở khi cầu trục 
+ở chế độ 'Bảo trì' an toàn - đã khóa cách ly điện, đảm bảo an toàn cho nhân sự). 
+• Bài học:  Khách hàng Châu Âu họ đặt an toàn con người lên hàng đầu. Họ không hỏi 'Cửa 
+sơn màu gì?', h ọ hỏi 'Control logic c ủa cái c ửa đó là gì?'. Khi chúng ta đưa ra gi ải 
+pháp Guard Locking kết hợp LOTO, chúng ta đã đáp ứng tiêu chuẩn an toàn khắc nghiệt 
+nhất của Pháp và Châu Âu." 
+2. Kỹ năng Sales (Bán hàng cho Giám đốc An toàn - EHS Manager): 
+• Tình huống: Gặp dự án mà Giám đốc Mua hàng (Purchasing) muốn cắt giảm chi phí, đòi 
+bỏ hệ thống Guard Locking, chỉ dùng cái xích sắt vắt ngang. 
+• Sales Engineer trả lời: Bạn hãy tìm cách tác đ ộng đến Giám đốc An toàn (EHS) của nhà 
+máy. 
+"Thưa anh, một cái cửa khóa liên động giá chỉ vài chục triệu đồng. Nhưng nếu anh dùng 
+xích sắt, công nhân bảo trì làm sai quy trình, bước lên cẩu khi chưa cúp điện và xảy ra tai 
+nạn chết người. Giám đốc nhà máy và Giám đốc An toàn sẽ là những người đầu tiên phải 
+chịu trách nhiệm hình sự trước pháp luật. Giải pháp Guard Locking của chúng em sinh ra 
+không phải để làm cẩu đắt lên, mà là để bảo vệ anh (Giám đốc EHS) khỏi việc phải đi bóc 
+lịch vì lỗi lầm của người khác. Hệ thống ép buộc công nhân ph ải tuân thủ LOTO 100%, 
+không có đường lách luật." 
+  
+
+=== PAGE 54 ===
+ 
+54 
+ 
+PHẦN G. CHIẾN LƯỢC BÁN HÀNG & PHÂN TÍCH ĐỐI THỦ 
+CHUYÊN ĐỀ 16. DANH SÁCH NHÀ CUNG CẤP 
+MỤC 1: CƠ CẤU TRUYỀN ĐỘNG CHÍNH (MAIN DRIVES) 
+1. Động cơ điện (Heavy-Duty AC Motors) 
+Yêu cầu: Lớp cách điện H (Insulation Class H), làm mát cưỡng bức, chịu nhiệt, có sẵn đuôi 
+lắp Encoder. 
+• Siemens (Đức): Dòng SIMOTICS siêu bền, đồng bộ hoàn hảo với hệ sinh thái biến tần/PLC 
+Siemens. 
+• ABB (Thụy Sĩ/Thụy Điển): Dòng động cơ công nghiệp nặng (Process performance motors) 
+IE3/IE4. 
+• VEM Motors (Đức): Hãng chuyên s ản xuất động cơ đúc b ằng gang siêu b ền cho ngành 
+luyện kim và hàng hải. 
+• WEG : Brazil 
+2. Hộp giảm tốc (Industrial Gearboxes) 
+Yêu cầu: Vỏ đúc nguyên khối, hệ số an toàn (Service factor) > 1.5 , chịu tải va đập. 
+• Flender (Đức - nay thuộc Siemens): Hãng h ộp số "huyền thoại" cho cơ c ấu nâng h ạ tải 
+trọng lớn. 
+• SEW-Eurodrive (Đức): Lựa chọn số 1 thế giới cho hộp số di chuyển (Travel drives) nh ờ 
+sự đa dạng và bền bỉ. 
+• Sumitomo Drive Technologies (Nhật Bản/Đức): Cực kỳ nổi tiếng với dòng h ộp số công 
+nghiệp Hansen (Paramax) dùng cho tời nâng. 
+3. Hệ thống Phanh (Braking Systems) 
+Yêu cầu: Phanh làm việc (Thruster brakes) và Phanh khẩn cấp kẹp vành tang (Hydraulic 
+Caliper Brakes). 
+• Pintsch Bubenzer (Đức): Hãng phanh số 1 thế giới cho cẩu cảng và nhà máy thép. Đặc biệt 
+mạnh về phanh khẩn cấp (Emergency Brakes). 
+• Sibre - Siegerland Bremsen (Đức): (Đã có trong danh m ục đề xuất của VINALIFT). Rất 
+mạnh về phanh đĩa thủy lực và các cơ cấu chống bão/chống kẹt. 
+• Stromag (Đức - thuộc Altra Motion): Chuyên gia về phanh đĩa điện từ và phanh thủy lực 
+cho ngành thép. 
+ 
+MỤC 2: THIẾT BỊ MANG TẢI & CƠ KHÍ ĐẶC CHỦNG (LIFTING & MECHANICAL) 
+1. Cáp thép chịu nhiệt (High-Performance Wire Ropes) 
+
+=== PAGE 55 ===
+ 
+55 
+ 
+Yêu cầu: Cáp lõi thép đ ộc lập (IWRC), mạ kẽm, nén dầm (compacted), chống xoắn, bôi trơn 
+bằng mỡ chịu nhiệt. 
+• Casar (Đức): Hãng cáp cẩu cao cấp nhất thế giới, tuổi thọ mỏi cực cao. 
+• Teufelberger (Áo/Đức): Chuyên các dòng cáp thép đặc biệt cho ngành cẩu tải nặng. 
+• Kiswire (Hàn Quốc): Lựa chọn tối ưu v ề chi phí nhưng v ẫn đảm bảo chất lượng rất cao 
+cho ngành thép. 
+• TECI (Italia) 
+• USHA MARTIN (Thailan) 
+2. Cụm Móc lá & Puly (Lamellar Hooks & Hook Blocks) 
+Yêu cầu: Móc phiến (laminated) chống nứt truyền dẫn, chịu bức xạ 1600∘𝐶 . 
+• Ropeblock (Hà Lan): Hãng chuyên gia công c ụm móc c ẩu (Hook blocks) x ịn nhất Châu 
+Âu. 
+• Wippermann (Đức): Chuyên gia v ề các lo ại móc lá (Lamellar hooks) đinh tán cho c ẩu 
+Ladle. 
+• Sibre (Đức): Ngoài phanh, họ cũng sản xuất cụm móc cẩu chất lượng rất cao. 
+• VINALIFT: Tự chế tạo 
+3. Gối đỡ giảm chấn (Crane Buffers) 
+Yêu cầu: Hấp thụ động năng lớn, không nảy ngược (Polyurethane xốp hoặc Thủy lực). 
+• Oleo International (Anh Quốc): Số 1 thế giới về giảm chấn thủy lực (Hydraulic buffers) 
+cho cẩu tốc độ cao/tải lớn. 
+• Gantrex (Bỉ): Rất nổi tiếng với cả giảm chấn thủy lực và các đệm ray cẩu (Rail pads). 
+• Conductix-Wampfler (Đức): Phổ biến với các dòng giảm chấn Polyurethane xốp (Cellular 
+buffers). 
+• Sibre (ITALY) 
+ 
+MỤC 3: ĐIỆN, ĐIỀU KHIỂN & TỰ ĐỘNG HÓA (ELECTRICAL & AUTOMATION) 
+1. Biến tần (VFD) & Bộ điều khiển trung tâm (PLC) 
+Yêu cầu: Biến tần có tính năng AFE (Hãm tái sinh), PLC vòng quét tốc độ cao, hỗ trợ Profinet. 
+• Siemens (Đức): Bi ến t ần SINAMICS S120 (chuyên tr ị AFE) + PLC S7 -1500. Đây là 
+combo "vô đối" trong ngành thép. 
+• Schneider Electric (Pháp): Biến tần Altivar + PLC M580 (Rất được khách hàng Pháp như 
+SG PAM ưa chuộng). 
+• ABB (Thụy Sĩ): Dòng biến tần ACS880 (Industrial drives) có tích hợp sẵn các module cho 
+cẩu (Crane control program). 
+
+=== PAGE 56 ===
+ 
+56 
+ 
+• Rockwell Automation (Allen-Bradley) 
+2. Thiết bị An toàn: Encoder, Rơ-le quá tốc & Cảm biến (Sensors) 
+Yêu cầu: Chịu nhiệt độ cao, chịu rung động mạnh, vỏ Inox hoặc gang. 
+• Hübner Giessen (Đức): Tuyệt đối số 1 thế giới về Công tắc ly tâm quá t ốc (Overspeed 
+switches) và Heavy-duty Encoders gắn trên trục tời. 
+• SICK (Đức): Cung cấp toàn bộ hệ thống Laser định vị tuyệt đối, cảm biến radar chống va 
+chạm. 
+• Brosa (Thụy Sĩ) hoặc Tecsis (Đức): Chuyên gia về chốt cảm biến lực (Load pins) độ chính 
+xác cao để báo quá tải. 
+3. Hệ thống Cấp điện (Electrification - Festoon & Busbar) 
+ 
+Yêu cầu: Chịu bụi dẫn điện, cáp chịu nhiệt silicone/teflon. 
+• Conductix-Wampfler (Đức): D ẫn đ ầu v ề ray đi ện an toàn (DSL) và máng cáp sâu đo 
+(Festoon). 
+• Vahle (Đức): Đối thủ ngang tầm với Conductix, cực kỳ bền bỉ trong môi trường bụi kim 
+loại. 
+• Stemmann-Technik (Đức): R ất m ạnh v ề Rulo cu ốn cáp (Cable reels) cho mâm t ừ/gầu 
+ngoạm. 
+ 
+MỤC 4: THIẾT BỊ PHỤ TRỢ ĐẶC BIỆT LÒ EAF (SPECIALTIES) 
+1.  Điều hòa không khí Phòng điện & Cabin (Heavy-duty HV AC) 
+Yêu cầu: Lọc bụi công nghiệp, chịu nhiệt độ môi trường  60∘𝐶 − 80∘𝐶 , chạy dự phòng. 
+• Frigortec (Đức): Tiêu chuẩn vàng của ngành thép (Đã đư ợc SG PAM đồng ý duyệt trong 
+hồ sơ). 
+• Lintern Corporation (Mỹ): Hãng đi ều hòa siêu b ền, được dùng trong 80% các nhà máy 
+luyện kim tại Bắc Mỹ. 
+• Weiss Klimatechnik (Đức): Cung cấp các giải pháp làm mát cực kỳ tin cậy cho E-room. 
+• (Thổ Nhĩ Kỳ)  
+2. Camera Công nghiệp & Hỗ trợ móc tải (CCTV for Remote Control) 
+ 
+Yêu cầu: Độ trễ <150𝑚𝑠 , chống lóa WDR, vỏ Inox 316L làm mát bằng khí nén. 
+• Motec (Đức): Hãng chuyên làm camera cho cần cẩu hạng nặng (Heavy-duty crane camera 
+systems). 
+• Orlaco (Hà Lan - thuộc Stoneridge): Rất nổi tiếng với các hệ thống camera không đ ộ trễ 
+cho xe siêu trường siêu trọng và cầu trục. 
+
+=== PAGE 57 ===
+ 
+57 
+ 
+• Axis Communications (Thụy Điển): Dòng camera công nghi ệp vỏ Inox chống cháy n ổ, 
+chất lượng hình ảnh IP cực cao. 
+3. Điều khiển từ xa vô tuyến (Radio Remote Control) 
+ 
+Yêu cầu: Chống nhiễu sóng trong nhà máy thép, có phím xác nh ận an toàn (Dead -man 
+switch), phím gạt Joystick như thật. 
+• HBC-radiomatic (Đức): Số 1 thế giới về tay bấm điều khiển cẩu loại đeo bụng (Belly-box). 
+• Autec (Ý): Thiết kế công thái học rất đẹp, màn hình màu tích hợp hiển thị CMS, độ an toàn 
+rất cao. 
+• Scanreco (Thụy Điển) hoặc Spohn & Burkhardt (Đức - Chuyên về cụm Joystick gạt). 
+  
+
+=== PAGE 58 ===
+ 
+58 
+ 
+CHUYÊN ĐỀ 17. CÁC "ÔNG TRÙM" CẨU THÉP TOÀN CẦU 
+Đây là nhóm dẫn dắt công nghệ, thường trúng thầu ở các tập đoàn đa qu ốc gia có ngân 
+sách lớn và yêu cầu an toàn khắt khe nhất 
+1. Konecranes (Phần Lan) 
+• Điểm mạnh: Là công ty cầu trục lớn nhất thế giới. Sức mạnh tuyệt đối ở công nghệ Smart 
+Features (Chống lắc, Định vị, Tránh va chạm) và hệ thống bảo trì dự đoán TRUCONNECT. 
+Các cầu trục luyện kim của họ gần như không có đối thủ về độ tin cậy và phần mềm. 
+2. Demag (Đức - Nay thuộc Konecranes/Tadano tùy khu vực) 
+• Điểm mạnh: Từng là biểu tượng "Mẹ của các loại cầu trục". Điểm mạnh lớn nhất là Cơ khí 
+chính xác và tiêu chuẩn thiết kế siêu bền. Bộ truyền động, động cơ và hộp số của Demag 
+tự sản xuất được đánh giá là bền bỉ nhất trong môi trường khắc nghiệt. 
+3. Danieli Centro Cranes (Ý) 
+• Điểm mạnh: Danieli là tập đoàn chuyên xây dựng nhà máy thép trọn gói. Nếu khách hàng 
+mua lò luyện EAF của Danieli, họ thường mua luôn cầu trục của hãng này vì tính đồng bộ 
+hoàn hảo với dây chuy ền công ngh ệ luyện kim. H ọ là bậc thầy về cẩu Rót thép (Ladle 
+Cranes). 
+4 . REEL (REEL International - Pháp)  
+• Phân tích điểm mạnh: Hãng này của Pháp, REEL chuyên cung cấp cầu trục cho các lò điện 
+nhôm (Aluminium), nhà máy thép và điện hạt nhân. Họ cực kỳ mạnh về độ an toàn và các 
+tiêu chuẩn khắt khe của Châu Âu. 
+5. GH Cranes & Components (Tây Ban Nha) 
+• Điểm mạnh: Giải pháp cực kỳ linh hoạt và có sự cân bằng xuất sắc giữa Chất lượng Châu 
+Âu và Giá thành hợp lý. Họ rất mạnh ở việc cung cấp các "Kit" (Pa-lăng, bộ truyền động 
+rời) đ ể các đối tác đ ịa phương gia công d ầm, đây là mô hình c ạnh tranh tr ực ti ếp v ới 
+VINALIFT. 
+6. Kranbau Köthen / Kocks Krane (Đức) 
+• Điểm mạnh: Các hãng này là "kh ủng long" trong vi ệc chế tạo các c ẩu siêu trường, siêu 
+trọng (Custom-built Heavy Duty) cho ngành thép (lên tới 500 - 600 tấn). Kết cấu dầm thép 
+của họ được thiết kế chịu mỏi (Fatigue) vô đối. 
+7. OMIS (Ý) 
+• Điểm mạnh: Có mặt rất nhiều tại Việt Nam thông qua các đại lý. Điểm mạnh là thiết kế tiêu 
+chuẩn hóa cao, giao hàng nhanh, và giá cả rất cạnh tranh so với các hãng Đức/Bắc Âu, phù 
+hợp cho các khu vực kho bãi, thành phẩm của nhà máy thép. 
+8. BVS Cranes (Bülbüloğlu Vinç Sanayi) - Thổ Nhĩ Kỳ 
+• Điểm mạnh: Đây là hãng c ẩu phát tri ển nhanh nh ất Châu Âu hi ện nay. Họ có nhà máy 
+khổng lồ, xuất khẩu đi 90 quốc gia. Thế mạnh của BVS là cầu trục luyện kim hạng nặng, 
+
+=== PAGE 59 ===
+ 
+59 
+ 
+thiết kế rất "Tây" nhưng giá chỉ bằng 60% hàng Đức. Họ liên tục trúng thầu các nhà máy 
+thép tại Trung Đông, Bắc Phi và cả Châu Âu. 
+9. Weihua Group (Tập đoàn Vệ Hoa) 
+• Điểm mạnh: Quy mô sản xuất lớn nhất nhì Trung Quốc. Họ có thể làm mọi loại cẩu luyện 
+kim với giá rẻ hơn 30-50% so với hàng Châu Âu. Hi ện nay Weihua cũng đã tích h ợp rất 
+nhiều công nghệ Smart Crane (Chống lắc, định vị) tự phát triển. 
+10. Henan Mine Crane (Khoáng Sơn Hà Nam) 
+• Điểm mạnh: Chiến lược cạnh tranh bằng giá cực đoan và sản lượng khổng lồ. Rất được ưa 
+chuộng tại Việt Nam cho các hạng mục cẩu nhà xưởng, cẩu phế liệu. Giao hàng cực nhanh. 
+11. Dalian Heavy Industry - DHHI (Đại Liên) 
+• Điểm mạnh: Là doanh nghiệp nhà nước (SOE) của Trung Quốc. Đây là hãng ch ế tạo cầu 
+trục rót thép lớn nhất thế giới (từng làm cẩu Ladle 500 Tấn). Chuyên thầu các dự án luyện 
+kim quốc gia, kết cấu cơ khí cực kỳ đồ sộ. 
+12. Taiyuan Heavy Industry - TYHI (Thái Nguyên - TQ) 
+• Điểm mạnh: Tương tự DHHI, TYHI là công ty l ịch sử của Trung Quốc chuyên làm thi ết 
+bị luyện kim. Điểm mạnh là kinh nghiệm thiết kế cẩu Lò EAF, BOF chống rủi ro cháy nổ. 
+13. ZPMC (Chấn Hoa Trùng Khánh) 
+• Điểm mạnh: Thống trị mảng cẩu cảng thế giới, nhưng mảng cẩu xưởng (Industrial Cranes) 
+của họ cũng rất khủng. Năng lực gia công kết cấu thép không có đối thủ, phù hợp với các 
+dự án cần hàng trăm chiếc cẩu cùng lúc. 
+14. Mukand Limited (Ấn Độ) 
+• Điểm mạnh (Cực kỳ độc đáo): Mukand vừa là nhà sản xuất thép hợp kim, vừa là hãng chế 
+tạo máy. Vì họ tự nấu thép, họ hiểu rõ nhất môi trường Lò EAF/Ladle khắc nghiệt ra sao. 
+Cầu trục rót thép của Mukand có độ tin cậy cực cao, thiết kế "bạo chi" về độ dày bản thép. 
+ 
+15. ElectroMech (Ấn Độ) 
+• Điểm mạnh: Là nhà sản xuất cầu trục lớn nhất Ấn Độ về sản lượng. Rất mạnh về các giải 
+pháp may đo (Custom-built) cho xưởng cán, kho cuộn thép với giá siêu rẻ. Họ đang bành 
+trướng r ất m ạnh sang Đông Nam Á và Châu Phi.  
+ 
+16. Anupam Industries (Ấn Độ) 
+• Điểm mạnh: Nắm giữ công nghệ nhờ liên doanh với Mitsubishi Heavy Industries và các 
+hãng Tây Ban Nha. Chuyên làm cẩu cảng, cẩu luyện kim siêu trọng (lên tới 500 Tấn) cho 
+các tập đoàn thép khổng lồ như Tata Steel, JSW. 
+17. Morgan Engineering (Mỹ) 
+
+=== PAGE 60 ===
+ 
+60 
+ 
+• Điểm mạnh: Trong giới cầu trục luyện kim, Morgan là  "Huyền thoại sống". Hầu hết các 
+cầu trục rót thép khổng lồ tại các nhà máy thép Bắc Mỹ trong 100 năm qua đều do Morgan 
+làm. Điểm mạnh tuyệt đối của họ là thiết kế Cẩu 4 dầm (Four-girder Ladle Crane) với tuổi 
+thọ lên t ới 50 -70 năm. Công ngh ệ chống rung, ch ịu nhi ệt c ủa M ỹ là vô đ ịch. 
+ 
+18. Whiting Corporation (Mỹ) 
+• Điểm mạnh: Một ông lớn khác của Mỹ. Whiting chuyên về cẩu luyện kim, thiết bị đường 
+sắt và cả công nghệ lò hồ quang. Mức độ an toàn (Redundancy) của cẩu Whiting luôn vượt 
+mức tiêu chuẩn OSHA/CMAA của Mỹ. 
+ 
+19. Deshazo Cranes (Mỹ) 
+• Điểm m ạnh: Dẫn đ ầu th ị trường M ỹ hiện t ại v ề mảng Tự động hóa toàn di ện (Fully 
+Automated Cranes). Deshazo có công ty con chuyên v ề AI và Robotics, bi ến cầu trục xử 
+lý cu ộn thép thành các robot d ỡ hàng hoàn toàn không c ần con ngư ời. 
+ 
+20. Dedini Indústrias de Base / GHE (Brazil) 
+• Điểm mạnh: Brazil là quốc gia xuất khẩu quặng sắt và có ngành luyện kim rất mạnh ở Nam 
+Mỹ. Các hãng như Dedini (cơ khí hạng nặng) hay các công ty liên doanh tại Brazil rất giỏi 
+chế tạo các cẩu hạng nặng phục vụ đặc thù khai khoáng, luyện thép với khung dầm chống 
+chịu độ võng cực tốt. 
+CASE STUDY :  
+Nhân viên Sales ho ặc Kỹ thuật của VINALIFT, hãy dùng điểm mạnh của mình để đánh 
+vào điểm yếu của đối thủ: 
+• Đấu với Nhóm 1 (Konecranes, Demag): Nhấn mạnh vào Chi phí bảo trì, thay thế phụ tùng 
+và độ phản hồi (Response time). Nếu cẩu hỏng, VINALIFT có mặt trong 2 giờ, phụ tùng 
+giá rẻ. Châu Âu phải chờ linh kiện bay từ Đức về mất 1 tháng. 
+• Đấu với Nhóm 2 (Trung Quốc): Nhấn mạnh vào Vật tư lõi (Siemens, Schneider) và tính an 
+toàn theo tiêu chuẩn EN 13001. Chỉ ra rằng hàng Trung Quốc giá rẻ thường dùng tiêu chuẩn 
+cũ, dễ bị nứt mỏi dầm trong môi trường luyện kim. 
+• Đấu với Nhóm 3 : Nhấn mạnh vào Năng lực Tự động hóa (Smart Crane). Ch ứng minh 
+VINALIFT không chỉ làm cơ khí, mà làm chủ công nghệ Anti-Sway, Absolute Positioning, 
+ISO 12482, điều mà nhiều hãng cơ khí truyền thống trong nước chưa làm tốt. 
+ 
+  
+
+=== PAGE 61 ===
+ 
+61 
+ 
+CHUYÊN ĐỀ 18. PHỐI HỢP VÀ TÍNH TOÁN CHIẾN LƯỢC CHO VINALIFT 
+Khi đặt VINALIFT lên bàn cân v ới 20 đối thủ (từ Châu Âu, Trung Quốc, Việt Nam, Thổ 
+Nhĩ Kỳ, Ấn Độ, Mỹ), bài toán cạnh tranh của đội ngũ VINALIFT sẽ được giải quyết qua Ma trận 
+Định vị sau: 
+1. Nếu đụng độ Thổ Nhĩ Kỳ (BVS, Güralp) tại thị trường Quốc tế / FDI: 
+• Vấn đề: BVS của Thổ Nhĩ Kỳ có lợi thế cước vận chuyển rẻ sang Châu Âu/Trung Đông và 
+có mác "Made in Turkey/Europe". Giá của họ cũng rất sát với VINALIFT. 
+• Chiến thuật của VINALIFT: Tập trung vào thị trường Châu Á - Thái Bình Dương (APAC). 
+Lấy lợi thế thời gian giao hàng (Lead time) và khả năng Bảo hành tại chỗ trong 24h. Nhấn 
+mạnh rằng VINALIFT dùng 100% linh kiện lõi của Đức/Pháp (Siemens, Schneider) không 
+thua kém gì cấu hình của Thổ Nhĩ Kỳ. 
+2. Nếu đụng độ Ấn Độ (Mukand, ElectroMech) tại các mỏ/nhà máy thép Châu Á: 
+• Vấn đề: Cẩu Ấn Độ rất "trâu bò" và giá thép của họ cực rẻ. 
+• Chiến thuật của VINALIFT: Đánh mạnh vào Trình độ gia công tinh x ảo và Tự động hóa 
+(Smart Crane). C ẩu Ấn Đ ộ thường thiên v ề cơ b ắp, h ệ thống đi ện đôi khi c ồng k ềnh. 
+VINALIFT cần trình diễn giải pháp CMS (Quản lý cẩu qua màn hình), ISO 12482 (Bảo trì 
+dự đoán) và thiết kế tủ điện IP55 chuẩn Châu Âu đ ể thuyết phục các Giám đ ốc nhà máy 
+thích công nghệ hiện đại. 
+3. Đứng trước các "Huyền thoại" Mỹ & Tây Âu (Morgan, Konecranes, Danieli): 
+• Vấn đề: Khách hàng sính ngo ại, sẵn sàng bỏ ra hàng chục triệu Đô để mua sự an tâm từ 
+các thương hiệu này. 
+• Chiến thu ật c ủa VINALIFT (Chi ến lư ợc "Thay ru ột"): Rất nhi ều d ự án t ại VN (như 
+Formosa, Hòa Phát,), chủ đầu tư không đủ ngân sách mua 100% cẩu Châu Âu. VINALIFT 
+sẽ đóng vai trò OEM/Local Partner. 
+ 
+ 
+ 
+
